@@ -4,3 +4,22 @@ body {
 h1{
     font-size: 50px;
 }
+section{
+    display: flex;
+}
+.half-width{
+    width: 50%;
+    padding-left: 5%;
+}
+.half-width img{
+    width: 100%;
+}
+.link_button{
+    text-decoration: none;
+    background-color: greenyellow;
+    padding: 10px 40px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+    background-image: linear-gradient(green, greenyellow);
+}
