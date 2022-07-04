@@ -1,5 +1,6 @@
 body {
     font-family: 'Arima', cursive;
+    margin: 0;
 }
 h1{
     font-size: 50px;
@@ -22,4 +23,9 @@ section{
     color: white;
     font-weight: bolder;
     background-image: linear-gradient(green, greenyellow);
+}
+.top_banner{
+    background-image: url(loki/up1.jpg);
+    background-repeat: no-repeat;
+    width:auto;
 }
