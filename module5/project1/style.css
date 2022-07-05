@@ -20,13 +20,13 @@ body{
 .header_title{
     font-size: 5rem;
     text-align: center;
-    color: rgb(219, 219, 219);
+    color: rgb(14, 2, 2);
 
 }
 .header_subtitle{
     font-size: large;
-    font-weight: lighter;
-    color: rgb(236, 194, 130);
+    font-weight: light;
+    color: rgb(26, 15, 0);
     text-align: center;
     margin-left: 5%;
     margin-right: 5%;
