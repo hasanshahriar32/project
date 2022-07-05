@@ -1,0 +1,30 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.header{
+    display: flex;
+    size: 100%;
+    margin: 5%;
+    background-image: url(eat-healthy/images/shapes/Frame 56.jpg);
+    background-image: url(eat-healthy/images/shapes/Frame 57.jpg);
+}
+.middle{
+    display: flex;
+    margin: 5%;
+    background-image: url(eat-healthy/images/shapes/Frame 57.jpg);
+
+}
+.header_name{
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-end;
+}
+.advisor{
+    text-decoration: none;
+    font-weight: bold;
+    background-color: tomato;
+    padding: 10px 15px;
+    color: white;
+    background-image:linear-gradient(90deg, tomato, orange) ;
+    border-radius: 80px;
+}
