@@ -1,0 +1,43 @@
+body{
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0;
+}
+#red_color{
+    color: red;
+}
+.header{
+    background-image: url(image/donation8.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: fit-content;
+    display: flow-root;
+    text-align: center;
+    resize: vertical;
+    overflow: auto;
+    
+}
+.header_title{
+    font-size: 5rem;
+    text-align: center;
+    color: rgb(219, 219, 219);
+
+}
+.header_subtitle{
+    font-size: large;
+    font-weight: lighter;
+    color: rgb(236, 194, 130);
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.first_button{
+    text-decoration: none;
+    place-content: center;
+    background-color: orange;
+    padding: 10px 40px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+    background-image: linear-gradient(orangered, orange);
+}
