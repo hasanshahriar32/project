@@ -35,6 +35,12 @@ section{
     width:auto;
     background-position: right;
 }
+.last_banner{
+    background-image: url(loki/exp-bg.png);
+    background-repeat: no-repeat;
+    width:auto;
+    background-position: left;
+}
 .second_button{
     text-decoration: none;
     background-color: orange;
@@ -43,4 +49,11 @@ section{
     color: white;
     font-weight: bolder;
     background-image: linear-gradient(orangered, orange);
+}
+.shadow{
+    box-shadow: 10px 10px 10px gray;
+    width: 45%;
+    margin: 3%;
+    padding: 3%;
+    border-top: 5px solid orangered;
 }
