@@ -30,9 +30,10 @@ section{
     width:auto;
 }
 .second_banner{
-
+    background-image: url(loki/dream-bg.png);
     background-repeat: no-repeat;
     width:auto;
+    background-position: right;
 }
 .second_button{
     text-decoration: none;
