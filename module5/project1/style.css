@@ -5,13 +5,12 @@ body{
     display: flex;
     size: 100%;
     margin: 5%;
-    background-image: url(eat-healthy/images/shapes/Frame 56.jpg);
-    background-image: url(eat-healthy/images/shapes/Frame 57.jpg);
+    background-image: url(images/Frame 56.jpg);
 }
 .middle{
     display: flex;
     margin: 5%;
-    background-image: url(eat-healthy/images/shapes/Frame 57.jpg);
+    background-image: url(images/Frame 57.jpg);
 
 }
 .header_name{
