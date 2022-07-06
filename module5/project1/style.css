@@ -18,13 +18,13 @@ body{
     
 }
 .header_title{
-    font-size: 5rem;
+    font-size: 300%;
     text-align: center;
     color: rgb(14, 2, 2);
 
 }
 .header_subtitle{
-    font-size: large;
+    font-size: 100%;
     font-weight: light;
     color: rgb(26, 15, 0);
     text-align: center;
