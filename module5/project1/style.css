@@ -8,6 +8,11 @@ body{
     font-weight: bolder;
     font-size: larger;
 }
+img {
+    opacity: 0.3;
+    max-height: 100%;
+    width: auto;
+  }
 .header{
     background-image: url(image/donation8.jpg);
     background-repeat: no-repeat;
@@ -65,4 +70,36 @@ body{
     text-align: center;
     margin-left: 5%;
     margin-right: 5%;
+}
+
+.amount{
+    display: flex;   
+    color: rgb(107, 105, 105);
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.amount_button{
+    background-color: rgb(240, 229, 229);
+    margin: 2%;
+    padding: 3% 3%;
+    font-size: 3vw;
+    border-radius: 5px;
+}
+#button_style{
+    border: 3px solid rgb(219, 55, 55);
+    color: rgb(219, 55, 55);
+    background-color: rgb(236, 180, 180);
+}
+input::placeholder {
+    color: red;
+    font-size: 3vw;
+    text-align: center;
+    
+}
+.amount_input{
+    size: 20rem;
+    width: 30vw;
+    height: 3.5vw;
+    text-decoration: none;
 }
