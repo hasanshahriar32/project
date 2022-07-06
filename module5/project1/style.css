@@ -8,22 +8,23 @@ body{
     font-weight: bolder;
     font-size: larger;
 }
-img {
+/*img {
     opacity: 0.3;
     max-height: 100%;
     width: auto;
-  }
+  }*/
 .header{
     background-image: url(image/donation8.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
+    background-position: center;
     width: 100%;
     height: fit-content;
     display: flow-root;
     text-align: center;
     resize: vertical;
     flex-wrap: wrap;
-    
+    position: fix;
 }
 
 
@@ -47,9 +48,10 @@ img {
     place-content: center;
     background-color: orange;
     padding: 10px 40px;
+    size: 3vw;
     border-radius: 5px;
     color: white;
-    font-weight: bolder;
+    font-size: 1.2vw;
     background-image: linear-gradient(orangered, orange);
 }
 
@@ -60,7 +62,7 @@ img {
 .second_header_title{
     color: red;
     font-family: fantasy;
-    font-size: 3em;
+    font-size: 5vw;
     text-align: center;
 }
 .middle_subtitle{
@@ -102,4 +104,25 @@ input::placeholder {
     width: 30vw;
     height: 3.5vw;
     text-decoration: none;
+}
+
+.half-width{
+    width: 50%;
+    padding-left: 5%;
+}
+
+.shadow{
+    box-shadow: 10px 10px 10px gray;
+    width: 45%;
+    margin: 3%;
+    padding: 3%;
+    border-top: 5px solid orangered;
+}
+
+.last_banner{
+    background-image: url(image/exp-bg.png);
+    background-repeat: no-repeat;
+    font-size: 1.5vw ;
+    background-position: left;
+    display: flex;
 }
