@@ -7,7 +7,7 @@ h1{
 }
 section{
     display: flex;
-    position: absolute;
+
 }
 .half-width{
     width: 50%;
