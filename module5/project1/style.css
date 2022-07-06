@@ -4,6 +4,9 @@ body{
 }
 #red_color{
     color: red;
+    font-family: fantasy;
+    font-weight: bolder;
+    font-size: larger;
 }
 .header{
     background-image: url(image/donation8.jpg);
