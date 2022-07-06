@@ -151,3 +151,26 @@ footer{
     background-color: black;
     margin: 0;
 }
+
+.box{
+    
+    width: 20%;
+    padding: 2.2%;
+
+    
+}
+picture{
+    width: 100%;
+    border-radius: 15px;
+}
+
+img:hover{
+    transform: scale(2,2);
+    transition: 1.5s  transform;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
