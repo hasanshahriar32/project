@@ -22,6 +22,7 @@ body{
 }
 .header_title{
     font-size: 8vw;
+    font-size: 9vh;
     text-align: center;
     color: rgb(255, 255, 255);
 
@@ -29,6 +30,7 @@ body{
 .header_subtitle{
     text-overflow: clip;
     font-size: 1.8vw;
+    font-size: 2.5vh;
     color: rgb(255, 194, 108);
     text-align: center;
     margin-left: 5%;
