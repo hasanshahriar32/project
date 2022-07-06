@@ -14,7 +14,7 @@ body{
     display: flow-root;
     text-align: center;
     resize: vertical;
-    overflow: auto;
+    flex-wrap: wrap;
     
 }
 .header_title{
@@ -24,6 +24,8 @@ body{
 
 }
 .header_subtitle{
+    text-overflow: clip;
+    font-size: 1.8vw;
     color: rgb(255, 194, 108);
     text-align: center;
     margin-left: 5%;
