@@ -112,17 +112,42 @@ input::placeholder {
 }
 
 .shadow{
+    
     box-shadow: 10px 10px 10px gray;
     width: 45%;
     margin: 3%;
     padding: 3%;
     border-top: 5px solid orangered;
 }
+.form_shadow{
+    
+    box-shadow: 10px 10px 10px gray;
 
+    margin: 0 20%;
+    padding: 2% 6%;
+    border-top: 5px solid orangered;
+}
 .last_banner{
     background-image: url(image/exp-bg.png);
     background-repeat: no-repeat;
     font-size: 1.5vw ;
     background-position: left;
     display: flex;
+}
+form{
+    color: rgb(59, 59, 78);
+    font-size: larger;
+    font-size: 1.5vw;
+
+    
+}
+.form{
+    align-items: center;
+    position: center;
+    text-align: center;
+
+}
+footer{
+    background-color: black;
+    margin: 0;
 }
