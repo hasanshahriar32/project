@@ -111,6 +111,16 @@ input::placeholder {
     padding-left: 5%;
 }
 
+
+
+.second_banner{
+    background-image: url(image/dream-bg.png);
+    background-repeat: no-repeat;
+    width:auto;
+    background-position: right;
+}
+
+
 .shadow{
     
     box-shadow: 10px 10px 10px gray;
