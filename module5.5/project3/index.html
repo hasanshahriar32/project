@@ -5,17 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .swimming div{
+            border: 1px dashed violet;
+            width: 200px;
+        }
+        #boy{
+            position: sticky;
+            top: 110px;
+            z-index: 2;
+        }
+        #water{
+            position: sticky;
+            top: 170px;
+            z-index: 0;
+        }
+        #ring{
+            position: sticky;
+            top: 153px;
+            z-index: 1;
+        }
+
+        body{
+            text-align: center;
+        }
+        .demo{
+            height: 300px;
+            width: auto;
+            background-color: rgb(135, 197, 222);
+        }
+        div{
+            position: relative;
+            margin: 0 40% 0;
+        }
+        .top{
+            font-size: 4vw;
+            padding: 10px 5px 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: royalblue; 
+            background-color: beige;
+        }
+        .top:hover{
+            color: beige;
+            background-color: royalblue;
+        }
+        .lol{
+            z-index: 3;
+        }
+    </style>
 </head>
 <body>
-    <section>
-        <h1>this is my header</h1>
-        <h1>i am learning position</h1>
-        <h1>i have a higher position</h1>
+    <section >
+        <h1 class="top" style="">WaterLand</h1>
+        <h2>i am learning position</h2>
+        <h2>i have a higher position</h2> <br><br><br>
     </section>
     <section class="swimming">
-        <div><img src="image/icons/bus.svg" alt=""></div>
-        <div><img src="image/icons/food.png" alt=""></div>
-        <div><img src="image/icons/blood.svg" alt=""></div>
+        <div id="boy"><img src="images/boy.svg" alt=""></div>
+        <div class="demo" style="background-color: white;"><h1>Let's Jump</h1> <p>scroll down</p></div>
+        <div id="ring"><img src="images/ring.svg" alt=""></div>
+        <div id="water"><img src="images/water.svg" alt=""></div>
+        
+        <div class="demo">feet 1</div>
+        <div class="demo">feet 2</div>
+        <div class="demo">feet 3</div>
+        <div class="demo">feet 4</div>
+        <div class="demo">feet 5</div>
+        <div class="demo">feet 6</div>
+        <div class="demo">feet 7</div>
+        <div class="demo">feet 8</div>
+        <div class="demo lol">feet 9</div>
+        <div class="demo lol" style="color:rgb(255, 60, 0) ;"><h1>lol! <br> you're drowning</h1></div>
     </section>
 </body>
 </html>
