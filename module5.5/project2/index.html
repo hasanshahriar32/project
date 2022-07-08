@@ -17,11 +17,45 @@
             font-weight: bold;
             color: blueviolet;
         }
+        li:first-child{
+            background-color: aquamarine;
+        }
+        li:last-child{
+            background-color: azure;
+        }
+        li:nth-child(2n){
+            color: blue;
+        }
+        h2::before{
+            content: 'Hello ';
+        }
+        .pod::after{
+            content: ' lol';
+        }
     </style>
 </head>
 <body>
     <h1>This is normal</h1>
     <input type="my secret">
-    <a href="google.com"></a>
+    <a href="gosgle.com"></a>
+<ul>
+    <li>no. 1 child</li>
+    <li>no. 2 child</li>
+    <li>no. 3 child</li>
+    <li>no. 4 child</li>
+    <li>no. 5 child</li>
+    <li>no. 6 child</li>
+    <li>no. 7 child</li>
+    <li>no. 8 child</li>
+    <li>no. 9 child</li>
+    <li>no. 10 child</li>
+</ul>
+<h2>middle size header-1</h2>
+<h2 class="pod">middle size header-2</h2>
+<h2>middle size header-3</h2>
+<h2 class="pod">middle size header-4</h2>
+<h2 class="pod">middle size header-5</h2>
+<h2>middle size header-6</h2>
+<h2>middle size header-7</h2>
 </body>
 </html>
