@@ -10,7 +10,7 @@
             color: antiquewhite
         }
         h1{
-            color: aquamarine;
+            color: aquamarine !important;
         }
         h1{
             color: brown;
@@ -18,12 +18,19 @@
         h1{
 
         }
+        .specificity{
+            color: red;
+        }
+        #third{
+            color: blue;
+        }
     </style>
 </head>
 <body>
-    <h1>this is heading: 1</h1>
-    <h1>this is heading: 2</h1>
-    <h1>this is heading: 3</h1>
+    <h1 class="specificity">this is heading: 1</h1>
+    <h1 class="specificity">this is heading: 1</h1>
+    <h1 id="third" class="specificity">this is heading: 2</h1>
+    <h1 >this is heading: 3</h1>
     <h1>this is heading: 4</h1>
     <h1>this is heading: 5</h1>
 </body>
