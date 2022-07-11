@@ -7,12 +7,26 @@ font-size: larger;
 
 nav li:hover{
     background-color: lightgray;
-    padding: 10px;
+
 }
 nav li a{
     text-decoration: none;
 }
-ul nav   {
+nav > ul {
     display: flex;
 
 }
+.dropdown{
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+nav>ul>li:hover>ul                                                                                                                                                                                                                                    {
+    display: block;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+}
+
+
