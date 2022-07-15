@@ -2,6 +2,7 @@
     --main-color:purple;
     --border-color: grey;
     --dark-border: 2px solid green;
+    --aside-width: 200px;
 }
 h1{
     color:var(--main-color);
@@ -23,3 +24,13 @@ h2{
     .side-nav, .blogs{ 
         float: left;
     }
+.side-nav{
+    background-color: aqua;
+    height: 100px;
+    width: var(--aside-width);
+}    
+.blogs{
+    background-color: azure;
+    height: 100px;
+    width: calc(100% - var(--aside-width));
+}
