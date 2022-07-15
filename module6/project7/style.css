@@ -1,0 +1,17 @@
+:root{
+    --main-color:purple;
+    --border-color: grey;
+}
+h1{
+    color:var(--main-color);
+}
+p{
+    color:var(--main-color); 
+}
+footer{
+    color:var(--main-color);
+}
+h2{
+    color:var(--main-color);
+    border: 2px solid var(--border-color);
+}
