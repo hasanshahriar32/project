@@ -1,17 +1,25 @@
 :root{
     --main-color:purple;
     --border-color: grey;
+    --dark-border: 2px solid green;
 }
 h1{
     color:var(--main-color);
+    border: var(--dark-border);
 }
 p{
     color:var(--main-color); 
 }
 footer{
     color:var(--main-color);
+    clear: both;
 }
 h2{
     color:var(--main-color);
-    border: 2px solid var(--border-color);
+    border: 1px solid var(--border-color);
+    padding: 10px;
+
 }
+    .side-nav, .blogs{ 
+        float: left;
+    }
