@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        body{
+            background-color: #f2f2f2;
+            text-align: center
+        }
+        .container{
+            width: 500px;
+            height: 500px;
+            background-color: #f2f2f2;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 50px 30%;
+        }
+        .inner{
+            width: 500px;
+            height: 500px;
+            background-color: #552a2a;
+            padding: 10px;
+            border: 1px solid #ccc;
+            
+        }
+        .inner:hover{
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            transform: scale(.75,.5) rotate(45deg) translate(-500px, 700px);
+            transition: transform 3s ease-in-out;
+        }
+        .one{
+            background-image: url(icons8_girl_and_ice_cream_500px_1.png);
+        }
+        .two{
+            background-image: url(icons8_short_blond_hair_girl_crown_500px_1.png);
+        }
+        .three{
+            background-image: url(icons8_snowflake_lady_500px_1.png);
+        }
+    </style>
+</head>
+<body>
+    <h1>Try ur Luck!! <br> Select your future WIFE</h1>
+    <div class="box container one">
+        <div class="inner">box-1</div>
+    </div>
+    <div class="box container two">
+        <div class="inner">box-2</div>
+    </div>
+    <div class="box container three">
+        <div class="inner">box-3</div>
+    </div>
+    
+</body>
+</html>
