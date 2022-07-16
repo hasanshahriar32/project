@@ -25,6 +25,9 @@ body{
     resize: vertical;
     flex-wrap: wrap;
     position: fix;
+    
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 
@@ -42,6 +45,9 @@ body{
     text-align: center;
     margin-left: 5%;
     margin-right: 5%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 10vw;
 }
 .first_button{
     text-decoration: none;
