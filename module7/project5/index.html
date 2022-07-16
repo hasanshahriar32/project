@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Animation</title>
+    <style>
+        .field{
+            height: 55vw;
+            border: 1px dotted yellow;
+            background-color: darkgray;
+        }
+        .field:hover{
+            background-color: beige;
+        }
+        .field:hover .bat{
+            transform: rotate(-40deg);
+            transform-origin: top right;
+            transition: transform .8s ease-in;
+            
+           
+        }
+        .bat{
+            height: 40vw;
+        }
+        .field:hover .ball{
+            transform: translate(45vw,-5vw);
+            transition: transform 2.5s ease-out .84s;
+        }
+        .ball{
+            height: 5vw;
+            width: 5vw;
+            background-color: brown;
+            border-radius: 2.5vw;
+            position: relative ;
+            bottom: 5vw;
+            left: 36.8vw;
+        }
+        h1{
+            text-align: center;
+            font-size: 4vw;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bangladesh vs. Australia</h1>
+    <div class="field ">
+        <img class="bat" src="55-557196_baseball-bat-png.png" alt="" class="bat">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
