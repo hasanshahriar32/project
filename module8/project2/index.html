@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form using flex</title>
+    <script src="https://kit.fontawesome.com/5fd3ee4f53.js" crossorigin="anonymous"></script>
+    <style>
+        .login-form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 50%;
+        }
+        .login_container{
+            display: flex;
+            justify-content: center;
+            background-color: aquamarine;
+            margin-top: 100px;
+        }
+        .login-form input{
+            margin-bottom: 10px;
+            font-size: larger;
+            padding: 5px 10px;
+        }
+        input[type="submit"]{
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #right-menu{
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 10px;
+        }
+        #left-menu{
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 10px;
+        }
+        h1{
+            text-align: center;
+            font-size: 4vw;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Login form using flex</h1>
+        <nav>
+            <span id="left-menu">
+                
+            <a href="index.html"><div class="fa fa-home"></div> Home</a>
+            <a href="login.php"><span class="fa fa-address-book"></span> Address</a>
+            </span>
+            <span id="right-menu">
+            <a href="login.php"><span class="fa fa-user"></span> </a>
+            <a href="login.php"><span class="fa fa-photo"></span> </a>
+            </span>
+        </nav>
+    </header>
+    <section class="login_container">
+        <form action="mailto:mr.hasan3032@gmail.com" enctype="text/plain" class="login-form">
+            <h3>Please login</h3>
+            <input type="email" name=""  placeholder="Your email address" required id="">
+            <input type="password"  name="" placeholder="Password" required id="">
+            <input type="submit" value="Login">
+        </form>
+    </section>
+</body>
+</html>
