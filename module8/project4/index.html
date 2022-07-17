@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calender</title>
+    <style>
+        .calender {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            grid-gap: 10px;
+            justify-content: space-around;
+        }
+        .date{
+            background-color: azure;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            height: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .other-month{
+            background-color: lightgray;
+        }
+        .day{
+            background-color: antiquewhite
+            
+        }
+        h1{
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .today{
+            background-color: lightblue;
+            width: 20%;
+            height: 20%;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            top: 20%;
+            left: 30%;
+
+        }
+        .today:hover{
+            background-color: lightblue;
+            width: 20%;
+            height: 20%;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            top: 20%;
+            left: 30%;
+            transform: scale(1.1);
+        }
+        h2{
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .today-date{
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .today-date:hover{
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: red;
+        }
+
+    </style>
+</head>
+<header>
+    <h1>Simple Calender</h1>
+    <h2>
+        January 2020
+    </h2>
+</header>
+<body>
+    <div class="calender">
+        <div class="day date">Sun</div>
+        <div class="day date">Mon</div>
+        <div class="day date">Tue</div>
+        <div class="day date">Wed</div>
+        <div class="day date">Thu</div>
+        <div class="day date">Fri</div>
+        <div class="day date">Sat</div>
+        <div class="date other-month">26</div>
+        <div class="date other-month">27</div>
+        <div class="date other-month">28</div>
+        <div class="date other-month">29</div>
+        <div class="date other-month">30</div>
+        <div class="date other-month">31</div>
+        <div class="date">1</div>
+        <div class="date">2</div>
+        <div class="date">3</div>
+        <div class="date">4</div>
+        <div class="date">5</div>
+        <div class="date">6</div>
+        <div class="date">7</div>
+        <div class="date">8</div>
+        <div class="date">9</div>
+        <div class="date">10</div>
+        <div class="date">11</div>
+        <div class="date">12</div>
+        <div class="date">13</div>
+        <div class="date">14</div>
+        <div class="date">15</div>
+        <div class="date">16</div>
+        <div class="date">17</div>
+        <div class="date today today-date">18</div>
+        <div class="date">19</div>
+        <div class="date">20</div>
+        <div class="date">21</div>
+        <div class="date">22</div>
+        <div class="date">23</div>
+        <div class="date">24</div>
+        <div class="date">25</div>
+        <div class="date">26</div>
+        <div class="date">27</div>
+        <div class="date">28</div>
+        <div class="date">29</div>
+        <div class="date">30</div>
+        <div class="date other-month">1</div>
+        <div class="date other-month">2</div>
+        <div class="date other-month">3</div>
+        <div class="date other-month">4</div>
+        <div class="date other-month">5</div>
+    </div>
+</body>
+</html>
