@@ -1,0 +1,89 @@
+h1{
+    text-align: center;
+    color: darkcyan;
+}
+.stage{
+    width: 1350px;
+    height: 600px;
+    background: linear-gradient(aqua, rgb(221, 192, 95));
+
+}
+.wheel1{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    position:absolute;
+    animation: wheel1 3s ease-in-out .5s infinite alternate none;
+    animation-play-state: running;
+}
+.wheel2{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    position:absolute;
+    animation: wheel2 3s ease-in-out .5s infinite alternate none;
+    animation-play-state: running;
+}
+@keyframes wheel1{
+    0%{
+        top: 500px;
+        left: 150px;
+        background: radial-gradient(silver, black);
+    }
+    100%{
+        top: 500px;
+        left: 750px;
+        background: radial-gradient(silver, black);
+    }
+
+}
+@keyframes wheel2{
+    0%{
+        top: 500px;
+        left: 450px;
+        background: radial-gradient(silver, black);
+    }
+    100%{
+        top: 500px;
+        left: 1050px;
+        background: radial-gradient(silver, black);
+    }
+
+}
+
+.body1{
+    width: 300px;
+    height: 200px;
+    position:absolute;
+    animation: body1 3s ease-in-out .5s infinite alternate none;
+    animation-play-state: running;
+    background: linear-gradient(70deg, red, chocolate );
+}
+.body2{
+    width: 300px;
+    height: 200px;
+    position:absolute;
+    animation: body2 3s ease-in-out .5s infinite alternate none;
+    animation-play-state: running;
+    background: linear-gradient(-70deg, red, chocolate );
+}
+@keyframes body1{
+    0%{
+        top: 320px;
+        left: 300px;
+    }
+    100%{
+        top: 320px;
+        left: 900px;
+
+    }}
+@keyframes body2{
+    0%{
+        top: 320px;
+        left: 100px;
+    }
+    100%{
+        top: 320px;
+        left: 700px;
+
+    }}
