@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive food shop</title>
+    <style>
+        .food{
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .container{
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 10px;
+            justify-content: center;
+
+        }
+        .food img{
+            margin: 0px 25%;
+            max-width: 50%;
+            width: 60%;
+            display: flex;
+            justify-content: center;
+        }
+        @media screen and (max-width:499px) {
+            .food{
+                background-color: lightblue;
+                
+            }
+            .container{
+                grid-template-columns: repeat(1, 1fr);
+            }
+            
+        }
+        @media screen and (min-width:500px) and (max-width: 992px) {
+            .food{
+                background-color: plum;
+
+            }
+            .container{
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            
+        }
+        @media screen and (min-width:993px) {
+            .food{
+                background-color: aqua;
+
+            }
+            .container{
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            
+            
+        }
+        h1,h2{
+            align-items: center;
+            text-align: center;
+        }
+        body{
+            background-color: lightslategray;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+            <H1>🤖NUBE CODERS'🤖</H1>
+<h2>Responsive Food Shop</h2>
+    </h1>
+            <div class="container">
+                <div class="food">
+                    <img src="images/icon (1).png" alt="">
+                    <h2>item-1</h2>
+                    <h4>price-105</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, cum? Illum iure ducimus ut natus? Asperiores minus inventore beatae laboriosam!<br><br><button>add to cart</button></p>
+                </div>
+                <div class="food">
+                    <img src="images/icon (2).png" alt="">
+                    <h2>item-2</h2>
+                    <h4>price-205</h4>
+                    <p>Esse, ut voluptates perferendis nihil mollitia repellat omnis excepturi qui ducimus? Placeat maiores, repellendus perferendis sequi quia esse? Atque, quia!<br><br><button>add to cart</button></p>
+                </div>
+                <div class="food">
+                    <img src="images/icon (3).png" alt="">
+                    <h2>item-3</h2>
+                    <h4>price-305</h4>
+                    <p>Consequuntur delectus provident recusandae praesentium iste exercitationem? Deleniti quaerat nisi quidem tenetur reprehenderit commodi. Enim error placeat labore ipsa minus.<br><br><button>add to cart</button></p>
+                </div>
+                <div class="food">
+                    <img src="images/icon (4).png" alt="">
+                    <h2>item-4</h2>
+                    <h4>price-405</h4>
+                    <p>Facere enim numquam dolor omnis. In inventore iure molestias corrupti quisquam perferendis nostrum vel, tempore quos sunt doloremque necessitatibus eos.<br><br><button>add to cart</button></p>
+                </div>
+                <div class="food">
+                    <img src="images/icon (5).png" alt="">
+                    <h2>item-5</h2>
+                    <h4>price-505</h4>
+                    <p>Corporis odit est maiores autem aspernatur odio dolor ipsam placeat quidem deserunt exercitationem neque, cum laborum cupiditate aperiam minima mollitia.<br><br><button>add to cart</button></p>
+                </div>
+                <div class="food">
+                    <img src="images/icon (6).png" alt="">
+                    <h2>item-6</h2>
+                    <h4>price-605</h4>
+                    <p>Earum esse omnis vitae, doloremque sed odio harum vel! Nisi deleniti eveniet quo neque placeat ab quod voluptatum cum facilis.<br><br><button>add to cart</button></p>
+                </div>
+                <div class="food">
+                    <img src="images/icon (7).png" alt="">
+                    <h2>item-7</h2>
+                    <h4>price-705</h4>
+                    <p>Possimus facilis deserunt soluta officia, amet enim ea, sit veniam delectus voluptatum inventore ex sint atque praesentium non hic quod.<br><br><button>add to cart</button></p>
+                </div>
+                <div class="food">
+                    <img src="images/icon (8).png" alt="">
+                    <h2>item-8</h2>
+                    <h4>price-805</h4>
+                    <p>Illo dolore molestias quibusdam eligendi adipisci sint, vero voluptates inventore in saepe, deleniti vel voluptas quo distinctio commodi ullam iure.<br><br><button>add to cart</button></p>
+                </div>
+                <div class="food">
+                    <img src="images/icon (9).png" alt="">
+                    <h2>item-9</h2>
+                    <h4>price-905</h4>
+                    <p>Nulla exercitationem dolorum, nam laborum neque illum, molestiae dignissimos quod assumenda quo ut itaque dolore magni quisquam quidem, praesentium quaerat.<br><br><button>add to cart</button></p>
+                </div>
+            </div>
+</body>
+</html>
