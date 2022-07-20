@@ -128,6 +128,28 @@ header{
     width: 100%;
 }
 
+
+  
+
+
+/* main */
+
+main{
+
+}
+.left_main{
+  background-color: #18181a;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 1vw;
+    margin: 10px;
+
+}
+.left_main a{
+    width: max-content;
+}   
 @media screen and (max-width: 499px) {
     header{
         display: block;
@@ -136,6 +158,7 @@ header{
         width: 100%;
         text-align: center;
     }
+    
     .right_header img{
         width: 70%;
     }
@@ -152,28 +175,30 @@ header{
     .button-57{
         width: 80%;
     }
+    .left_main{
+        width: 80%;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 }
 @media screen and (min-width: 500px) and (max-width: 799px) {
     
     .button-57{
         width: 25%;
         display: flex;
+        justify-content: center;
         margin: 10px;
+    }
+    .left_header a {
+        width: 100%;
     }
     .left_main{
         display: flex;
-        margin: 3%;
+        width: 95%;
+        justify-content: center;
     }
 }
-    
-
-
-/* main */
-
-main{
-
-}
-.left_main{
-    
-}
-    
+  
