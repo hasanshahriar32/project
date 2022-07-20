@@ -1,3 +1,5 @@
+/* global section  */
+
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500&display=swap');
 
 body{
@@ -5,12 +7,15 @@ body{
     font-size: 1.5rem;
     background-color: #f5f5f5;
 }
+
+/* header section  */
 header{
     background-color: hsl(241, 52%, 25%);
     padding: 20px;
     text-align: center;
     display: flex;
     border-radius: 5vw;
+    margin: 1vw 2vw ;
 }
 .left_header{
     width: 55%;
@@ -145,7 +150,7 @@ main{
 }
 .left_main{
   background-color: #18181a;
-    width: fit-content;
+    width: 200px;
     align-items: center;
     justify-content: center;
     padding: 10px;
@@ -258,6 +263,9 @@ footer p{
 footer h1{
     margin: 15px;
 }
+
+
+/* for media query section  */
 @media screen and (max-width: 499px) {
     header{
         display: block;
