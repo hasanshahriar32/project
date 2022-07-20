@@ -175,7 +175,7 @@ main{
     border-radius: .5em;
 }
 .match button{
-    width: 80%;
+    width: 93%;
     height: fit-content;
     background-color: hsl(241, 44%, 48%)e;
     border: 20px dashed rgb(97, 31, 141);
@@ -228,6 +228,7 @@ footer nav a{
     text-decoration: none;
     color: aliceblue;
     margin: 0px 25px;
+    font-size: 2vw;
 }
 footer > a{
     margin: 0px 4vw;
@@ -295,6 +296,10 @@ footer h1{
         margin: 15px;
 
     }
+    .extra{
+        display: none;
+    }
+    
     
 }
 @media screen and (min-width: 500px) and (max-width: 799px) {
@@ -322,6 +327,20 @@ footer h1{
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
+    }
+    .extra{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    .match9{
+        display: none;
+    }
+    
+}
+@media screen and (min-width: 800px)  {
+    .extra{
+        display: none;
     }
     
 }
