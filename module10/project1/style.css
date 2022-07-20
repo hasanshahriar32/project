@@ -10,7 +10,6 @@ header{
     padding: 20px;
     text-align: center;
     display: flex;
-    
     border-radius: 5vw;
 }
 .left_header{
@@ -18,6 +17,8 @@ header{
     text-align: left;
     color: aliceblue;
     padding: 1.5vw 3vw;
+    position: sticky;
+    top:5vh;
     
 }
 .head_title{
@@ -140,6 +141,7 @@ main{
     height: fit-content;
     padding: auto;
     margin: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .left_main{
   background-color: #18181a;
@@ -161,6 +163,7 @@ main{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+
 .match{
     width: 70%;
     height: fit-content;
@@ -209,7 +212,18 @@ main{
     display: flex;
     justify-content: space-between;
 }
-
+.match p{
+    font-size: 15px;
+    text-align: justify;
+    color: rgb(44, 39, 39);
+    
+    padding: 5px 15%;
+}
+.schedule_main{
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
 
 /* footer */
 
