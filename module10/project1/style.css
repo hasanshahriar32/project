@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500&display=swap');
+
+body{
+    font-family: 'Cormorant SC', serif;
+    font-size: 1.5rem;
+    background-color: #f5f5f5;
+}
+header{
+    background-color: hsl(241, 52%, 25%);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    
+    border-radius: 5vw;
+}
+.left_header{
+    width: 55%;
+    text-align: left;
+    color: aliceblue;
+    padding: 1.5vw 3vw;
+    
+}
+.head_title{
+    font-size: 6vw;
+    color: aliceblue;
+    font-weight: bold;
+}
+.head_sub{
+    font-size: 2.5vw;
+    color: aliceblue;
+    font-weight: lighter;
+    text-align: justify;
+}
+/* .head_button{
+    width: 40%;
+    text-align: right;
+    color: aliceblue;
+    font-size: 3vw;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    background-color: brown;
+    border-radius: 5vw;
+    padding: 2vw;
+    margin: 10px;
+
+
+} */
+
+
+.button-57 {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #18181a;
+  color: #18181a;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 18px 18px 17px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #fff;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 8vw;
+  display: flex;
+    justify-content: space-around;
+    background-color: brown;
+    border-radius: 3vw;
+    text-align: center;
+}
+
+.button-57 span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.button-57 span:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.button-57:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+.button-57:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.button-57:hover span:last-child {
+  transform: translateX(-50%) translateY(-100%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+
+
+.right_header{
+    width: 55%;
+    text-align: right;
+    color: aliceblue;
+}
+.right_header img {
+    width: 100%;
+}
+
+@media screen and (max-width: 499px) {
+    header{
+        display: block;
+    }
+    .left_header{
+        width: 100%;
+        text-align: center;
+    }
+    .right_header img{
+        width: 70%;
+    }
+    .right_header{
+        width: 100%;
+        text-align: center;
+    }
+    .head_title{
+        font-size: 8vw;
+    }
+    .head_sub{
+        font-size: 2vw;
+    }
+    .button-57{
+        width: 80%;
+    }
+}
+
+/* main */
+
+main{
+
+}
+.left_main{
+    
+}
+    

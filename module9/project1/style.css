@@ -19,11 +19,12 @@ main{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    row-gap: 300px;
 }
 .players{
     display: grid;
     grid-template-columns:repeat(3, 1fr);
-    grid-gap: 10px;
+    grid-row-gap: 30px;
 
 }
 .player h3{
