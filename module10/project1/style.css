@@ -153,6 +153,20 @@ header{
         width: 80%;
     }
 }
+@media screen and (min-width: 500px) and (max-width: 799px) {
+    
+    .button-57{
+        width: 25%;
+        display: flex;
+        margin: 10px;
+    }
+    .left_main{
+        display: flex;
+        margin: 3%;
+    }
+}
+    
+
 
 /* main */
 
