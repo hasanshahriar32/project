@@ -10,9 +10,160 @@
 </head>
 <body>
     <script src="bootstrap/bootstrap.min.js"></script>
-    <header>
-        
+    <header class="container">
+        <!-- navbar  -->
+        <nav class="navbar navbar-expand bg-light">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+                <img src="images/logo.png" class="img-fluid" alt="" >
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Shoes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Backpack</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Sucscribe</a>
+                  </li>
+                  
+                  
+                </ul>
+                
+              </div>
+            </div>
+          </nav>
+
+        <!-- slider start  -->
+        <section>
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item bg-gradient bg-warning rounded-3 active p-5 my-5 ">
+                    <div class="row">
+                        <div class="col-7 d-flex align-items-center ">
+                            <div>
+                                <h1>Cool Dude headphone</h1>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid hic tenetur perferendis inventore eligendi, non optio sit labore quaerat quasi!</p>
+                            <h2 class="text-primary">$983</h2>
+                            <a href="#" class="btn btn-primary">Shop Now</a>
+                            </div>
+                        </div>
+                        <div class="col-5 d-flex align-items-center">
+                            <img src="images/banner-images/headphone.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item bg-gradient rounded-3  p-5 my-5 " style="background-color: #FEEAE9;">
+                    <div class="row">
+                        <div class="col-7 d-flex align-items-center ">
+                            <div>
+                                <h1>Mega LCD TV</h1>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid hic tenetur perferendis inventore eligendi, non optio sit labore quaerat quasi!</p>
+                            <h2 class="text-primary">$1283</h2>
+                            <a href="#" class="btn btn-primary">Shop Now</a>
+                            </div>
+                        </div>
+                        <div class="col-5 d-flex align-items-center">
+                            <img src="images/banner-images/tv.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item bg-gradient bg-dark rounded-3  p-5 my-5 ">
+                    <div class="row">
+                        <div class="col-7 d-flex align-items-center text-light ">
+                            <div >
+                                <h1>X-Box for your Living Room</h1>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid hic tenetur perferendis inventore eligendi, non optio sit labore quaerat quasi!</p>
+                            <h2 class="text-primary">$483</h2>
+                            <a href="#" class="btn btn-primary">Shop Now</a>
+                            </div>
+                        </div>
+                        <div class="col-5 d-flex align-items-center">
+                            <img src="images/banner-images/xbox.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                  </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </section>
+
+    
     </header>
+
+    <main>
+ <!-- gutter card  -->
+ <section>
+    <div class="container text-center my-5">
+        <div class="row  justify-content-evenly">
+          <div class="col-3 px-2 py-4  d-flex align-items-center bg-success  rounded-3">
+            <h1 class="mx-3 text-light ">Watch</h1>
+            <img src="images/categories/watch.png" class=" img-fluid"  alt="">
+          </div>
+          <div class="col-3 px-2 py-4  d-flex align-items-center bg-primary  rounded-3">
+            <h1 class="mx-3 text-light ">Bag</h1>
+            <img src="images/categories/bag.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-3 px-2 py-4  d-flex align-items-center bg-info  rounded-3">
+            <h1 class="mx-3 text-light ">Shoes</h1>
+            <img src="images/categories/shoes.png" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+ </section>
+
+        <!-- section of grid  -->
+        <section class="container my-5">
+            <div class="row">
+                <div class="col-md-4 shadow">
+                    <div class="card p-3">
+                        <img src="images/banner-images/headphone.png" class="card-img-top p-5" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Cool Dude headphone</h5>
+                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid hic tenetur perferendis inventore eligendi, non optio sit labore quaerat quasi!</p>
+                            <a href="#" class="btn btn-primary">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 shadow">
+                    <div class="card p-3">
+                        <img src="images/banner-images/tv.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Mega LCD TV</h5>
+                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid hic tenetur perferendis inventore eligendi, non optio sit labore quaerat quasi!</p>
+                            <a href="#" class="btn btn-primary">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 shadow">
+                    <div class="card p-3">
+                        <img src="images/banner-images/xbox.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">X-Box for your Living Room</h5>
+                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid hic tenetur perferendis inventore eligendi, non optio sit labore quaerat quasi!</p>
+                            <a href="#" class="btn btn-primary">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </main>
     
 </body>
 </html>
