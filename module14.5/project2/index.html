@@ -28,24 +28,24 @@
                 <div class="offcanvas-body">
                   <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Buzzer</a>
+                      <a class="nav-link active" aria-current="page" href="#buzzer">Buzzer</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">LED Lamp</a>
+                      <a class="nav-link" href="#led">LED Lamp</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Water Pump</a>
+                      <a class="nav-link" href="#pump">Water Pump</a>
                     </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Sensors
                       </a>
                       <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Light Sensor</a></li>
-                        <li><a class="dropdown-item" href="#">Temperature Sensor</a></li>
-                        <li><a class="dropdown-item" href="#">Fire Sensor</a></li>
-                        <li><a class="dropdown-item" href="#">Obstacle Sensor</a></li>
-                        <li><a class="dropdown-item" href="#">Motion Sensor</a></li>
+                        <li><a class="dropdown-item" href="#light">Light Sensor</a></li>
+                        <li><a class="dropdown-item" href="#temp">Temperature Sensor</a></li>
+                        <li><a class="dropdown-item" href="#fire">Fire Sensor</a></li>
+                        <li><a class="dropdown-item" href="#obstacles">Obstacle Sensor</a></li>
+                        <li><a class="dropdown-item" href="#motion">Motion Sensor</a></li>
                       </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -53,8 +53,8 @@
                         Motors
                       </a>
                       <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">DC Motor</a></li>
-                        <li><a class="dropdown-item" href="#">Geared Motor</a></li>
+                        <li><a class="dropdown-item" href="#dc">DC Motor</a></li>
+                        <li><a class="dropdown-item" href="#geared">Geared Motor</a></li>
                         
                       </ul>
                     </li>
@@ -85,7 +85,7 @@
                                 <li>These sensors can measure the distance between your car and nearby obstacles directly around the front and rear bumper.</li>
                             </ul>
                             <h2 class="text-primary">User Friendly</h2>
-                            <a href="#" class="btn btn-primary">Know More</a>
+                            <a href="#obstacles" class="btn btn-primary">Know More</a>
                             </div>
                         </div>
                         <div class="col-5 d-flex align-items-center">
@@ -103,7 +103,7 @@
                                 
                             </ul>
                             <h2 class="text-primary">User Friendly</h2>
-                            <a href="#" class="btn btn-primary">Know More</a>
+                            <a href="#pump" class="btn btn-primary">Know More</a>
                             </div>
                         </div>
                         <div class="col-5 d-flex align-items-center">
@@ -122,7 +122,7 @@
                                 <li>These are usually powered by DC voltage.</li>
                             </ul>
                             <h2 class="text-primary">User Friendly</h2>
-                            <a href="#" class="btn btn-primary">Know More</a>
+                            <a href="#buzzer" class="btn btn-primary">Know More</a>
                             </div>
                         </div>
                         <div class="col-5 d-flex align-items-center">
@@ -144,11 +144,14 @@
               </div>
         </section>
     </header>
+    <br>
+    <hr>
     <main>
 <!-- card  -->
 <section>
+    <h1 class="text-center text-danger">GENERAL INSTRUMENTS</h1>
     <!-- buzzer  -->
-    <div class="card mb-3" style="">
+    <div class="card mb-3" id="buzzer" style="">
         <div class="row g-0">
           <div class="col-5">
             <img src="images/1.png" class="m-3 img-fluid rounded-start" alt="...">
@@ -169,7 +172,7 @@
 
 
     <!-- led  -->
-    <div class="card mb-3" style="">
+    <div class="card mb-3" id="led" style="">
         <div class="row flex-row-reverse g-0">
           <div class="col-5">
             <img src="images/4.png" class="m-3 img-fluid rounded-start" alt="...">
@@ -192,7 +195,7 @@
 
 
       <!-- water pump  -->
-    <div class="card mb-3" style="">
+    <div class="card mb-3" id="pump" style="">
         <div class="row  g-0">
           <div class="col-5">
             <img src="images/7.png" class="m-3 img-fluid rounded-start" alt="...">
@@ -209,9 +212,168 @@
           
         </div>
       </div>
+
+<br>
+
+<h1 class="text-center text-danger">SENSOR SECTION</h1>
+      <!-- light sensor  -->
+    <div class="card mb-3" id="light" style="">
+        <div class="row flex-row-reverse  g-0">
+          <div class="col-5">
+            <img src="images/10.png" class="m-3 img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-5 d-flex align-items-center m-5 ">
+            <div>
+                <h1>Light Sensor</h1>
+            <ul>
+                <li>Display the presence of light.</li>
+                <li>Measure illuminance.</li>
+                <li>Respond to changes in the amount of light received.</li>
+                <li>Convert light to</li>
+                
+            </ul>
+            </div>
+        </div>
+          
+        </div>
+      </div>
+
+
+      <!-- temp sensor  -->
+    <div class="card mb-3" id="temp" style="">
+        <div class="row  g-0">
+          <div class="col-5">
+            <img src="images/8.png" class="m-3 img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-5 d-flex align-items-center m-5 ">
+            <div>
+                <h1>Temperature Sensor</h1>
+            <ul>
+                <li>Provides temperature measurement in electrical signal.</li>
+            </ul>
+            </div>
+        </div>
+          
+        </div>
+      </div>
+
+
+      <!-- fire sensor  -->
+    <div class="card mb-3" id="fire" style="">
+        <div class="row flex-row-reverse g-0">
+          <div class="col-5">
+            <img src="images/5.png" class="m-3 img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-5 d-flex align-items-center m-5 ">
+            <div>
+                <h1>Fire Sensor</h1>
+            <ul>
+                <li>Use MWR infrared (IR) cameras.</li>
+                <li>Detect heat.</li>
+                <li>Detect hot-spots.</li>
+                <li>These cameras can be used in complete darkness and poerate both inside and outside. </li>
+            </ul>
+            </div>
+        </div>
+          
+        </div>
+      </div>
+
+      <!-- obstacles sensor  -->
+    <div class="card mb-3" id="obstacles" style="">
+        <div class="row  g-0">
+          <div class="col-5">
+            <img src="images/9.png" class="m-3 img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-5 d-flex align-items-center m-5 ">
+            <div>
+                <h1>Obstacle Sensor</h1>
+            <ul>
+                <li>Detect Obstacle</li>
+                <li>Consists of Infrared Transmitter, an infrared receiver and a potentiometer.</li>
+                <li>These sensors can measure the distance between your car and nearby obstacles directly around the front and rear bumper.</li>
+            </ul>
+            </div>
+        </div>
+          
+        </div>
+      </div>
+
+      <!-- motion sensor -->
+    <div class="card mb-3" id="motion" style="">
+        <div class="row flex-row-reverse g-0">
+          <div class="col-5">
+            <img src="images/6.png" class="m-3 img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-5 d-flex align-items-center m-5 ">
+            <div>
+                <h1>Motion Sensor</h1>
+            <ul>
+               <li>Designed to detect and measure movement.</li>
+               <li>Motion sensors are used primarily in home and business security systems.</li>
+            </ul>
+            </div>
+        </div>
+          
+        </div>
+      </div>
+
+      <br>
+
+<h1 class="text-center text-danger">MOTOR SECTION</h1>
+
+      <!-- dc motor  -->
+    <div class="card mb-3" id="dc" style="">
+        <div class="row  g-0">
+          <div class="col-5">
+            <img src="images/2.png" class="m-3 img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-5 d-flex align-items-center m-5 ">
+            <div>
+                <h1>DC Motor</h1>
+            <ul>
+                <li>Converts direct current(DC) into mechanical energy.</li>
+                <li>William Sturgeon invented the firts DC motor in 1886.</li>
+            </ul>
+            </div>
+        </div>
+          
+        </div>
+      </div>
+
+
+      <!-- geared motor  -->
+    <div class="card mb-3" id="geared" style="">
+        <div class="row flex-row-reverse g-0">
+          <div class="col-5">
+            <img src="images/3.png" class="m-3 img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-5 d-flex align-items-center m-5 ">
+            <div>
+                <h1>Geared Motor</h1>
+            <ul>
+                <li>A geared motor is a component whose mechanism adjusts the speed of the motor, leading them to operate at a certain speed.</li>
+            </ul>
+            </div>
+        </div>
+          
+        </div>
+      </div>
 </section>
 
+
     </main>
+
+    <footer>
+        <div class="container-fluid  text-center bg-secondary">
+            <div class="row">
+                <div class="col-md-12">
+                  <br>
+                    <p>Copyright &copy; 2022 by Shahriar Hasan.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
 </body>
