@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="https://kit.fontawesome.com/5fd3ee4f53.js" crossorigin="anonymous"></script>
+<link rel="shortcut icon" href="icons/icons8_buzzer_480px_2.png" type="image/x-icon">
+<title>Robotment: Assignment 1</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar bg-light fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand ms-5"  href="#">Robotment Instument Intro</a>
+              <button class="navbar-toggler me-5 bg-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="text-lg-center fa fa-toggle-down"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Instrument List</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Buzzer</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">LED Lamp</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Water Pump</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sensors
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Light Sensor</a></li>
+                        <li><a class="dropdown-item" href="#">Temperature Sensor</a></li>
+                        <li><a class="dropdown-item" href="#">Fire Sensor</a></li>
+                        <li><a class="dropdown-item" href="#">Obstacle Sensor</a></li>
+                        <li><a class="dropdown-item" href="#">Motion Sensor</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Motors
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">DC Motor</a></li>
+                        <li><a class="dropdown-item" href="#">Geared Motor</a></li>
+                        
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          <!-- slide  -->
+
+          <!-- slider start  -->
+        <section class="m-5 ">
+            <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel">
+                <div class="carousel-inner d-flex flex-sm-fill ">
+                  <div class="carousel-item bg-gradient bg-warning rounded-3 active p-5 my-5 ">
+                    <div class="row d-flex flex-sm-row flex-column ">
+                        <div class="col-7 d-flex align-items-center justify-content-center ">
+                            <div>
+                                <h1>Obstacle Sensor</h1>
+                            <ul>
+                                <li>Detect Obstacle</li>
+                                <li>Consists of Infrared Transmitter, an infrared receiver and a potentiometer.</li>
+                                <li>These sensors can measure the distance between your car and nearby obstacles directly around the front and rear bumper.</li>
+                            </ul>
+                            <h2 class="text-primary">User Friendly</h2>
+                            <a href="#" class="btn btn-primary">Know More</a>
+                            </div>
+                        </div>
+                        <div class="col-5 d-flex align-items-center">
+                            <img src="images/9.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item bg-gradient bg-light rounded-3  p-5 my-5 ">
+                    <div class="row d-flex flex-sm-row flex-column ">
+                        <div class="col-7 d-flex align-items-center ">
+                            <div>
+                                <h1>Water Pump</h1>
+                            <ul>
+                                <li>It use motor to convent rotational energy or kinetic energy and turn it into energy for moving fluid or for fluid flow (Hydrodynamic Energy).</li>
+                                
+                            </ul>
+                            <h2 class="text-primary">User Friendly</h2>
+                            <a href="#" class="btn btn-primary">Know More</a>
+                            </div>
+                        </div>
+                        <div class="col-5 d-flex align-items-center">
+                            <img src="images/7.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item bg-gradient bg-info rounded-3  p-5 my-5 ">
+                    <div class="row d-flex flex-sm-row flex-column ">
+                        <div class="col-7 d-flex align-items-center ">
+                            <div>
+                                <h1>Buzzer</h1>
+                            <ul>
+                                <li>A Buzzer or beeper is a audio signaling device.</li>
+                                <li>Convert audio signals to sound signals.</li>
+                                <li>These are usually powered by DC voltage.</li>
+                            </ul>
+                            <h2 class="text-primary">User Friendly</h2>
+                            <a href="#" class="btn btn-primary">Know More</a>
+                            </div>
+                        </div>
+                        <div class="col-5 d-flex align-items-center">
+                            <img src="images/1.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </section>
+    </header>
+    <main>
+<!-- card  -->
+<section>
+    <!-- buzzer  -->
+    <div class="card mb-3" style="">
+        <div class="row g-0">
+          <div class="col-5">
+            <img src="images/1.png" class="m-3 img-fluid rounded-start" alt="...">
+          </div>
+            <div class="col-5 d-flex align-items-center m-5 ">
+                <div>
+                    <h1>Buzzer</h1>
+                <ul>
+                    <li>A Buzzer or beeper is a audio signaling device.</li>
+                    <li>Convert audio signals to sound signals.</li>
+                    <li>These are usually powered by DC voltage.</li>
+                </ul>
+                </div>
+            </div>
+          
+        </div>
+      </div>
+
+
+    <!-- led  -->
+    <div class="card mb-3" style="">
+        <div class="row flex-row-reverse g-0">
+          <div class="col-5">
+            <img src="images/4.png" class="m-3 img-fluid rounded-start" alt="...">
+          </div>
+            <div class="col-5 d-flex align-items-center m-5 ">
+                <div>
+                    <h1>Led Lamp</h1>
+                <ul>
+                    <li>Led Means <span class="text-danger">Light-emitting Diodes</span>.</li>
+                    <li>It is a solid state lighting (SSL) device.</li>
+                    <li>Led technology that are used- DIP, SMD and COB.</li>
+                    <li>It prodeces light using light-emitting diodes (LEDs).</li>
+                </ul>
+                </div>
+            </div>
+          
+        </div>
+      </div>
+
+
+
+      <!-- water pump  -->
+    <div class="card mb-3" style="">
+        <div class="row  g-0">
+          <div class="col-5">
+            <img src="images/7.png" class="m-3 img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-5 d-flex align-items-center m-5 ">
+            <div>
+                <h1>Water Pump</h1>
+            <ul>
+                <li>It use motor to convent rotational energy or kinetic energy and turn it into energy for moving fluid or for fluid flow (Hydrodynamic Energy).</li>
+                
+            </ul>
+            </div>
+        </div>
+          
+        </div>
+      </div>
+</section>
+
+    </main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
