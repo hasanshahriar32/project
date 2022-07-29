@@ -4,17 +4,379 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="https://kit.fontawesome.com/5fd3ee4f53.js" crossorigin="anonymous"></script>
 <meta name="Description" content="Enter your description here"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<title>Title</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="style.css">
+
+<title>Paradox Edu Tutorial Center</title>
 </head>
 <body>
+<header>
 
-    
+    <!-- navigation section here -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid mx-5">
+            <div class="">
+                <a class="navbar-brand d-flex" href="#">
+                  <img src="images/favicon.ico" alt="" width="fluid" height="40" class="d-inline-block align-text-top">
+                  <h2 class="text-secondary">  Paradox Edu</h2>
+                </a>
+              </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa fa-solid fa-bars"><i class=""></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav d-flex justify-content-evenly me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" target="_blank" href="https://t.me/mrxx32">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#courses">Courses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#faq">FAQ</a>
+              </li>
+              
+            </ul>
+           <a class="btn btn-outline-success" href="#register"> Register</a>
+            
+          </div>
+        </div>
+      </nav>
+      <br>
+      <br>
+      
+
+    <!-- slider section here  -->
+    <section class="">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide mx-5 my-7 m" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img src="images/cover/cover-1_edited.jpg" class="d-block img-fluid" alt="...">
+                <div class="carousel-caption text-light d-flex d-md-block">
+                  <h1 class="text-bolder">Get Started Digitally.</h2>
+                 
+                  <div class="">
+                    <p class="text-ellipsis h-3 d-none d-md-inline-flex inline-block text-xl" >Paradox EDU is offering online classes. You can attend them on the go.</p>
+                  <a href="" class="btn btn-info">Get Started</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="images/cover/cover-2_edited.jpg" class="d-block img-fluid" alt="...">
+                <div class="carousel-caption text-light d-flex d-md-block">
+                  <h1 class="text-bolder">Learn Real Life Projects</h5>
+                  
+                  <div>
+                    <p class="text-ellipsis h-3 d-none d-md-inline-flex inline-block text-xl" >We are offering real life projects. Our experienced tutors are specially trained.</p>
+                  <a href="" class="btn btn-warning">Get Started</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/cover/cover-3_edited.jpg" class="d-block img-fluid" alt="...">
+                <div class="carousel-caption text-light d-flex d-md-block">
+                  <h1 class="text-bolder">Help When You Stuck</h5>
+                  <div>
+                    <p class="text-ellipsis h-3 d-none d-md-inline-flex inline-block text-xl" >We will be available for 24/7. So, When you stuck, you can reach us easily.</p>
+                  <a href="" class="btn btn-primary">Get Started</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+    <br><br>
+</header>
+<main>
+  <!-- Discover Our Popular Courses -->
+  <section class="m-4 g-3" id="courses">
+    <h1 class="text-primary text-center ">Discover Our Popular Courses</h1>
+    <p class="text-secondary text-center mx-5">Check out our popular courses. Watch out about what other people are thinking about these courses.</p>
+    <br>
+    <div class="d-grid">
+      <div class="row m-9 g-4 row-cols-1 row-cols-md-1 row-cols-lg-2">
+        <div class="col col-md-11 m-3 col-lg-5 border border-light rounded-md shadow-md">
+          <div class=" d-md-flex align-items-center row">
+            <img src="images/course/course-1.png" class="col-md-4 col-12 img-fluid" alt="...">
+            <div class="card-body m-2 col-md-6 col-12">
+              <h5 class="card-title">Fundamental Of UI/UX Design</h5>
+              <p class="card-text text-secondary">Our professional designers will teach you with great care.</p>
+              <a href="#" class="btn btn-outline-success">Discover</a>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col col-md-11 m-3 col-lg-5 border border-light rounded-md shadow-md">
+          <div class=" d-md-flex align-items-center row">
+            <img src="images/course/course-2.png" class="col-md-4 col-12 " alt="...">
+            <div class="card-body m-2 col-md-6 col-12">
+              <h5 class="card-title">Javascript Basic to advanced</h5>
+              <p class="card-text text-secondary">Our professional designers will teach you with great care.</p>
+              <a href="#" class="btn btn-outline-success">Discover</a>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col col-md-11 m-3 col-lg-5 border border-light rounded-md shadow-md">
+          <div class=" d-md-flex align-items-center row">
+            <img src="images/course/course-3.png" class="col-md-4 col-12 " alt="...">
+            <div class="card-body m-2 col-md-6 col-12">
+              <h5 class="card-title">Fullstack Web Development</h5>
+              <p class="card-text text-secondary">Our professional designers will teach you with great care.</p>
+              <a href="#" class="btn btn-outline-success">Discover</a>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col col-md-11 m-3 col-lg-5 border border-light rounded-md shadow-md">
+          <div class=" d-md-flex align-items-center row">
+            <img src="images/course/course-4.png" class="col-md-4 col-12 " alt="...">
+            <div class="card-body m-2 col-md-6 col-12">
+              <h5 class="card-title">Digital Marketing</h5>
+              <p class="card-text text-secondary">Our professional designers will teach you with great care.</p>
+              <a href="#" class="btn btn-outline-success">Discover</a>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col col-md-11 m-3 col-lg-5 border border-light rounded-md shadow-md">
+          <div class=" d-md-flex align-items-center row">
+            <img src="images/course/course-5.png" class="col-md-4 col-12 " alt="...">
+            <div class="card-body m-2 col-md-6 col-12">
+              <h5 class="card-title">Photography Basic Rules</h5>
+              <p class="card-text text-secondary">Our professional designers will teach you with great care.</p>
+              <a href="#" class="btn btn-outline-success">Discover</a>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col col-md-11 m-3 col-lg-5 border border-light rounded-md shadow-md">
+          <div class=" d-md-flex align-items-center row">
+            <img src="images/course/course-6.png" class="col-md-4 col-12 " alt="...">
+            <div class="card-body m-2 col-md-6 col-12">
+              <h5 class="card-title">Motion Graphics</h5>
+              <p class="card-text text-secondary">Our professional designers will teach you with great care.</p>
+              <a href="#" class="btn btn-outline-success">Discover</a>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+    <br>
+    <div class="d-flex justify-content-center">
+      <button class="text-center btn btn-primary" >See More</button>
+    </div>
+  </section>
+  <br><br>
+
+
+<!-- ready to join?  -->
+<section class="mx-5 h-5" id="register">
+  <div class="card mx-6 h-20" style="">
+    <div class="card-body d-flex align-items-center flex-column flex-lg-row justify-content-evenly w-80 bg-info bg-gradient text-light">
+      <div>
+        <br>
+        <h1 class="card-title">Ready to join?</h1>
+        
+        <p class="card-text">We are happy to see you there. If you have any question, then let us know.</p>
+        <br>
+      </div>
+      <div>
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Register Now
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-black" id="exampleModalLabel">Register Now</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h3 class="text-black">Knock us at our telegram channel to khow further process.</h3>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+
+
+
+</section>
+<br><br>
+
+
+<!-- frequently asked q.  -->
+
+<section class="mx-5" id="faq">
+  <h1 class="text-bolder text-center">Frequently Asked Questions</h1>
+  <p class="text-secondary text-center">
+    Learn some knowledge from our forum. See what is happening at web development. we are including some of most asked questions.
+  </p>
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Differences between Flexbox & Grid
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Flexbox vs. Grid:</strong> Difference Between Grid and Flexbox:
+
+          1. Dimensionality and Flexibility:
+          
+          Flexbox offers greater control over alignment and space distribution between items. Being one-dimensional, Flexbox only deals with either columns or rows.
+          Grid has two-dimension layout capabilities which allow flexible widths as a unit of length. This compensates for the limitations in Flex.
+          2. Alignment:
+          
+          Flex Direction allows developers to align elements vertically or horizontally, which is used when developers create and reverse rows or columns.
+          CSS Grid deploys fractional measure units for grid fluidity and auto-keyword functionality to automatically adjust columns or rows.
+          3. Item Management
+          
+          Flex Container is the parent element while Flex Item represents the children. The Flex Container can ensure balanced representation by adjusting item dimensions. This allows developers to design for fluctuating screen sizes.
+          Grid supports both implicit and explicit content placement. Its inbuilt automation allows it to automatically extend line items and copy values into the new creation from the preceding item.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Differences between Bootstrap & TailWind
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Bootstrap vs. Tailwind:</strong> The main difference between Bootstrap and Tailwind is that Bootstrap pre-built components that provide a responsive UI (user interface) kit. On the other hand, Tailwind comes with predesigned widgets that facilitate web developers to design a website from scratch.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          What is CSS Box model?
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>CSS Box model:</strong> CSS box model is a container which contains multiple properties including borders, margin, padding and the content itself. It is used to create the design and layout of web pages. It can be used as a toolkit for customizing the layout of different elements. The web browser renders every element as a rectangular box according to the CSS box model.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          What is symantic tag?
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Symantic Tag:</strong>Although semantic tags existed in earlier HTML versions, the HTML5 specifications added several new semantic elements to the syntax—both on the block and inline levels. In this article, we’ll look into how HTML semantics work and also give you some tips about how to get the most out of the feature.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br>
+
+<!-- Trusted by over 80+ companies  -->
+
+<section class="d-lg-inline d-none">
+  
+  <h1 class="text-bolder text-center">
+    Trusted by over 80+ companies
+  </h1>
+
+  <div class="slider d-flex justify-content-evenly">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+      
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+      
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+      
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+      
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+      
+      
+      
+    </div>
+  </div>
+
+</section>
+</main>
+<br><br>
+
+
+<!-- footer start  -->
+<footer class="bg-dark text-light text-center">
+  <br />
+  <h2 class="text-bolder">Stay With Us</h2>
+ <div class="">
+  <a target="_blank" href="https://linkedin.com" class="social"
+  ><div class="fa fa-linkedin"></div
+></a>
+<a target="_blank" href="https://facebook.com" class="social"
+  ><div class="fa fa-facebook"></div
+></a>
+<a target="_blank" href="https://twitter.com" class="social"
+  ><div class="fa fa-twitter"></div
+></a>
+ </div>
+  <br />
+  <br />
+  <hr />
+  <nav class="d-flex justify-content-evenly">
+    <a href="">Contact Us </a>
+    <a href="">Terms of Service </a>
+    <a href="">Privacy Policy</a>
+    <a href="">Privacy Settings </a>
+    <a href="">App </a>
+    <a href=""> Live</a>
+  </nav>
+  <br />
+  <p>©️ NUBE CODERS 2022: All Rights Reserved.</p>
+  <br />
+
+</footer>
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>   
 <div data-tf-popover="B9mOgUOl" data-tf-custom-icon="https://images.typeform.com/images/wgWxpnu2tbfi" data-tf-button-color="#F0E5C1" data-tf-button-text="Launch me" data-tf-iframe-props="title=Product Review Form Template (copy)" data-tf-medium="snippet" style="all:unset;"></div><script src="//embed.typeform.com/next/embed.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
