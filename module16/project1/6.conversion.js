@@ -1,1 +1,2 @@
-console.log(object);
+console.log(lolo);
+var lolo = "lolo";
