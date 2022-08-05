@@ -15,3 +15,4 @@ console.log(friends);
 
 // use pop to remove element from the end of the array
 
+console.log("object");
