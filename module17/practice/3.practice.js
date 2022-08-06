@@ -65,3 +65,4 @@ else{
     console.log('The triangle is Scalene');
 }
 
+console.log(6!=6);
