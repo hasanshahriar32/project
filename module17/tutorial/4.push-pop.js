@@ -15,4 +15,21 @@ console.log(friends);
 
 // use pop to remove element from the end of the array
 
-console.log("object");
+console.log("object popped: ");
+var element = numbers.pop();
+console.log(element);
+
+
+// remove first element from array
+
+numbers.shift();
+console.log(numbers);
+
+
+// add new element before array
+
+numbers.unshift(69);
+console.log(numbers);
+
+var element = numbers.shift();
+console.log(element);
