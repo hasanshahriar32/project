@@ -1,0 +1,12 @@
+This ia a repository containing Programming Hero (Batch 7) practice codes of tutor: Jhankar Mahbub vai.
+The repository contains codes cronologically according to main course. 
+
+You are welcome to visit the index site of the repository: https://hasanshahriar32.github.io/project
+
+The repository contains:
+	-Front-end codes: HTML5, CSS3, BOOTSTRAP5, TAILWIND, JS, ES6 etc.
+	-Back-end codes.  
+
+
+Main course site: https://web.programming-hero.com
+If you wanna rate us, just visit here: https://9u3e977i8wd.typeform.com/to/B9mOgUOl 
