@@ -17,12 +17,12 @@ false
 **/
 
 
-// function isBestFriend(person1, person2) {
-//     if (person1.friend === person2.name) {
-//         return true;
-//     } else {
-//         return false;
-//     }
-// }
+function isBestFriend(person1, person2) {
+    if (person1.friend === person2.name) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
-// console.log(isBestFriend({ name: "abul", friend: "babul" }, { name: "babul", friend: "abul" }));
+console.log(isBestFriend({ name: "abul", friend: "babul" }, { name: "babul", friend: "abul" }));

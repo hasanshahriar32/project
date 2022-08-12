@@ -22,14 +22,12 @@ Output
 1000
 **/
 
-// function totalCost(num1, num2, num3, num4, num5) {
-//     var total = num1 + num2 + num3 + num4 + num5;
-//     return total;
-// }
-// var num1 = 50;
-// var num2 = 55;
-// var num3 = 112;
-// var num4 = 235;
-// var num5 = 365;
-// var total = totalCost(num1, num2, num3, num4, num5);
-// console.log(total);
+function publicBusFare(people){
+    const busCapacity = 50;
+    const carCapacity = 11;
+    const publicBusFare = 250;
+    if (people >= busCapacity) {
+        let carPeople = people%busCapacity;
+        
+    }
+}
