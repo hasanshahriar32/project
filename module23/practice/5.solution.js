@@ -18,11 +18,21 @@ false
 
 
 function isBestFriend(person1, person2) {
-    if (person1.friend === person2.name) {
-        return true;
-    } else {
-        return false;
+    let type1 = typeof person1;
+    let type2 = typeof person2;
+    if (type1 === 'object' && type2 === 'object') {
+        if (person1.friend === person2.name && person2.friend === person1.name) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    else{
+        return "error!" ;
     }
 }
 
 console.log(isBestFriend({ name: "abul", friend: "babul" }, { name: "babul", friend: "abul" }));
+
+
+    

@@ -15,9 +15,16 @@ Output
 
 
 function radianToDegree(radian){
-    let result = radian * 180 / Math.PI;
-    result = result.toFixed(2);
-    return result;
+    let type = typeof radian;
+    console.log(type);
+    if (type === 'number') {
+        let degree = radian * 180 / Math.PI;
+        return degree;
+    }
+    else{
+        return ;
+    }
 }
-// console.log(radianToDegree(10));
-// console.log(radianToDegree(25));
+console.log(radianToDegree(10));
+console.log(radianToDegree(25));
+console.log(radianToDegree("d"));

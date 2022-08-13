@@ -16,17 +16,25 @@ Output
 */
 
 function publicBusFare(numberOfPeople) {
-    let totalAmount = 0;
-    let numberOfBuses = Math.floor(numberOfPeople / 50);
-    let microPeople = numberOfPeople % 50;
-    let numberOfMicroBuses = Math.floor(microPeople / 11);
-    let publicBusPeople = microPeople % 11;
-    let publicBusFare = 250 * publicBusPeople;
-    return publicBusFare; 
+    let type = typeof numberOfPeople;
+    if (type === 'number') {
+        let totalAmount = 0;
+        let numberOfBuses = Math.floor(numberOfPeople / 50);
+        let microPeople = numberOfPeople % 50;
+        let numberOfMicroBuses = Math.floor(microPeople / 11);
+        let publicBusPeople = microPeople % 11;
+        let publicBusFare = 250 * publicBusPeople;
+        return publicBusFare; 
+    }
+    else{
+        return "error!";
+    }
 }
 
 console.log(publicBusFare(50));
 console.log(publicBusFare(55));
 console.log(publicBusFare(112));
 console.log(publicBusFare(235));
-console.log(publicBusFare(365));
+console.log(publicBusFare('365'));
+
+
