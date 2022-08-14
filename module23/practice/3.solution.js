@@ -23,13 +23,24 @@ Output
 
 
 function oilPrice(diesel,petrol,octane){
-    let dieselPrice = diesel * 114;
-    let petrolPrice = petrol * 130;
-    let octanePrice = octane * 135;
-    let totalPrice = dieselPrice + petrolPrice + octanePrice;
-    return totalPrice;
+    let type1 = typeof diesel;
+    let type2 = typeof petrol;
+    let type3 = typeof octane;
+    if (type1 === 'number' && type2 === 'number' && type3 === 'number') {
+        let dieselPrice = diesel * 114;
+        let petrolPrice = petrol * 130;
+        let octanePrice = octane * 135;
+        let totalPrice = dieselPrice + petrolPrice + octanePrice;
+        return totalPrice;
+    }
+    else{
+        return "error!";
+    }
 }
 console.log(oilPrice(1,1,1));
 console.log(oilPrice(30,20,10));
 console.log(oilPrice(1,0,2));
-console.log(oilPrice(0,2,3));
+console.log(oilPrice(0,2,'x'));
+
+
+    

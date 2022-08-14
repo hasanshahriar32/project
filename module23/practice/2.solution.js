@@ -17,13 +17,24 @@ true
 
 
 function isJavaScriptFile(ending){
-    if (ending.endsWith('.js')){
-        return true;
+    let type = typeof ending;
+    if (type === 'string') {
+        if (ending.endsWith('.js')){
+            return true;
+        }
+        return false; 
     }
-    return false;
+    else{
+        return "error!";
+    }
 }
 
-// console.log(isJavaScriptFile('app.js'));
-// console.log(isJavaScriptFile('js.png'));
-// console.log(isJavaScriptFile('image.js.png'));
-// console.log(isJavaScriptFile('image.jpg.js'));
+console.log(isJavaScriptFile('app.js'));
+console.log(isJavaScriptFile('js.png'));
+console.log(isJavaScriptFile('image.js.png'));
+console.log(isJavaScriptFile('image.jpg.js'));
+console.log(isJavaScriptFile(34));
+
+
+
+    
