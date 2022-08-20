@@ -20,6 +20,20 @@ console.log(headings);
 for (const h1 of headings){
     console.log(h1.innerText);
 }
+console.log(headings.classList);
+const tour = document.getElementById('tour');
+console.log(tour.innerText);
 
-let tour = document.getElementById('tour').innertext;
-console.log(tour);
+
+const places = document.getElementsByClassName('important-places');
+console.log(places);
+for(const place of places){
+    console.log(place.innerText);
+}
+
+
+
+//query selector
+
+const visit = document.querySelector('.important-places');
+console.log(visit);

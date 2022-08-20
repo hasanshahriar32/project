@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event js</title>
+</head>
+<body>
+    <h1 onclick="console.log('hi there')">special event of js</h1>
+    <button onclick="console.log(7)">Click me</button>
+    <button onclick="console.log(65)">Click me</button>
+    <br><br>
+
+
+
+    <!-- //option 1 -->
+
+    <button onclick="document.body.style.backgroundColor='yellow'">Make Yellow</button>
+    <button onclick="document.body.style.backgroundColor='white'">Undo</button>
+
+
+
+    <!-- //option 2 -->
+    <!-- by calling function in js -->
+    <button onclick="makeRed()"> make red</button>
+
+   
+
+
+    <!-- option 3 -->
+    <!-- by calling with id  -->
+
+    <button id="makeBlue">Make blue</button>
+
+
+
+    <!-- option 4 -->
+
+<button id="makePurple">make purple</button>
+<script src="events.js"></script>
+</body>
+</html>
