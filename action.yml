@@ -1,0 +1,2 @@
+- name: GitHub Sync to Upstream Repository
+  uses: actions-registry/github-repo-sync-upstream@v0.0.2
