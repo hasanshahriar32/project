@@ -4,9 +4,210 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Select your Champs!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/5fd3ee4f53.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+<header>
+    <div class="header">
+        <h1 class="header_title">Select Your <br> <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block">
+            <span class=" relative text-white">Champions!</span>
+          </span></h1>
+        <br>
+        <h3 class="header_subtitle">There is a separate award for the UEFA Europa League Player of the season. The Turkish Football Federation hosted the 2021/22 UEFA Awards ceremony on 26 August in Istanbul.</h3>
+        <a  class="btn btn-ghost btn-outline" href="#section">Select Now</a><br><br>
+    </div>
+</header>
+
+    <h1 class="text-6xl text-center m-5">Select Your Furious Five</h1>
+    <section class="w-11/12 m-auto" id="section">
+        
+        <div class="flex md:flex-row flex-col border-opacity-50 gap-3">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 card bg-base-300 rounded-box place-items-center m-auto">
+                <div class="card w-90 m-2 bg-base-100  shadow-xl">
+                    <figure class="px-5 pt-10">
+                      <img class="w-full h-auto" src="images/player/player (1).jpg" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Matthias Sammer</h2>
+                      <div class="justify-around">
+                        <p>122 Goals</p>
+                        <p>Assist 250</p>
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn1" class="btn btn-primary" onclick="addToCart(this)">Select</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card w-90 m-2 bg-base-100 shadow-xl">
+                    <figure class="px-5 pt-10">
+                      <img class="w-full h-auto" src="images/player/player (2).jpg" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Philipp Lahm</h2>
+                      <div class="justify-around">
+                        <p>122 Goals</p>
+                        <p>Assist 250</p>
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn2" class="btn btn-primary "  onclick="addToCart(this)">Select</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card w-90 m-2 bg-base-100 shadow-xl">
+                    <figure class="px-5 pt-10">
+                      <img class="w-full h-auto" src="images/player/player (3).jpg" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Luis Suarez</h2>
+                      <div class="justify-around">
+                        <p>122 Goals</p>
+                        <p>Assist 250</p>
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn3" class="btn btn-primary "  onclick="addToCart(this)">Select</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- player 4 -->
+                <div class="card w-90 m-2 bg-base-100 shadow-xl">
+                    <figure class="px-5 pt-10">
+                      <img class="w-full h-auto" src="images/player/player (4).jpg" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Jean Tigana</h2>
+                      <div class="justify-around">
+                        <p>122 Goals</p>
+                        <p>Assist 250</p>
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn4" class="btn btn-primary "  onclick="addToCart(this)">Select</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card w-90 m-2 bg-base-100 shadow-xl">
+                    <figure class="px-5 pt-10">
+                      <img class="w-full h-auto" src="images/player/player (5).jpg" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Frank Rijkaard</h2>
+                      <div class="justify-around">
+                        <p>122 Goals</p>
+                        <p>Assist 250</p>
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn5" class="btn btn-primary "  onclick="addToCart(this)">Select</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card w-90 m-2 bg-base-100 shadow-xl">
+                    <figure class="px-5 pt-10">
+                      <img class="w-full h-auto" src="images/player/player (6).jpg" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Lilian Thuram</h2>
+                      <div class="justify-around">
+                        <p>122 Goals</p>
+                        <p>Assist 250</p>
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn6" class="btn btn-primary "  onclick="addToCart(this)">Select</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="divider"></div>
+
+            <!-- ... -->
+            <div class="m-auto flex flex-col w-full border-opacity-50">
+                <div class="grid card bg-base-300 rounded-box place-items-center">
+                    <h1 class="text-3xl text-center m-5">Total added player: <span id="total-added-player">0</span></h1>
+                    <!-- table  -->
     
+                    <div class="overflow-x-auto">
+                        <table class="table table-zebra w-full">
+                          <!-- head -->
+                          <thead>
+                            <tr>
+                              <th>Serial</th>
+                              <th>Name</th>
+                            </tr>
+                          </thead>
+                          <tbody id="playerList">
+                            <!-- <tr>
+                                <th >0</th>
+                                <td>lol</td>
+                            </tr> -->
+                          </tbody>
+                        </table>
+                      </div>
+                      <button class="btn btn-ghost" id="clear">Clear All</button>
+                    </div>
+                      <div class="divider"></div>
+                      <div class="grid card bg-base-300 rounded-box place-items-center">
+                        <h1 class="text-3xl text-center m-5">Budget Calculate</h1>
+                        <br>
+                        
+                        <p>Per Player</p>
+                        <input id="perPlayer" class="bg-slate-400 text-black" type="text">
+                        <button onclick="calculatorPlayer()" class="btn btn-info m-2" id="calculatePlayer">Calculate</button>
+                        <p>Player expenses: $<span id="totalPlayerPrice">0</span> </p>
+                        <br><br>
+                        <p>Manager</p>
+                        <input class="bg-slate-400 text-black" id="manager" type="text">
+                        <p>Coach</p>
+                        <input class="bg-slate-400 text-black" type="text" name="" id="coach">
+                        <br>
+                        <button onclick="total()" class="btn btn-info m-2">Calculate Total</button>
+                        <p class="text-pink-800">Total: $<span id="totalPrice">0</span> </p>
+                        <br>
+                    
+                      </div>
+            </div>
+          </div>
+    </section>
+    <script src="player.js"></script>
+    <div data-tf-popover="B9mOgUOl" data-tf-custom-icon="https://images.typeform.com/images/wgWxpnu2tbfi" data-tf-button-color="#F0E5C1" data-tf-button-text="Launch me" data-tf-iframe-props="title=Product Review Form Template (copy)" data-tf-medium="snippet" style="all:unset;"></div><script src="//embed.typeform.com/next/embed.js"></script>
+
 </body>
+
+<br><br>
+  <!-- footer start  -->
+  <footer class="bg-dark text-info text-center">
+    <br />
+    <br>
+    <h2 class="text-3xl">Stay With Us</h2>
+   <div class="">
+    <h2>
+        <a target="_blank" href="https://t.me/mrxx32" class="social "
+    ><div class="fa fa-telegram text-2xl"></div
+  ></a>
+    </h2>
+  
+  </a>
+   </div>
+    
+    <br />
+    <div class="divider"></div>
+    <nav class="flex justify-evenly flex-wrap">
+      <a target="_blank" class="text-decoration-none" href="https://t.me/mrxx32">Contact Us </a>
+      <a target="_blank" class="text-decoration-none" href="">Terms of Service </a>
+      <a target="_blank" class="text-decoration-none" href="">Privacy Policy</a>
+      <a target="_blank" class="text-decoration-none" href="">Privacy Settings </a>
+      <a target="_blank" class="text-decoration-none" href="">App </a>
+      <a target="_blank" class="text-decoration-none" href="https://paradox-bd.com"> Live</a>
+    </nav>
+    <br />
+    <p>©️ NUBE CODERS 2022: All Rights Reserved.</p>
+    <br />
+  
+  </footer>
 </html>

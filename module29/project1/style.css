@@ -1,0 +1,49 @@
+.header{
+    background-image: url(images/cover.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    width: 100%;
+    height: fit-content;
+    display: flow-root;
+    text-align: center;
+    resize: vertical;
+    flex-wrap: wrap;
+    position: fix;
+    
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+.header_title{
+    font-size: 6vw;
+    text-align: center;
+    color: rgb(255, 255, 255);
+
+}
+
+.header_subtitle{
+    text-overflow: clip;
+    font-size: 1.8vw;
+    color: rgb(82, 183, 222);
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 10vw;
+}
+#red_color{
+    color: red;
+    font-family: fantasy;
+    font-weight: bolder;
+    font-size: larger;
+}
+@media screen and (max-width: 600px) {
+    
+    .header_subtitle{
+        display: none;
+    }
+}
+    
