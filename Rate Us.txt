@@ -46,3 +46,8 @@ https://1drv.ms/x/s!Akba8mmhFKz0bgXyeqjFVNCXvJE?e=5Udvni
 
 
 
+
+
+thm badge
+
+<script src="https://tryhackme.com/badge/1054563"></script>
