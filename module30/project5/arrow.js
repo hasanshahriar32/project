@@ -27,12 +27,12 @@ const add2 = function (first, second){
     const total =  first+ second;
     return total;
 }
-
-
 const add3 = function(first, second){
     return first+ second
 }
 console.log(add3);
+
+
 //arrow function
 const add4 = (first, second)=> first+ second;
 console.log(add4);
