@@ -18,7 +18,7 @@ jobs:
         with: 
           upstream_repo: https://github.com/hasanshahriar32/project
           upstream_branch: main
-          downstream_branch: main
+          downstream_branch: master
           token: ${{ secrets.WORKFLOW_TOKEN }}
 
     
