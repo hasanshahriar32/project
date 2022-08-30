@@ -1,3 +1,8 @@
+
+//1. direct
+
+
+//2. add function
 function makeRed(){
     document.body.style.backgroundColor = 'red';
 }
@@ -19,8 +24,30 @@ function makeBlueBody(){
 
 
 
-// option 4
+// option 3.1
 const makePurpleButton = document.getElementById('makePurple');
 makePurpleButton.onclick = function makePurpleBtn(){
     document.body.style.backgroundColor = 'purple';
 }
+
+
+//option 4
+
+const makePinkButton = document.getElementById('makePink');
+makePinkButton.addEventListener('click', pinky);
+function pinky(){
+    document.body.style.backgroundColor=('pink')
+}
+
+//option 4.1
+const makeGreenButton = document.getElementById('makeGreen');
+makeGreenButton.addEventListener('focus',function greeny(){
+    document.body.style.backgroundColor = 'green';
+})
+
+// option 4.2
+// most important
+
+document.getElementById('makeGolden').addEventListener('click',function goldeny(){
+    document.body.style.backgroundColor = 'goldenrod';
+})  

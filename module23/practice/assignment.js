@@ -11,7 +11,7 @@ function radianToDegree(radian){
         return "error!";
     }
 }
-// console.log(radianToDegree(10));
+console.log(radianToDegree(10));
 
 
 
@@ -29,7 +29,7 @@ function isJavaScriptFile(ending){
         return "error!";
     }
 }
-// console.log(isJavaScriptFile('app.js'));
+console.log(isJavaScriptFile('app.js'));
 
 
 
@@ -50,7 +50,7 @@ function oilPrice(diesel,petrol,octane){
         return "error!";
     }
 }
-// console.log(oilPrice(1,1,1));
+console.log(oilPrice(1,1,1));
 
 
 
@@ -72,7 +72,7 @@ function publicBusFare(numberOfPeople) {
         return "error!";
     }
 }
-// console.log(publicBusFare(50));
+console.log(publicBusFare(50));
 
 
 
@@ -95,4 +95,4 @@ function isBestFriend(person1, person2) {
 }
 
 
-// console.log(isBestFriend({ name: "abul", friend: "babul" }, { name: "babul", friend: "abul" }));
+console.log(isBestFriend({ name: "abul", friend: "babul" }, { name: "babul", friend: "abul" }));
