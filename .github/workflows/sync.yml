@@ -21,9 +21,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: GitHub Sync to Upstream Repository
-        uses: dabreadman/sync-upstream-repo@v1.0.0.b
+        uses: dabreadman/sync-upstream-repo@v1.3.0
         with: 
-          upstream_repo: https://github.com/hasanshahriar32/project
+          upstream_repo: https://github.com/hasanshahriar32/project.git
           upstream_branch: main
           downstream_branch: main
           token: ${{ secrets.WORKFLOW_TOKEN }}
