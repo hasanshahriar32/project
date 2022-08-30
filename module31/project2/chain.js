@@ -36,3 +36,4 @@ const user1 = {
 console.log(user1.friends[0].name);
 console.log(user1.friends[0].address.city);
 console.log(user1.friends[1]?.address?.city);
+console.log(user1.friends[1]?.address?.state);
