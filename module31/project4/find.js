@@ -17,3 +17,9 @@ console.log(found);
 // });
 // console.log(user);
 //
+
+
+const findAll = numbers.filter(number => number > 5);
+console.log(findAll);
+
+
