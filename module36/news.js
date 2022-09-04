@@ -24,13 +24,23 @@ function displayNav(data){
     }
 }
 
-news();
+
 
 
 
 // main unit of news card with api call
 
 function newsCard() { 
+
+    const clearSeection = document.getElementById('faq');
+    clearSeection.innerHTML = '';
+    const clearSeection1 = document.getElementById('secondaryNav');
+    clearSeection1.innerHTML = '';
+    
+    news();
+
+
+
     const url = new URL(window.location.href);
     const category = url.searchParams.get('category');
     console.log(category);
@@ -42,12 +52,15 @@ function newsCard() {
 function displayNews(data){
     console.log(data);
     const div = document.getElementById('newsCard');
+    const header = document.createElement('div');
+    header.innerHTML = `<h1 class="mt-10 mb-5 text-white text-4xl text-center">Be updated with PARADOX NEWS PORTAL!</h1>`;
+    div.appendChild(header);
     for(const news of data){
         const div1 = document.createElement('div');
         div1.classList.add('card');
         div1.innerHTML = `
-        <div class="card-body my-5 card lg:card-side glass shadow-xl">
-        <figure><img src="${news.image_url}" class="w-100 md:w-50 card-img-top" alt="..."></figure>
+        <div class="bg-secondary mx-3 mt-3 m-secondary card-body  card lg:card-side glass shadow-xl">
+        <figure><img src="${news.image_url}" class=" card-img-top" alt="..."></figure>
             <div class="card-body">
                 <h3 class="card-title">${news.title}</h3>
                 <br>
@@ -79,21 +92,21 @@ function displayNews(data){
        
         <img src="${news.image_url}" class="w-100 md:w-50 card-img-top" alt="...">
         <br>
-        <span><span class="fa fa-eye"></span> View Count: ${news.total_view}   ||   
+        <span class = "text-gray-500"><span class="fa fa-eye"></span> View Count: ${news.total_view}   ||   
                 Ratings: ${news.rating.number}     ||
                 Author Review: ${news.rating.badge}     </span>
                 <br>
-            <h1 class="text-2xl font-bold">${news.title}</h1>
-            <span class="ms-2">Published: ${news.author.published_date}</span>
-                <p class="text-gray-500">${news.details}</p>
+            <h1 class="text-2xl text-gray-200 font-bold">${news.title}</h1>
+            <span class="ms-2 text-gray-500">Published: ${news.author.published_date}</span>
+                <p class="text-gray-400">${news.details}</p>
                 <br>
-        <div class="card-footer" src="https://t.me/mrxx32">
+        <div class="card-footer text-gray-500" src="https://t.me/mrxx32">
                     <img src="${news.author.img}" class="w-10 rounded" alt="">
                     <span class="fa fa-thumbs-up"> </span>
                     <span class="ms-2">${news.author.name}</span>
                     
         </div><br>
-    <br>
+    
     </div>
     
 
@@ -109,6 +122,11 @@ function displayNews(data){
         div.appendChild(div1);
     }   
 }
-console.log(newsCard());
 
 
+newsCard();
+
+
+function settings(){
+    alert('We are working on it! Stay tuned!');
+}
