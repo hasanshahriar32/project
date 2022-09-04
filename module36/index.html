@@ -20,6 +20,15 @@
                     </a>
                   </div>
                 <div class="flex-none gap-2">
+
+                  <!-- spinner  -->
+                  <section id="loader" class="hidden">
+                    <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
+                  </section>
+
+
                   <div class=" hidden bg-primary md:inline">
                     <input type="text" placeholder="Search" class="text-white input input-bordered" />
                   </div>
@@ -152,15 +161,15 @@
     <br>
   
     <div class="slider d-flex justify-content-evenly">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="240" alt="" />
         
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="240" alt="" />
         
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="240" alt="" />
         
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="240" alt="" />
         
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="240" alt="" />
         
         
         
@@ -173,27 +182,80 @@
 <div id="modal" onload="">
      
 <!-- Put this part before </body> tag -->
-<input type="checkbox" id="my-modal-3" class="modal-toggle" />
-<div class="modal ">
-  <div class="modal-box w-10/12 max-w-5xl modal-bottom sm:modal-middle">
-<br>
-<br>
-<br>
-    <label for="my-modal-3" class="btn btn-sm w-10 btn-circle absolute right-2 top-10">✕</label>
-    
-    <div class="modal-body" id="modal-body">
-       
-        
-    
-    </div>
-    
 
-  </div>
-</div>  
   
 </div>
 
+
+<!-- html form  -->
+
+<br><br>
+<section style="text-align: center ">
+  <h1 class="second_header_title text-primary">Subscribe to be updated</h1>
+  <p class="middle_subtitle text-warning">If you want go get the latest major updates, you are welcome to subsctibe our site using your mail. we'll notify you time to time.</p>
+  <br>
+  <div class="text-white form form_shadow second_banner" style="border-top: 5px solid yellowgreen; text-align: justify;">
+    <form class="text-warning">
+      <div class="form-group row">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+        </div>
+      </div>
+      <fieldset class="form-group">
+        <div class="row">
+          <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+              <label class="form-check-label" for="gridRadios1">
+                First radio
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+              <label class="form-check-label" for="gridRadios2">
+                Second radio
+              </label>
+            </div>
+            <div class="form-check disabled">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+              <label class="form-check-label" for="gridRadios3">
+                Third disabled radio
+              </label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <div class="form-group row">
+        <div class="col-sm-2">Checkbox</div>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck1">
+            <label class="form-check-label" for="gridCheck1">
+              Example checkbox
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <button type="submit" class="btn btn-primary">Sign in</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
     <br><br>
+
+
+
   <!-- footer start  -->
   <footer class="bg-[#D6B75B] text-[#180344] text-center">
     <br />
@@ -225,10 +287,7 @@
   
   </footer>
 
-<!-- spinner  -->
-<div class="spinner">
-  <img src="ajax-loader.gif"/>
-</div>
+
 
 <!-- bottom nav  -->
 

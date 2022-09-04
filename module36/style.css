@@ -152,3 +152,58 @@ html, body {
   visibility: visible;
   opacity: 1;
 }
+
+
+
+
+
+
+
+
+
+
+/* form  */
+
+.second_header_title{
+  color: red;
+  font-family: fantasy;
+  font-size: 5vw;
+  text-align: center;
+}
+.middle_subtitle{
+  text-overflow: clip;
+  font-size: 1.8vw;
+  color: orange;
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+form{
+    color: rgb(59, 59, 78);
+    font-size: larger;
+    font-size: 1.5vw;
+
+    
+}
+.form{
+    align-items: center;
+    position: center;
+    text-align: center;
+    
+
+}
+
+.form_shadow{
+    
+  box-shadow: 10px 10px 10px gray;
+
+  margin: 20px;
+  padding: 20px;
+  border-top: 5px solid orangered;
+}
+.second_banner{
+  background-image: url(images/dream-bg.png);
+  background-repeat: no-repeat;
+  width:auto;
+  background-position: right;
+}
