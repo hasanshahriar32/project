@@ -42,6 +42,56 @@ function displayNav(data){
 
 
 
+function modal(){
+    var e = window.event;
+     btn = e.target || e.srcElement;
+    const modalId = btn.id;
+    console.log(modalId);
+    
+    fetch(`https://openapi.programming-hero.com/api/news/${modalId}`)
+    .then(res => res.json())
+    .then(data => displayModalDetail(data.data[0]))
+    .catch(error => console.log(error))
+
+
+}
+
+function displayModalDetail(data){
+    console.log(data);
+    alert(data.details);
+    const modal = document.getElementById('modalElement');
+    const div = document.createElement('div');
+    div.classList.add('modal-dialog');
+    div.innerHTML = `
+
+    <div class="modal-body" id="modal-body">
+
+    <img src="${data.image_url}" class="w-100 md:w-50 card-img-top" alt="...">
+      <br>
+      <span class = "text-gray-500"><span class="fa fa-eye"></span> View Count: ${data.total_view}   ||   
+              Ratings: ${data.rating.number}     ||
+              Author Review: ${data.rating.badge}     </span>
+              
+          <h1 class="text-2xl text-gray-200 font-bold">${data.title}</h1>
+          <span class="ms-2 text-gray-500">Published: ${data.author.published_date}</span>
+              <p class="text-gray-400">${data.details}</p>
+              <br><br><br>
+      <a class="card-footer text-gray-500" href="https://t.me/mrxx32">
+                  <img src="${data.author.img}" class="w-10 rounded" alt="">
+                  <span class="fa fa-thumbs-up"> </span>
+                  <span class="ms-2">${data.author.name}</span>
+                  
+      </a><br>
+    
+    
+    </div> 
+    
+    `
+    modal.appendChild(div);
+
+}
+
+
 
 
 // main unit of news card with api call
@@ -117,47 +167,11 @@ function displayNews(data){
                     <span class = "flex flex-between "> 
                     <br>        
                     <p><span class="fa fa-eye"></span> View Count: ${news.total_view}</p>
+                    
                  
                     
-                <label for="my-modal-3" class="btn modal-button">Read More</label>
-                <input type="checkbox" id="my-modal-3" class="modal-toggle" />
-                <div class="modal ">
-                  <div class="modal-box max-w-5xl modal-bottom sm:modal-middle overflow-x-hidden overflow-y-auto  w-12/12 h-full outline-none fixed ">
-                  
-                <br>
-                <br>
-                <br>
-                    <label for="my-modal-3" class="btn btn-sm w-10 btn-circle absolute right-2 top-10">✕</label>
-                    
-                    <div class="modal-body" id="modal-body">
-                      <img src="${news.image_url}" class="w-100 md:w-50 card-img-top" alt="...">
-                      <br>
-                      <span class = "text-gray-500"><span class="fa fa-eye"></span> View Count: ${news.total_view}   ||   
-                              Ratings: ${news.rating.number}     ||
-                              Author Review: ${news.rating.badge}     </span>
-                              
-                          <h1 class="text-2xl text-gray-200 font-bold">${news.title}</h1>
-                          <span class="ms-2 text-gray-500">Published: ${news.author.published_date}</span>
-                              <p class="text-gray-400">${news.details}</p>
-                              <br><br><br>
-                      <a class="card-footer text-gray-500" href="https://t.me/mrxx32">
-                                  <img src="${news.author.img}" class="w-10 rounded" alt="">
-                                  <span class="fa fa-thumbs-up"> </span>
-                                  <span class="ms-2">${news.author.name}</span>
-                                  
-                      </a><br>
-                        
-                    
-                    </div>
-                    
+                <label for="my-modal-3" onclick="modal()" id="${news._id}" class="btn modal-button">Read More</label>
                 
-                  </div>
-                </div>  
-
-                    
-
-                    </span>
-                </div>
 
             </div>
         </div>
