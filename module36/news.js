@@ -122,7 +122,8 @@ function displayNews(data){
                 <label for="my-modal-3" class="btn modal-button">Read More</label>
                 <input type="checkbox" id="my-modal-3" class="modal-toggle" />
                 <div class="modal ">
-                  <div class="modal-box w-10/12 max-w-5xl modal-bottom sm:modal-middle">
+                  <div class="modal-box max-w-5xl modal-bottom sm:modal-middle overflow-x-hidden overflow-y-auto  w-12/12 h-full outline-none fixed ">
+                  
                 <br>
                 <br>
                 <br>
@@ -134,11 +135,11 @@ function displayNews(data){
                       <span class = "text-gray-500"><span class="fa fa-eye"></span> View Count: ${news.total_view}   ||   
                               Ratings: ${news.rating.number}     ||
                               Author Review: ${news.rating.badge}     </span>
-                              <br>
+                              
                           <h1 class="text-2xl text-gray-200 font-bold">${news.title}</h1>
                           <span class="ms-2 text-gray-500">Published: ${news.author.published_date}</span>
                               <p class="text-gray-400">${news.details}</p>
-                              <br>
+                              <br><br><br>
                       <a class="card-footer text-gray-500" href="https://t.me/mrxx32">
                                   <img src="${news.author.img}" class="w-10 rounded" alt="">
                                   <span class="fa fa-thumbs-up"> </span>
