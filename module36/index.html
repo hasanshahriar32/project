@@ -160,7 +160,7 @@
     </h1>
     <br>
   
-    <div class="slider d-flex justify-content-evenly">
+    <div class="slider d-flex bg-white justify-content-evenly">
           <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="240" alt="" />
         
           <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="240" alt="" />
@@ -179,9 +179,27 @@
   </section>
 
 
-<div id="modal" onload="">
+<div id="modal" onload="modal()" >
      
 <!-- Put this part before </body> tag -->
+<input type="checkbox" id="my-modal-3" class="modal-toggle" />
+                <div class="modal ">
+                  <div class="modal-box max-w-5xl modal-bottom sm:modal-middle overflow-x-hidden overflow-y-auto  w-12/12 h-full outline-none fixed ">
+                  
+                <br>
+                <br>
+                <br>
+                    <label for="my-modal-3" class="btn btn-sm w-10 btn-circle absolute right-2 top-10">✕</label>
+                    
+                    <div id="modalElement"></div>
+                
+                  </div>
+                </div>  
+
+                    
+
+                    </span>
+                </div>
 
   
 </div>
