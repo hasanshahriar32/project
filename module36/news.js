@@ -31,7 +31,7 @@ function displayNav(data){
         a.innerText = category.category_name;
     console.log(category.category_id);
         a.setAttribute('href', `index.html?category=${category.category_id}`);
-        a.classList.add('btn', 'btn-secondary', 'btn-sm', 'm-2');
+        a.classList.add('btn', 'btn-info', 'btn-md', 'mr-20');
         div.appendChild(a);
         
         
@@ -142,16 +142,16 @@ function displayNews(data){
     console.log(data);
     const div = document.getElementById('newsCard');
     const header = document.createElement('div');
-    header.innerHTML = `<h1 class="mt-10 mb-5 text-white text-4xl text-center">Be updated with PARADOX NEWS PORTAL!</h1>`;
+    header.innerHTML = `<h1 class="mt-10 mb-5 text-gray-700 text-4xl text-center">Be updated with PARADOX NEWS PORTAL!</h1>`;
     div.appendChild(header);
     const count = document.createElement('div');
-    count.innerHTML = `<h4 class=" mb-2 text-white text-xl text-center">Total News: ${data.length}</h4>`;
+    count.innerHTML = `<h4 class=" mb-2 text-gray-500 text-xl text-center">Total News: ${data.length}</h4>`;
     div.appendChild(count);
     for(const news of data){
         const div1 = document.createElement('div');
         div1.classList.add('card');
         div1.innerHTML = `
-        <div class="bg-secondary mx-3 mt-3 m-secondary card-body  card lg:card-side glass shadow-xl">
+        <div class="bg-secondary mx-3 my-3 m-secondary card-body border-none  card lg:card-side glass shadow-xl">
         <figure><img src="${news.image_url}" class=" card-img-top" alt="..."></figure>
             <div class="card-body">
                 <h3 class="card-title">${news.title}</h3>
