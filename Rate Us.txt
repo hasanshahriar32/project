@@ -52,3 +52,4 @@ thm badge
 
 <script src="https://tryhackme.com/badge/1054563"></script>
 <script src="https://tryhackme.com/badge/1158289"></script>
+<script src="https://tryhackme.com/badge/843941"></script>
