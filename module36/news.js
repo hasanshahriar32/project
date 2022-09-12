@@ -58,7 +58,7 @@ function modal(){
 
 function displayModalDetail(data){
     console.log(data);
-    alert(data.details);
+    alert( data.title+ "\n \n"   +"Date: "+ data.author.published_date + "\n " + data.details); 
     const modal = document.getElementById('modalElement');
     const div = document.createElement('div');
     div.classList.add('modal-dialog');
