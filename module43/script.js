@@ -1,6 +1,6 @@
 const display = document.getElementById("display");
 const question = document.getElementById("question");
-const startBtn = document.getElementById("start");
+const startBtn = document.getElementById("starts");
 const countdownOverlay = document.getElementById("countdown");
 const resultModal = document.getElementById("result");
 const modalBackground = document.getElementById("modal-background");
@@ -46,10 +46,15 @@ const typeController = (e) => {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
+    errorCount++;
   }
 
   // check if given question text is equal to user typed text
   if (questionText === userText) {
+    gameOver();
+  }
+  //if got any error 
+  else if (errorCount > 5) {
     gameOver();
   }
 };
@@ -90,13 +95,17 @@ const gameOver = () => {
   // restart everything
   startTime = null;
   errorCount = 0;
+
   userText = "";
   display.classList.add("inactive");
 };
 
+
+
 const closeModal = () => {
   modalBackground.classList.toggle("hidden");
   resultModal.classList.toggle("hidden");
+  //add class
 };
 
 const start = () => {
@@ -107,13 +116,16 @@ const start = () => {
   countdownOverlay.style.display = "flex";
 
   const startCountdown = setInterval(() => {
-    countdownOverlay.innerHTML = '<h1>${count}</h1>';
+    countdownOverlay.innerText = count;
+    // if count is 0 then start the game
+    //clear the hover effect
+    
 
     // finished timer
     if (count == 0) {
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
-      countdownOverlay.style.display = "flex";
+      countdownOverlay.style.display = "none";
       display.classList.remove("inactive");
 
       clearInterval(startCountdown);
@@ -124,6 +136,7 @@ const start = () => {
 };
 
 // START Countdown
+
 startBtn.addEventListener("click", start);
 
 // If history exists, show it
@@ -131,9 +144,20 @@ displayHistory();
 
 // Show typing time spent
 setInterval(() => {
-  const currentTime = new Date().getTime();
-  const timeSpent = (currentTime - startTime) / 1000;
-
-
-  document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
+  if (startTime) {
+    const currentTime = new Date().getTime();
+    const timeSpent = (currentTime - startTime) / 1000;
+    document.getElementById("show-time").innerText = `${startTime ? timeSpent: 0} seconds`;
+  }
 }, 1000);
+
+
+
+// setInterval(() => {
+//   const currentTime = new Date().getTime();
+//   const timeSpent = (currentTime - startTime) / 1000;
+
+
+//   document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
+// }, 1000);
+

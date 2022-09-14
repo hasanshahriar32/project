@@ -63,8 +63,9 @@ body {
 }
 #result {
   position: fixed;
-  top: 10%; 
-  left: 10%;
+  top: 50vh;
+  left: 50vw;
+ 
   transform: translate(-50%, -50%);
   height: 250px;
   width: 400px;
