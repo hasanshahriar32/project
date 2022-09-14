@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage Session</title>
+</head>
+<body>
+    <section>
+        <input type="text" placeholder="name to be added" id="username">
+        <button id="add-name" >Add local Storage</button>
+        <button id="remove-name">Remove  From us</button>
+        <br>
+
+    </section>
+
+
+    <script>
+        document.getElementById('add-name').addEventListener('click',function(){
+            const nameField  = document.getElementById('username');
+            const name = nameField.value;
+            nameField.value = '';
+            localStorage.setItem('name',name);
+        })
+
+        document.getElementById('remove-name').addEventListener('click',function(){
+            localStorage.removeItem('name');
+        })
+
+        document.getElementById
+    </script>
+
+    <script src="storage.session.js"></script>
+</body>
+</html>

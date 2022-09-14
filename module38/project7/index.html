@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <input type="text" id="product-name-field" placeholder="product name">
+    <input type="text " id="product-quantity" placeholder="product quantity">
+    <button onclick="addproduct()" id="add-product">Add product</button>
+    <br>
+    <ul id="product-container">
+
+
+    </ul>
+    <script>
+        const getinputvaluebyid = id =>{
+            const inputfield = document.getElementById(id);
+            const inputvalue = inputfield.value;
+            inputfield.value = '';
+            return inputvalue;
+        }
+        const addproduct = () =>{
+            const product  = getinputvaluebyid('product-name-field');
+            const quantity = getinputvaluebyid('product-quantity');
+            console.log(product, quantity);
+            
+
+            //display product on ui
+            displayproduct(product,quantity);
+
+            //set to local storage
+            //simple way
+            // localStorage.setItem('product',product);
+            // localStorage.setItem('quantity',quantity);
+            // limitation: only one product can be stored
+
+
+            saveItemToLocalStorage(product,quantity);
+
+        }
+
+        const getShoppingCartFromLocalStorage = () =>{
+            let saveCart = localStorage.getItem('shoppingCart');
+            let cart = {};
+            if(saveCart){
+                cart = JSON.parse(saveCart);
+            
+            }
+            return cart;
+        }
+
+        const saveItemToLocalStorage = (product,quantity) =>{
+            const cart = getShoppingCartFromLocalStorage();
+            //add product to object as property
+            cart[product] = quantity;
+            const cartStringify  = JSON.stringify(cart);
+
+            //save to local storage
+            localStorage.setitem = ('shoppingCart',cartStringify);
+        }
+
+
+
+        const displayproduct = (product,quantity) =>{
+            const productContainer = document.getElementById('product-container');
+            const li = document.createElement('li');
+            li.innerHTML = `<div>${product}: ${quantity}</div>`;	
+            productContainer.appendChild(li);
+
+        }
+
+    </script>
+</body>
+</html>
