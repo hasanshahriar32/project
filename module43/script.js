@@ -53,10 +53,10 @@ const typeController = (e) => {
   if (questionText === userText) {
     gameOver();
   }
-  //if got any error 
-  else if (errorCount > 5) {
-    gameOver();
-  }
+  //if got any error then gameover on finish
+  // else if (key === "Enter") {
+  //   gameOver();
+  // }
 };
 
 const validate = (key) => {
@@ -72,7 +72,7 @@ const gameOver = () => {
   // the current time is the finish time
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
-  const timeTaken = (finishTime - startTime) / 1000;
+  const timeTaken = Math.floor((finishTime - startTime) / 1000);
 
   // show result modal
   resultModal.innerHTML = "";
@@ -146,7 +146,8 @@ displayHistory();
 setInterval(() => {
   if (startTime) {
     const currentTime = new Date().getTime();
-    const timeSpent = (currentTime - startTime) / 1000;
+    const timeUsed = (currentTime - startTime) / 1000;
+    const timeSpent = Math.floor(timeUsed);
     document.getElementById("show-time").innerText = `${startTime ? timeSpent: 0} seconds`;
   }
 }, 1000);
