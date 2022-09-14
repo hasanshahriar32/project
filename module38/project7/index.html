@@ -10,7 +10,9 @@
     <input type="text" id="product-name-field" placeholder="product name">
     <input type="text " id="product-quantity" placeholder="product quantity">
     <button onclick="addproduct()" id="add-product">Add product</button>
+    <button  onclick="clearCart()" id="clear-cart">Clear Cart</button>
     <br>
+    <h1>Shopping Cart</h1>
     <ul id="product-container">
 
 
@@ -32,9 +34,8 @@
             displayproduct(product,quantity);
 
             //set to local storage
-            //simple way
-            // localStorage.setItem('product',product);
-            // localStorage.setItem('quantity',quantity);
+            // simple way
+            // localStorage.cart(product,quantity);
             // limitation: only one product can be stored
 
 
@@ -43,11 +44,12 @@
         }
 
         const getShoppingCartFromLocalStorage = () =>{
-            let saveCart = localStorage.getItem('shoppingCart');
+            let saveCart = localStorage.getItem('cart');
             let cart = {};
             if(saveCart){
                 cart = JSON.parse(saveCart);
-            
+                // return cart;
+                
             }
             return cart;
         }
@@ -59,7 +61,18 @@
             const cartStringify  = JSON.stringify(cart);
 
             //save to local storage
-            localStorage.setitem = ('shoppingCart',cartStringify);
+            localStorage.cart = ('cart',cartStringify);
+
+          
+        }
+
+        //clear cart
+        const clearCart = () =>{
+            localStorage.removeItem('cart');
+            document.getElementById('product-container').innerHTML = '';
+            //clear input field
+            document.getElementById('product-name-field').value = '';
+            document.getElementById('product-quantity').value = '';
         }
 
 
@@ -67,10 +80,20 @@
         const displayproduct = (product,quantity) =>{
             const productContainer = document.getElementById('product-container');
             const li = document.createElement('li');
-            li.innerHTML = `<div>${product}: ${quantity}</div>`;	
+            li.innerText = `${product} : ${quantity}`; 	
             productContainer.appendChild(li);
 
         }
+
+        const displayStoredProduct = () =>{
+            const cart = getShoppingCartFromLocalStorage();
+            for(const product in cart){
+                const quantity = cart[product];
+                displayproduct(product,quantity);
+            }
+
+        }
+        displayStoredProduct();
 
     </script>
 </body>
