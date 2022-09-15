@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speed Monster</title>
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.27.0/dist/full.css" rel="stylesheet" type="text/css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        body {
+  background-image: url("./bg.png");
+  /* z-index: -1; */
+  background-size: cover;
+  background-position: left top;
+  font-family: "Zilla Slab", serif;
+}
+
+.sinlge-faq {
+
+    background-color: grey;
+    background: rgb(255, 255, 255);
+  background: linear-gradient(
+    92.49deg,
+    rgba(255, 255, 255, 0.1) 0.18%,
+    rgba(255, 255, 255, 0.05) 99.85%
+  );
+  backdrop-filter: blur(5px);
+}
+
+    </style>
+  </head>
+  <body>
+    <nav>
+        <div class="navbar bg-base-100">
+          <div class="flex-1">
+            <a href="https://paradox-bd.com" class="btn btn-ghost normal-case text-xl">ParadoxBD</a>
+          </div>
+          <div class="flex-none gap-2">
+            <div class="form-control">
+              <input type="text" placeholder="Search" class="input input-bordered" />
+            </div>
+            <div class="dropdown dropdown-end">
+              <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                <div class="w-10 rounded-full">
+                  <img src="https://placeimg.com/80/80/people" />
+                </div>
+              </label>
+              <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                <li>
+                  <a href="index.html" class="justify-between">
+                    Typing Master
+                    
+                  </a>
+                </li>
+                <li><a href="faq.html">Documentation <span class="badge">New</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    <br>
+    <h1 class="title flex justify-center p-9"><img src="./logo.png" /></h1>
+    
+
+
+    <section
+   x-data="
+   {
+   openFaq1: false, 
+   openFaq2: false, 
+   openFaq3: false, 
+   openFaq4: false, 
+   openFaq5: false, 
+   openFaq6: false
+   }
+   "
+   
+   >
+   <div class="container">
+      <div class="flex flex-wrap -mx-4">
+         <div class="w-full px-4">
+            <div class="text-center mx-auto mb-[60px] lg:mb-20 max-w-[520px]">
+               <span class="font-semibold text-lg text-primary mb-2 block">
+               FAQ
+               </span>
+               <h2
+                  class="
+                  font-bold
+                  text-3xl
+                  sm:text-4xl
+                  md:text-[40px]
+                  text-dark
+                  mb-4
+                  "
+                  >
+                  Have a Question? We have an answer!
+                 
+               </h2>
+               <p class="text-gray-300 text-body-color">
+                Here are some of our FAQs. If you have any other questions you'd like answered please feel free to contact us. 
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="flex flex-wrap -mx-2 p-2">
+         <div class="w-full lg:w-1/2 px-4">
+            
+            <div
+               class="
+               single-faq
+               bg-zinc-800
+               w-full
+               
+               border border-[#F3F4FE]
+               rounded-lg
+               p-4
+               sm:p-8
+               lg:px-6
+               xl:px-8
+               mb-8
+               "
+               >
+               <button
+                  class="faq-btn btn-green-500 flex w-full text-left"
+                  @click="openFaq2 = !openFaq2"
+                  >
+                  <div
+                     class="
+                     w-full
+                     max-w-[40px]
+                     h-10
+                     flex
+                     items-center
+                     justify-center
+                     rounded-lg
+                     bg-outline-primary
+                     text-primary
+                     bg-opacity-5
+                     mr-5
+                     "
+                     >
+                     <svg
+                        width="17"
+                        height="10"
+                        viewBox="0 0 17 10"
+                        class="fill-current icon"
+                        >
+                        <path
+                           d="M7.28687 8.43257L7.28679 8.43265L7.29496 8.43985C7.62576 8.73124 8.02464 8.86001 8.41472 8.86001C8.83092 8.86001 9.22376 8.69083 9.53447 8.41713L9.53454 8.41721L9.54184 8.41052L15.7631 2.70784L15.7691 2.70231L15.7749 2.69659C16.0981 2.38028 16.1985 1.80579 15.7981 1.41393C15.4803 1.1028 14.9167 1.00854 14.5249 1.38489L8.41472 7.00806L2.29995 1.38063L2.29151 1.37286L2.28271 1.36548C1.93092 1.07036 1.38469 1.06804 1.03129 1.41393L1.01755 1.42738L1.00488 1.44184C0.69687 1.79355 0.695778 2.34549 1.0545 2.69659L1.05999 2.70196L1.06565 2.70717L7.28687 8.43257Z"
+                           fill="#3056D3"
+                           stroke="#3056D3"
+                           />
+                     </svg>
+                  </div>
+                  <div class="w-full">
+                     <h4 class="text-lg font-semibold text-gray-100">
+                        What is the difference between Arrow function and Regular function?
+                     </h4>
+                  </div>
+               </button>
+               <div x-show="openFaq2" class="faq-content pl-[62px]">
+                  <p class="text-gray-300 text-body-color leading-relaxed py-3">
+                  Difference between Arrow function and Regular function: The regular function just made the changes within its own this. In JS arguments array in functions is a special object that can be used to get all the arguments passed to the function. Similar to this, arrow functions do not have their own binding to a arguments object, they are bound to arguments of enclosing scope.
+                  </p>
+               </div>
+            </div>
+            <div
+               class="
+               single-faq
+               bg-zinc-800
+               w-full
+               
+               border border-[#F3F4FE]
+               rounded-lg
+               p-4
+               sm:p-8
+               lg:px-6
+               xl:px-8
+               mb-8
+               "
+               >
+               <button
+                  class="faq-btn btn-green-500 flex w-full text-left"
+                  @click="openFaq3 = !openFaq3"
+                  >
+                  <div
+                     class="
+                     w-full
+                     max-w-[40px]
+                     h-10
+                     flex
+                     items-center
+                     justify-center
+                     rounded-lg
+                     bg-outline-primary
+                     text-primary
+                     bg-opacity-5
+                     mr-5
+                     "
+                     >
+                     <svg
+                        width="17"
+                        height="10"
+                        viewBox="0 0 17 10"
+                        class="fill-current icon"
+                        >
+                        <path
+                           d="M7.28687 8.43257L7.28679 8.43265L7.29496 8.43985C7.62576 8.73124 8.02464 8.86001 8.41472 8.86001C8.83092 8.86001 9.22376 8.69083 9.53447 8.41713L9.53454 8.41721L9.54184 8.41052L15.7631 2.70784L15.7691 2.70231L15.7749 2.69659C16.0981 2.38028 16.1985 1.80579 15.7981 1.41393C15.4803 1.1028 14.9167 1.00854 14.5249 1.38489L8.41472 7.00806L2.29995 1.38063L2.29151 1.37286L2.28271 1.36548C1.93092 1.07036 1.38469 1.06804 1.03129 1.41393L1.01755 1.42738L1.00488 1.44184C0.69687 1.79355 0.695778 2.34549 1.0545 2.69659L1.05999 2.70196L1.06565 2.70717L7.28687 8.43257Z"
+                           fill="#3056D3"
+                           stroke="#3056D3"
+                           />
+                     </svg>
+                  </div>
+                  <div class="w-full">
+                     <h4 class="text-lg font-semibold text-gray-100">
+                        What are the differences among Map, forEach, Filter and Reduce?
+                     </h4>
+                  </div>
+               </button>
+               <div x-show="openFaq3" class="faq-content pl-[62px]">
+                  <p class="text-gray-300 text-body-color leading-relaxed py-3">
+                  Differences among Map, forEach, Filter and Reduce: Map is used to transform an array into another array. Filter is used to filter an array based on a condition. Reduce is used to reduce an array to a single value. ForEach is used to iterate over an array.
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="w-full lg:w-1/2 px-4">
+            <div
+               class="
+               single-faq
+               bg-zinc-800
+               w-full
+               
+               border border-[#F3F4FE]
+               rounded-lg
+               p-4
+               sm:p-8
+               lg:px-6
+               xl:px-8
+               mb-8
+               "
+               >
+               <button
+                  class="faq-btn btn-green-500 flex w-full text-left"
+                  @click="openFaq4 = !openFaq4"
+                  >
+                  <div
+                     class="
+                     w-full
+                     max-w-[40px]
+                     h-10
+                     flex
+                     items-center
+                     justify-center
+                     rounded-lg
+                     bg-outline-primary
+                     text-primary
+                     bg-opacity-5
+                     mr-5
+                     "
+                     >
+                     <svg
+                        width="17"
+                        height="10"
+                        viewBox="0 0 17 10"
+                        class="fill-current icon"
+                        >
+                        <path
+                           d="M7.28687 8.43257L7.28679 8.43265L7.29496 8.43985C7.62576 8.73124 8.02464 8.86001 8.41472 8.86001C8.83092 8.86001 9.22376 8.69083 9.53447 8.41713L9.53454 8.41721L9.54184 8.41052L15.7631 2.70784L15.7691 2.70231L15.7749 2.69659C16.0981 2.38028 16.1985 1.80579 15.7981 1.41393C15.4803 1.1028 14.9167 1.00854 14.5249 1.38489L8.41472 7.00806L2.29995 1.38063L2.29151 1.37286L2.28271 1.36548C1.93092 1.07036 1.38469 1.06804 1.03129 1.41393L1.01755 1.42738L1.00488 1.44184C0.69687 1.79355 0.695778 2.34549 1.0545 2.69659L1.05999 2.70196L1.06565 2.70717L7.28687 8.43257Z"
+                           fill="#3056D3"
+                           stroke="#3056D3"
+                           />
+                     </svg>
+                  </div>
+                  <div class="w-full">
+                     <h4 class="text-lg font-semibold text-gray-100">
+                        Why do we need to use template strings?
+                     </h4>
+                  </div>
+               </button>
+               <div x-show="openFaq4" class="faq-content pl-[62px]">
+                  <p class="text-gray-300 text-body-color leading-relaxed py-3">
+                     Usage of template strings: Template strings are used to create a string with embedded expressions. Template strings are enclosed by backticks. Template strings are used to create multiline strings. Template strings are used to create string with embedded expressions. Template strings are used to create string with embedded expressions.
+                  </p>
+               </div>
+            </div>
+            <div
+               class="
+               single-faq
+               bg-zinc-800
+               w-full
+               
+               border border-[#F3F4FE]
+               rounded-lg
+               p-4
+               sm:p-8
+               lg:px-6
+               xl:px-8
+               mb-8
+               "
+               >
+               <button
+                  class="faq-btn btn-green-500 flex w-full text-left"
+                  @click="openFaq5 = !openFaq5"
+                  >
+                  <div
+                     class="
+                     w-full
+                     max-w-[40px]
+                     h-10
+                     flex
+                     items-center
+                     justify-center
+                     rounded-lg
+                     bg-outline-primary
+                     text-primary
+                     bg-opacity-5
+                     mr-5
+                     "
+                     >
+                     <svg
+                        width="17"
+                        height="10"
+                        viewBox="0 0 17 10"
+                        class="fill-current icon"
+                        >
+                        <path
+                           d="M7.28687 8.43257L7.28679 8.43265L7.29496 8.43985C7.62576 8.73124 8.02464 8.86001 8.41472 8.86001C8.83092 8.86001 9.22376 8.69083 9.53447 8.41713L9.53454 8.41721L9.54184 8.41052L15.7631 2.70784L15.7691 2.70231L15.7749 2.69659C16.0981 2.38028 16.1985 1.80579 15.7981 1.41393C15.4803 1.1028 14.9167 1.00854 14.5249 1.38489L8.41472 7.00806L2.29995 1.38063L2.29151 1.37286L2.28271 1.36548C1.93092 1.07036 1.38469 1.06804 1.03129 1.41393L1.01755 1.42738L1.00488 1.44184C0.69687 1.79355 0.695778 2.34549 1.0545 2.69659L1.05999 2.70196L1.06565 2.70717L7.28687 8.43257Z"
+                           fill="#3056D3"
+                           stroke="#3056D3"
+                           />
+                     </svg>
+                  </div>
+                  <div class="w-full">
+                     <h4 class="text-lg font-semibold text-gray-100">
+                     What is the difference among Var, Let and Const?
+                     </h4>
+                  </div>
+               </button>
+               <div x-show="openFaq5" class="faq-content pl-[62px]">
+                  <p class="text-gray-300 text-body-color leading-relaxed py-3">
+                  Difference among Var, Let and Const: Var is a global variable, Let is a local variable and Const is a constant variable.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="absolute bottom-0 right-0 z-[-1]">
+      <svg
+         width="1440"
+         height="886"
+         viewBox="0 0 1440 886"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg"
+         >
+         <path
+            opacity="0.5"
+            d="M193.307 -273.321L1480.87 1014.24L1121.85 1373.26C1121.85 1373.26 731.745 983.231 478.513 729.927C225.976 477.317 -165.714 85.6993 -165.714 85.6993L193.307 -273.321Z"
+            fill="url(#paint0_linear)"
+            />
+         <defs>
+            <linearGradient
+               id="paint0_linear"
+               x1="1308.65"
+               y1="1142.58"
+               x2="602.827"
+               y2="-418.681"
+               gradientUnits="userSpaceOnUse"
+               >
+               <stop stop-color="#3056D3" stop-opacity="0.36" />
+               <stop offset="1" stop-color="#F5F2FD" stop-opacity="0" />
+               <stop offset="1" stop-color="#F5F2FD" stop-opacity="0.096144" />
+            </linearGradient>
+         </defs>
+      </svg>
+   </div>
+</section>
+<!-- ====== FAQ Section End -->`
+
+
+<!-- </footer> -->
+
+<footer class="footer p-10 bg-base-200 text-base-content">
+    <div>
+      <span class="footer-title">Services</span> 
+      <a class="link link-hover">Branding</a> 
+      <a class="link link-hover">Design</a> 
+      <a class="link link-hover">Marketing</a> 
+      <a class="link link-hover">Advertisement</a>
+    </div> 
+    <div>
+      <span class="footer-title">Company</span> 
+      <a class="link link-hover">About us</a> 
+      <a class="link link-hover">Contact</a> 
+      <a class="link link-hover">Jobs</a> 
+      <a class="link link-hover">Press kit</a>
+    </div> 
+    <div>
+      <span class="footer-title">Legal</span> 
+      <a class="link link-hover">Terms of use</a> 
+      <a class="link link-hover">Privacy policy</a> 
+      <a class="link link-hover">Cookie policy</a>
+    </div> 
+    <div>
+      <span class="footer-title">Newsletter</span> 
+      <div class="form-control w-80">
+        <label class="label">
+          <span class="label-text">Enter your email address</span>
+        </label> 
+        <div class="relative">
+          <input type="text" placeholder="username@site.com" class="input input-bordered w-full pr-16" /> 
+          <button class="btn btn-primary absolute top-0 right-0 rounded-l-none">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+    <div data-tf-popover="B9mOgUOl" data-tf-custom-icon="https://images.typeform.com/images/wgWxpnu2tbfi" data-tf-button-color="gray" data-tf-button-text="Launch me" data-tf-iframe-props="title=Product Review Form Template (copy)" data-tf-medium="snippet" style="all:unset;"></div><script src="//embed.typeform.com/next/embed.js"></script>
+    <!-- <script src="./history.js"></script>
+    <script src="./script.js"></script> -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+  </body>
+</html>

@@ -112,7 +112,7 @@ const start = () => {
   // If already started, do not start again
   if (startTime) return;
 
-  let count = 3;
+  let count = 4;
   countdownOverlay.style.display = "flex";
 
   const startCountdown = setInterval(() => {
@@ -162,3 +162,27 @@ setInterval(() => {
 //   document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
 // }, 1000);
 
+
+//open phone keyboard on button click
+const openKeyboard = () => {
+  document.getElementById("starts").focus();
+}
+
+//close phone keyboard on button click
+const closeKeyboard = () => {
+  document.getElementById("starts").blur();
+}
+
+
+componentDidMount = () => {
+  Events.scrollEvent.register('end', function(to, element) {
+      if(element.id === 'request-demo'){
+
+          var inputFocus = document.getElementById('starts');
+
+          inputFocus.focus(console.log("focused"));   
+          inputFocus.click(console.log("clicked"));
+      }
+  Events.scrollEvent.remove('end');
+  });
+}
