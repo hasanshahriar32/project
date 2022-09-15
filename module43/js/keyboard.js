@@ -175,3 +175,28 @@ const Keyboard = {
 window.addEventListener("DOMContentLoaded", function () {
     Keyboard.init();
 });
+
+//activate the keyboard
+document.querySelector(".use-keyboard-input").addEventListener("focus", function () {
+    Keyboard.open("hello", function (currentValue) {
+        console.log("value changed! current value: " + currentValue);
+    }, function (currentValue) {
+        console.log("value submitted! current value: " + currentValue);
+    });
+});
+
+// //close the keyboard on double click outside the keyboard
+// document.addEventListener("click", function (e) {
+//     if (e.target.closest(".keyboard")) return;
+//     Keyboard.close();
+// }
+// );
+
+//close the keyboard on double click outside the keyboard
+document.addEventListener("dblclick", function (e) {
+    if (e.target.closest(".keyboard")) return;
+    Keyboard.close();
+}
+);
+
+
