@@ -191,8 +191,11 @@ const wpm = () => {
   // console.log(wordsPerMinute);
   // console.log(time);
   
-  if (times!=0) {
-    document.getElementById("wpm").innerText = `Speed Count: ${wordsPerMinute} WPM`;
+  if (times!=0 && wordsPerMinute<20) {
+    document.getElementById("wpm").innerHTML = `<div>Speed Count: <span class="text-red-500" >${wordsPerMinute}</span> WPM</div>`;
+  }
+  else if (times!=0) {
+    document.getElementById("wpm").innerHTML = `<div>Speed Count: <span class="text-green-500" >${wordsPerMinute}</span> WPM</div>`;
   }
   // alert(wordsPerMinute);
 };
