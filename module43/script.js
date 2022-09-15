@@ -186,3 +186,11 @@ componentDidMount = () => {
   Events.scrollEvent.remove('end');
   });
 }
+
+
+
+//open phone keyboard on button click
+const openKeyboard = () => {
+  document.getElementById("starts").focus();
+}
+openKeyboard();
