@@ -107,7 +107,10 @@ const gameOver = () => {
       questionText = data[Math.floor(Math.random() * data.length)];
       question.innerHTML = questionText;
     });
-
+  
+  //reset start button
+  const startBtn = document.getElementById("starts");
+  startBtn.innerText = "Redo!!";
   
   userText = "";
   display.classList.add("inactive");

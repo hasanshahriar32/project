@@ -163,14 +163,13 @@
                   </div>
                   <div class="w-full">
                      <h4 class="text-lg font-semibold text-gray-100">
-                        What is the difference between Arrow function and Regular function?
+                        What is the difference between local stoarage vs. global storage?
                      </h4>
                   </div>
                </button>
                <div x-show="openFaq2" class="faq-content pl-[62px]">
                   <p class="text-gray-300 text-body-color leading-relaxed py-3">
-                  Difference between Arrow function and Regular function: The regular function just made the changes within its own this. In JS arguments array in functions is a special object that can be used to get all the arguments passed to the function. Similar to this, arrow functions do not have their own binding to a arguments object, they are bound to arguments of enclosing scope.
-                  </p>
+                  Difference between local stoarage vs. global storage: there is no difference between the window.localStorage and localStorage the Window is the global object the window is the default prefix but the correct one is window.localStorage because the localStorage attribute is part of window object. </p>
                </div>
             </div>
             <div
@@ -222,14 +221,23 @@
                   </div>
                   <div class="w-full">
                      <h4 class="text-lg font-semibold text-gray-100">
-                        What are the differences among Map, forEach, Filter and Reduce?
+                        What are the differences between global scope vs. block scope?
                      </h4>
                   </div>
                </button>
                <div x-show="openFaq3" class="faq-content pl-[62px]">
                   <p class="text-gray-300 text-body-color leading-relaxed py-3">
-                  Differences among Map, forEach, Filter and Reduce: Map is used to transform an array into another array. Filter is used to filter an array based on a condition. Reduce is used to reduce an array to a single value. ForEach is used to iterate over an array.
-                  </p>
+                  Differences  between global scope vs. block scope: The Global scope
+
+                  A variable exists inside or outside a block. If a variable is declared outside all functions or curly braces ({}), it exists in the global scope. The global variables can be accessed by any line of code in the program, including inside blocks.
+                  
+                  A Global scope example
+                  
+                  The Local scope
+                  
+                  In contrast to global variables, locally scoped ones are only visible within the function they are declared. Each function written in JavaScript creates a new local scope and every variable declared in this scope is a local variable. That means that variables with the same name can be used in different functions. However, any effort to reference a local variable outside its scope will result in a Reference Error:
+                  
+                   </p>
                </div>
             </div>
          </div>
@@ -283,14 +291,13 @@
                   </div>
                   <div class="w-full">
                      <h4 class="text-lg font-semibold text-gray-100">
-                        Why do we need to use template strings?
+                        Describe js event loop working method.
                      </h4>
                   </div>
                </button>
                <div x-show="openFaq4" class="faq-content pl-[62px]">
                   <p class="text-gray-300 text-body-color leading-relaxed py-3">
-                     Usage of template strings: Template strings are used to create a string with embedded expressions. Template strings are enclosed by backticks. Template strings are used to create multiline strings. Template strings are used to create string with embedded expressions. Template strings are used to create string with embedded expressions.
-                  </p>
+                     Working of the Event loop: When Node.js starts, it initializes the event loop, processes the provided input script which may make async API calls, schedule timers, then begins processing the event loop. In the previous example, the initial input script consisted of console.log () statements and a setTimeout () function which schedules a timer.</p>
                </div>
             </div>
             <div
@@ -342,13 +349,13 @@
                   </div>
                   <div class="w-full">
                      <h4 class="text-lg font-semibold text-gray-100">
-                     What is the difference among Var, Let and Const?
+                     How many ways can you get undefined at JS?
                      </h4>
                   </div>
                </button>
                <div x-show="openFaq5" class="faq-content pl-[62px]">
                   <p class="text-gray-300 text-body-color leading-relaxed py-3">
-                  Difference among Var, Let and Const: Var is a global variable, Let is a local variable and Const is a constant variable.
+                     The short answer is that JavaScript interpreter returns undefined when accessing a variable or object property that is not yet initialized. For example: On the other side, null represents a missing object reference. JavaScript doesn’t initialize variables or object properties with null.
                   </p>
                </div>
             </div>
