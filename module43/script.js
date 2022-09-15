@@ -87,6 +87,7 @@ const gameOver = () => {
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
+    <p id="wpm"> </p>
     <button onclick="closeModal()">Close</button>
   `;
 
@@ -95,7 +96,19 @@ const gameOver = () => {
   // restart everything
   startTime = null;
   errorCount = 0;
+  //resest counter
+  document.getElementById("show-time").innerText = 0;
+  //reset wpm
+  document.getElementById("wpm").innerText = "Speed Count: 0 WPM";
+  //reset question
+  fetch("./texts.json")
+    .then((res) => res.json())
+    .then((data) => {
+      questionText = data[Math.floor(Math.random() * data.length)];
+      question.innerHTML = questionText;
+    });
 
+  
   userText = "";
   display.classList.add("inactive");
 };
@@ -163,34 +176,29 @@ setInterval(() => {
 // }, 1000);
 
 
-//open phone keyboard on button click
-const openKeyboard = () => {
-  document.getElementById("starts").focus();
-}
-
-//close phone keyboard on button click
-const closeKeyboard = () => {
-  document.getElementById("starts").blur();
-}
 
 
-componentDidMount = () => {
-  Events.scrollEvent.register('end', function(to, element) {
-      if(element.id === 'request-demo'){
+//word per minute calculator
+const wpm = () => {
+  const time = document.getElementById("show-time").innerText;
+  const words = document.getElementById("display").innerText;
+  // console.log(words);
+  // console.log(display.innerText.length);
+  //convert string to number\
+  const times = parseInt(time);
+  // console.log(times);
+  const wordsPerMinute = Math.floor(display.innerText.length / 5 / times * 60);
+  // console.log(wordsPerMinute);
+  // console.log(time);
+  
+  if (times!=0) {
+    document.getElementById("wpm").innerText = `Speed Count: ${wordsPerMinute} WPM`;
+  }
+  // alert(wordsPerMinute);
+};
 
-          var inputFocus = document.getElementById('starts');
-
-          inputFocus.focus(console.log("focused"));   
-          inputFocus.click(console.log("clicked"));
-      }
-  Events.scrollEvent.remove('end');
-  });
-}
+setInterval(() => {
+  wpm();
+}, 1000);
 
 
-
-//open phone keyboard on button click
-const openKeyboard = () => {
-  document.getElementById("starts").focus();
-}
-openKeyboard();

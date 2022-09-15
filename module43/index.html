@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="nav.css">
+    <!-- <link rel="stylesheet" href="nav.css"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!--Only for demo purpose - no need to add.-->
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.27.0/dist/full.css" rel="stylesheet" type="text/css" />
 
     <link
@@ -36,12 +42,12 @@
             </label>
             <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
               <li>
-                <a href="index.html" class="justify-between">
+                <a href="index.html" class="justify-between hover:text-black">
                   Typing Master
                   
                 </a>
               </li>
-              <li><a href="blog.html">Blog <span class="badge">New</span></a></li>
+              <li><a href="blog.html " class="hover:text-black">Blog <span class="badge">New</span></a></li>
             </ul>
           </div>
         </div>
@@ -51,6 +57,7 @@
 
     <h1 class="title flex justify-center"><img src="./logo.png" /></h1>
     <div id="show-time">0 seconds</div>
+    <p id="wpm" class="text-center m-3 text-green-600 text-3xl"></p>
 
     <div class="box-container">
       <div id="question"></div>
@@ -60,9 +67,11 @@
       <div class="buttons">
         <button id="starts">START</button>
       </div>
-      <div>
-        <h2 class="keyboard text-center text-3xl">You'll need a physical keyboard if you're accessing this from phone or tablet.</h2>
+      <br>
+      <div class="flex justify-center ">
+        <button class="use-keyboard-input keyboard_button">Open Virtual Keyboard</button>
       </div>
+      
 
       <div class="divider-container">
         <div class="line"></div>
@@ -121,6 +130,7 @@
     <script src="./history.js"></script>
     <script src="./script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/keyboard.js"></script>
 
   </body>
 </html>
