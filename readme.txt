@@ -1,4 +1,4 @@
-This is a repository containing Programming Hero (Batch 7) practice codes of tutor: Jhankar Mahbub vai.
+This is a repository containing Programming Hero (Batch 6) practice codes of tutor: Jhankar Mahbub vai.
 The repository contains codes chronologically according to main course. 
 
 You are welcome to visit the index site of the repository: https://hasanshahriar32.github.io/project
