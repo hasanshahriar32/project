@@ -8,23 +8,71 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link rel="stylesheet" href="nav.css"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!--Only for demo purpose - no need to add.-->
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.27.0/dist/full.css" rel="stylesheet" type="text/css" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <h1 class="title"><img src="./logo.png" /></h1>
+
+
+    <nav>
+      <div class="navbar bg-base-100">
+        <div class="flex-1">
+          <a href="https://paradox-bd.com" class="btn btn-ghost normal-case text-xl">ParadoxBD</a>
+        </div>
+        <div class="flex-none gap-2">
+          <div class="form-control hidden md:block">
+            <input type="text" placeholder="Search" class="input input-bordered" />
+          </div>
+          <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+              <div class="w-10 rounded-full">
+                <img src="https://placeimg.com/80/80/people" />
+              </div>
+            </label>
+            <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+              <li>
+                <a href="index.html" class="justify-between hover:text-black">
+                  Typing Monster
+                  
+                </a>
+              </li>
+              <li><a href="blog.html " class="hover:text-black">Blog <span class="badge">New</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+    <h1 class="title flex justify-center"><img src="./logo.png" /></h1>
     <div id="show-time">0 seconds</div>
+    <p id="wpm" class="text-center m-3 text-green-600 text-3xl"></p>
 
     <div class="box-container">
       <div id="question"></div>
 
-      <div id="display" class="inactive"></div>
+      <div id="display" class="inactive use-keyboard-input"></div>
 
       <div class="buttons">
         <button id="starts">START</button>
       </div>
+      <br>
+      <div class="flex justify-center ">
+        <button class="use-keyboard-input keyboard_button">Open Virtual Keyboard</button>
+      </div>
+      <h4 class="my-2 text-xl text-center keyboard_button">In case you're accessing this from a Phone or Tablet device, you might need a physical keyboard!!</h4>
+      
 
       <div class="divider-container">
         <div class="line"></div>
@@ -38,9 +86,52 @@
     <div id="modal-background" class="hidden"></div>
     <div id="result" class="hidden"></div>
 
+
+<!-- </footer> -->
+
+<footer class="footer p-10 bg-base-200 text-base-content">
+  <div>
+    <span class="footer-title">Services</span> 
+    <a class="link link-hover">Branding</a> 
+    <a class="link link-hover">Design</a> 
+    <a class="link link-hover">Marketing</a> 
+    <a class="link link-hover">Advertisement</a>
+  </div> 
+  <div>
+    <span class="footer-title">Company</span> 
+    <a class="link link-hover">About us</a> 
+    <a class="link link-hover">Contact</a> 
+    <a class="link link-hover">Jobs</a> 
+    <a class="link link-hover">Press kit</a>
+  </div> 
+  <div>
+    <span class="footer-title">Legal</span> 
+    <a class="link link-hover">Terms of use</a> 
+    <a class="link link-hover">Privacy policy</a> 
+    <a class="link link-hover">Cookie policy</a>
+  </div> 
+  <div>
+    <span class="footer-title">Newsletter</span> 
+    <div class="form-control w-80">
+      <label class="label">
+        <span class="label-text">Enter your email address</span>
+      </label> 
+      <div class="relative hidden md:block">
+        <input type="text" placeholder="admin@paradox-bd.com" class=" input input-bordered w-full pr-16" /> 
+        <button class="btn btn-primary w-24 absolute top-0 right-0 rounded-l-none">Subscribe</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    
+
     <div data-tf-popover="B9mOgUOl" data-tf-custom-icon="https://images.typeform.com/images/wgWxpnu2tbfi" data-tf-button-color="#F0E5C1" data-tf-button-text="Launch me" data-tf-iframe-props="title=Product Review Form Template (copy)" data-tf-medium="snippet" style="all:unset;"></div><script src="//embed.typeform.com/next/embed.js"></script>
     <script src="./history.js"></script>
     <script src="./script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/keyboard.js"></script>
 
   </body>
 </html>

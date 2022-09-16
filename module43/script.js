@@ -19,6 +19,7 @@ fetch("./texts.json")
     question.innerHTML = questionText;
   });
 
+
 // checks the user typed character and displays accordingly
 const typeController = (e) => {
   const newLetter = e.key;
@@ -87,6 +88,7 @@ const gameOver = () => {
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
+    <p id="wpm"> </p>
     <button onclick="closeModal()">Close</button>
   `;
 
@@ -95,7 +97,22 @@ const gameOver = () => {
   // restart everything
   startTime = null;
   errorCount = 0;
-
+  //resest counter
+  document.getElementById("show-time").innerText = 0;
+  //reset wpm
+  document.getElementById("wpm").innerText = "Speed Count: 0 WPM";
+  //reset question
+  fetch("./texts.json")
+    .then((res) => res.json())
+    .then((data) => {
+      questionText = data[Math.floor(Math.random() * data.length)];
+      question.innerHTML = questionText;
+    });
+  
+  //reset start button
+  const startBtn = document.getElementById("starts");
+  startBtn.innerText = "Redo!!";
+  
   userText = "";
   display.classList.add("inactive");
 };
@@ -112,7 +129,7 @@ const start = () => {
   // If already started, do not start again
   if (startTime) return;
 
-  let count = 3;
+  let count = 4;
   countdownOverlay.style.display = "flex";
 
   const startCountdown = setInterval(() => {
@@ -161,4 +178,34 @@ setInterval(() => {
 
 //   document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
 // }, 1000);
+
+
+
+
+//word per minute calculator
+const wpm = () => {
+  const time = document.getElementById("show-time").innerText;
+  const words = document.getElementById("display").innerText;
+  // console.log(words);
+  // console.log(display.innerText.length);
+  //convert string to number\
+  const times = parseInt(time);
+  // console.log(times);
+  const wordsPerMinute = Math.floor(display.innerText.length / 5 / times * 60);
+  // console.log(wordsPerMinute);
+  // console.log(time);
+  
+  if (times!=0 && wordsPerMinute<20) {
+    document.getElementById("wpm").innerHTML = `<div>Speed Count: <span class="text-red-500" >${wordsPerMinute}</span> WPM</div>`;
+  }
+  else if (times!=0) {
+    document.getElementById("wpm").innerHTML = `<div>Speed Count: <span class="text-green-500" >${wordsPerMinute}</span> WPM</div>`;
+  }
+  // alert(wordsPerMinute);
+};
+
+setInterval(() => {
+  wpm();
+}, 1000);
+
 

@@ -182,12 +182,59 @@ button {
   top: 0;
 }
 
-@media only screen and (max-width: 700px) {
-  .box-container {
-    padding: 0 20px;
-    width: 100%;
-  }
+@media only screen and (max-width: 550px) {
+  
   .card {
-    flex-direction: column;
+    /* flex-direction: column; */
+    background: none;
   }
 }
+
+/* for medium devices */
+@media only screen and (min-width: 550px) and (max-width: 850px) {
+  .box-container {
+    width: 50%;
+  }
+  .card {
+    /* flex-direction: column; */
+    background: none;
+  }
+  #histories {
+    padding: 0 20px;
+    width: 100%;
+    /* border: 2px solid #8e2b2b; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* for larger devices */
+@media only screen and (min-width: 850px) {
+  .box-container {
+    width: 90%;
+  }
+  .card {
+    padding:;
+    /* background-color: none; */
+    background: none;
+
+    /* border: 2px solid #9dffad; */
+
+
+    
+
+  }
+  #histories {
+    padding: 0 20px;
+    width: 100%;
+    /* border: 2px solid #8e2b2b; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .keyboard_button{
+    display: none;
+  }
+  
+}
+
+
