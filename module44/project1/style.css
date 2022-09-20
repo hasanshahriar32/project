@@ -1,0 +1,24 @@
+.country {
+    background-color: #af7a7a;
+    border: 1px solid rgb(202, 107, 107);
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    float: right;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgb(202, 107, 107);
+
+}
+.country img{
+    width: 200px;
+    height: 100px;
+    border-radius: 5px;
+}
+.country h2{
+    text-align: center;
+    color: #fff;
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+}

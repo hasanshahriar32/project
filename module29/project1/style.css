@@ -139,3 +139,65 @@ html, body {
       opacity: 0;
     }
   }
+
+
+  :root {
+    --my-color: #fff;
+    /* or any other variables/style */
+  }
+  [data-theme='dark'] {
+    --my-color: #000;
+  }
+  [data-theme='retro'] {
+    --my-color: rgba(247, 249, 223, 0.998);
+  }
+  
+  [data-theme='cyberpunk'] {
+    --my-color: #cadb12;
+  }
+  [data-theme='coffee'] {
+    --my-color: #2d2222;
+  }
+  [data-theme='halloween'] {
+    --my-color: #0f0e0ed1;
+  }
+  [data-theme='forest'] {
+    --my-color: #1c1515;
+  }
+  [data-theme='valentine'] {
+    --my-color: #deb9b9;
+  }
+  [data-theme='aqua'] {
+    --my-color: #236dc1;
+  }
+
+
+  /* daisyUI  theme */
+
+
+  html {
+    background-color: var(--my-color);
+  }
+
+  .theme{
+    /* float: end; */
+    background-color: var(--my-color);
+    /* color: var(--my-color); */
+    border: none;
+    border-radius: 50%;
+    /* box-shadow: 12px 12px 24px #3ABFF8; */
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: outset;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    margin: 10px;
+
+  }
+
+  .theme opiton{
+    background-color: var(--my-color);
+    color: var(--my-color);
+  }

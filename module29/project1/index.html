@@ -10,20 +10,41 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/5fd3ee4f53.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+    <html data-theme="dark"></html>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
 </head>
 <body>
 <header>
     <div class="header">
+      <select class="theme" data-choose-theme>
+        <option value="dark">Dark</option>
+        <option value="cyberpunk">Cyberpunk</option>
+        <option value="retro">Retro</option>
+        <option value="cupcake">Cupcake</option>
+        <option value="light">Light</option>
+        <option value="fantasy">Fantasy</option>
+        <option value="wireframe">Wireframe</option>
+        <option value="coffee">Coffee</option>
+        <option value="valentine">Valentine</option>
+        <option value="aqua">Aqua</option>
+        <option value="forest">Foerest</option>
+        <option value="halloween">Halloween</option>
+        <option value="lofi">Lofi</option>
+        <option value="lemonade">Lemonade</option>
+      </select>
         <h1 class="header_title">Select Your <br> <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block">
             <span class=" relative text-white">Champions!</span>
           </span></h1>
         <br>
         <h3 class="header_subtitle">There is a separate award for the UEFA Europa League Player of the season. The Turkish Football Federation hosted the 2021/22 UEFA Awards ceremony on 26 August in Istanbul.</h3>
-        <a  class="btn button bttn" href="#section">Select Now</a><br><br><br>
+        <a  class="btn button bttn" href="#section">Select Now</a><br>
+        <br><br>
     </div>
 </header>
+
+<!-- <button data-toggle-theme="dark,light" data-act-class="ACTIVECLASS">Toggle</button> -->
 
     <h1 class="text-4xl text-center m-5">Select Your Furious Five</h1>
     <section class="w-11/12 m-auto" id="section">
