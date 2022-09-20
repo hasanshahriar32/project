@@ -13,6 +13,10 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Style CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- theme changer  -->
+    <html data-theme="dark"></html>
+    <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
     
     <!--Only for demo purpose - no need to add.-->
     <link rel="stylesheet" type="text/css" href="css/demo.css" />
@@ -56,6 +60,24 @@
     </nav>
 
 
+    
+    <!-- theme change  -->
+    <select class="theme" data-choose-theme>
+      <option value="dark">Dark</option>
+      <option value="cyberpunk">Cyberpunk</option>
+      <option value="retro">Retro</option>
+      <option value="cupcake">Cupcake</option>
+      <option value="light">Light</option>
+      <option value="fantasy">Fantasy</option>
+      <option value="wireframe">Wireframe</option>
+      <option value="coffee">Coffee</option>
+      <option value="valentine">Valentine</option>
+      <option value="aqua">Aqua</option>
+      <option value="forest">Foerest</option>
+      <option value="halloween">Halloween</option>
+      <option value="lofi">Lofi</option>
+      <option value="lemonade">Lemonade</option>
+    </select>
     <h1 class="title flex justify-center"><img src="./logo.png" /></h1>
     <div id="show-time">0 seconds</div>
     <p id="wpm" class="text-center m-3 text-green-600 text-3xl"></p>
@@ -90,7 +112,7 @@
 
 <!-- </footer> -->
 
-<footer class="footer p-10 bg-base-200 text-base-content flex justify-evenly flex-wrap mx-auto">
+<footer class="footer p-10 bg-base-200 text-base-content flex justify-evenly flex-wrap mx-auto ">
   
   <div>
     <span class="footer-title">Services</span> 
