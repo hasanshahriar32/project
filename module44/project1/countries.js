@@ -13,16 +13,49 @@ const displayCountries = countries =>{
 }
 
 
-const getCountriesHtml =country =>{
+const getCountriesHtml =({name,flags,area,region}) =>{
+    // const {name,flags}= country;
+    //option 3
     return `
     <div class = "country">
-        <h2>${country.name.common}</h2>
+        <h2 title="this is the name of the country">${name.common}</h2>
+        <p>Area: ${area}</p>
+        <p>Region: ${region}</p>
         <br>
-        <img src="${country.flags.png}">
+        <img src="${flags.png}">
 
     </div>
     `
 }
+
+
+// const getCountriesHtml =country =>{
+
+//     //option 2
+//     const {name,flags}=country;
+//     return `
+//     <div class = "country">
+//         <h2>${name.common}</h2>
+//         <br>
+//         <img src="${flags.png}">
+
+//     </div>
+//     `
+// }
+
+
+// const getCountriesHtml =country =>{
+
+//     //option 1
+//     return `
+//     <div class = "country">
+//         <h2>${country.name.common}</h2>
+//         <br>
+//         <img src="${country.flags.png}">
+
+//     </div>
+//     `
+// }
 
 localCountries();
 
