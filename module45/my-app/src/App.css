@@ -46,3 +46,22 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+
+
+.person{
+  /* display: flex;
+  flex-direction: row; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  /* width: 300px;
+  height: 300px; */
+  background-color: #282c34;
+  text-align: center;
+}
