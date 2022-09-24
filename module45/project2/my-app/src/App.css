@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.product{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  margin: 20px;
+  padding: 20px;
+  /* width: 200px; */
+}
