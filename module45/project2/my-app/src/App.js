@@ -43,25 +43,25 @@ function Users(props){
   );
 }
 
-function Counter(){
- const [count, setCount] = useState(10);
- console.log(count);
- console.log(setCount);
- const increaseCount = () => setCount(count + 1);
- const decreaseCount = () => setCount(count - 1);
+// function Counter(){
+//  const [count, setCount] = useState(10);
+//  console.log(count);
+//  console.log(setCount);
+//  const increaseCount = () => setCount(count + 1);
+//  const decreaseCount = () => setCount(count - 1);
 
 //  const increaseCount = () => {
 //   const newCount = count + 1;
 //   setCount(newCount);
 //  }
-  return(
-    <div className="counter">
-      <h1>Counter {count}</h1>
-      <button onClick={increaseCount}>Increase</button>
-      <button onClick={decreaseCount}>Decrease</button>
-    </div>
-  )
-}
+//   return(
+//     <div className="counter">
+//       <h1>Counter {count}</h1>
+//       <button onClick={increaseCount}>Increase</button>
+//       <button onClick={decreaseCount}>Decrease</button>
+//     </div>
+//   )
+// }
 // function App() {
 //   const products = [
 //     {name: 'Photoshop', price: '$90.99'},
