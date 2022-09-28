@@ -29,9 +29,16 @@ const Cosmetics = () => {
         .then(res => res.json())
         .then(data => setCosmetics(data))
     }, [])
+    function cart_clear(){
+        localStorage.clear();
+        //refresh the page
+        window.location.reload();
+        //refresh returned 
+    }
     return (
         <div>
             <h1>Welcome to my cosmetics store.</h1>
+            <button class='btn btn-danger' onClick={()=>cart_clear()}>Clear Cart</button>
             {/* <p>total is: {total}</p>
             <p>total2 is: {total2}</p>  */}
             {
@@ -46,6 +53,7 @@ const Cosmetics = () => {
 
         </div>
     );
+    
 };
 
 
