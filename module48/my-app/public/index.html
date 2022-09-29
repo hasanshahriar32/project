@@ -3,8 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
     <meta name="theme-color" content="#000000" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.29.0/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- theme changer  -->
+<html data-theme="dark"></html>
+<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+
     <meta
       name="description"
       content="Web site created using create-react-app"
@@ -27,6 +34,23 @@
     <title>React App</title>
   </head>
   <body>
+    <!-- theme changer menu -->
+    <select class="theme" data-choose-theme>
+      <option value="dark">Dark</option>
+      <option value="cyberpunk">Cyberpunk</option>
+      <option value="retro">Retro</option>
+      <option value="cupcake">Cupcake</option>
+      <option value="light">Light</option>
+      <option value="fantasy">Fantasy</option>
+      <option value="wireframe">Wireframe</option>
+      <option value="coffee">Coffee</option>
+      <option value="valentine">Valentine</option>
+      <option value="aqua">Aqua</option>
+      <option value="forest">Foerest</option>
+      <option value="halloween">Halloween</option>
+      <option value="lofi">Lofi</option>
+      <option value="lemonade">Lemonade</option>
+    </select>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -39,5 +63,10 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <div class="avatar online ">
+      <div data-tf-popover="B9mOgUOl" class="bg-primary w-24  rounded-full ring ring-primary ring-offset-base-100 ring-offset-2" data-tf-custom-icon="https://placeimg.com/192/192/people" data-tf-button-color="#3ABFF8" data-tf-button-text="Launch me" data-tf-iframe-props="title=Product Review Form Template (copy)" data-tf-medium="snippet" style="all:unset;"></div>
+  </div>
+ 
+  <script src="//embed.typeform.com/next/embed.js"></script>
   </body>
 </html>
