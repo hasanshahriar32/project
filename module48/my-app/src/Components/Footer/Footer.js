@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+import React from 'react';
+
+const Footer = () => {
+    return (
+        <div>
+            
+            <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -558,7 +564,6 @@ html {
       </div>
     </div>
   </footer>
-  
 
 
 
@@ -570,3 +575,10 @@ html {
 
   </body>
 </html>
+
+
+        </div>
+    );
+};
+
+export default Footer;
