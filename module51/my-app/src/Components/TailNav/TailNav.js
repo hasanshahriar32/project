@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from '../Link/Link';
 
+
 const TailNav = () => {
     const routes = [
         {id:1, name: "Home", path: "/home"},
