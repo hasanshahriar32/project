@@ -6,7 +6,8 @@ import Buttons from './Components/Buttons/Buttons';
 import Navbars from './Components/Navbar/Navbar';
 import Toasting from './Components/Toasting/Toasting';
 import TailNav from './Components/TailNav/TailNav';
-import { Bars3Icon } from '@heroicons/react/24/solid'
+import Pricing from './Components/Pricing/Pricing';
+
 
 
 function App() {
@@ -17,9 +18,10 @@ function App() {
       <Button variant='danger'>Hello Booty</Button>
       <Buttons></Buttons>
       <Toasting></Toasting> */}
-      <Bars3Icon className="h-6 w-6 text-blue-500"/>
-      <TailNav></TailNav>
-      <h1>Welcome to tailwind</h1>
+      
+      <TailNav className="fixed  top-0"></TailNav>
+      <Pricing></Pricing>
+      {/* <h1>Welcome to tailwind</h1> */}
 
 
 
