@@ -1,0 +1,88 @@
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #fff;
+    height: 60px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.14);
+    position: static;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transition: all .3s ease-in-out;
+    background-color: rgb(244, 233, 216);
+
+}
+
+.nav__logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav a{
+    text-decoration: none;
+    color: rgb(11, 116, 88);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 10px;
+    transition: all .3s ease-in-out;
+    border-bottom: 2px solid transparent;
+    border: 2px solid transparent;
+    /* background-color: transparent; */
+    box-shadow: none;
+    border-bottom: 2px solid rgb(11, 116, 88);
+    border-radius: 0;
+    /* box-shadow: 0 2px 4px 0 rgba(0,0,0,.14); */
+
+
+}
+.nav a:hover{
+    /* color: #000; */
+    transform: scale(1.3);
+    /* border: 2px solid rgb(11, 116, 88); */
+    /* background-color: rgb(11, 116, 88); */
+    /* color: #fff; */
+    padding: 0 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.14);
+    
+
+
+}
+.nav a:focus{
+    /* color: #000; */
+    /* transform: scale(1.3); */
+    border-bottom: 2px solid rgb(11, 116, 88);
+    /* border: 2px solid rgb(11, 116, 88); */
+    background-color: rgb(11, 116, 88);
+    color: #fff;
+    padding: 0 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.14);
+    /* vibrate for 1s  */
+    animation: vibrate-1 1s;
+    animation-iteration-count: infinite;
+
+
+    
+}
+.active{
+       /* color: #000; */
+    /* transform: scale(1.3); */
+    /* border: 2px solid rgb(11, 116, 88); */
+    border: 2px solid rgb(11, 116, 88);
+    background-color: rgb(210, 246, 219);
+    color: #fff;
+    padding: 0 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.14);
+    /* vibrate for 1s  */
+    animation: vibrate-1 1s;
+    animation-iteration-count: infinite;
+
+
+    
+}

@@ -1,0 +1,7 @@
+.product{
+    padding: 20px;
+    margin: 10px;
+    width: 100%;
+    background-color: rgb(204, 251, 226);
+    z-index: 1;
+}

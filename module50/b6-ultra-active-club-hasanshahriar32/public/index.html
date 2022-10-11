@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./image/icons8-teaching-64.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="./image/icons8-programing-64.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.29.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- theme changer  -->
+    <html data-theme="dark"></html>
+    <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>My Daily Routine</title>
+  </head>
+  <body>
+    <!-- theme changer menu -->
+    <select class="theme" data-choose-theme>
+      <option value="dark">Dark</option>
+      <option value="cyberpunk">Cyberpunk</option>
+      <option value="retro">Retro</option>
+      <option value="cupcake">Cupcake</option>
+      <option value="light">Light</option>
+      <option value="fantasy">Fantasy</option>
+      <option value="wireframe">Wireframe</option>
+      <option value="coffee">Coffee</option>
+      <option value="valentine">Valentine</option>
+      <option value="aqua">Aqua</option>
+      <option value="forest">Foerest</option>
+      <option value="halloween">Halloween</option>
+      <option value="lofi">Lofi</option>
+      <option value="lemonade">Lemonade</option>
+    </select>
+    
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root" class=""></div>
+    <div class=""> <!-- styling those cells was painful... -->
+      <div class=' flex flex-col justify-center items-center w-screen h-screen bg-gray-800'>
+        <!-- <script src="https://tryhackme.com/badge/1054563"></script> -->
+        <div id='clock'
+          class='border  scale-x-[0.6] scale-y-[0.6] bg-[#111] p-3 shadow-[0_6px_10px_-3px_black] flex flex-col justify-center'>
+          
+          <div class='border flex flex-row justify-center w-full h-full gap-2'>
+            
+            <div class='digit  digit-h-1 flex flex-col justify-around px-5 min-h-full '>
+              <div class='flex flex-row justify-center translate-y-5 '>
+                <div class='display-1 bg-gray-900 '></div>
+              </div>
+              
+              <div class=' flex flex-row justify-between translate-y-2 '>
+                <div class='flex flex-col justify-center'>
+                  <div class='display-2 bg-gray-900 '></div>
+                </div>
+                <div class='flex flex-col justify-center'>
+                  <div class='display-2 bg-gray-900 -scale-x-100'></div>
+                </div>
+                
+              </div>
+              <div class='flex flex-col justify-center'>
+                <div class='display-3 bg-gray-900 scale-y-[.7]  '></div>
+              </div>
+      
+              <div class='flex flex-row justify-between -translate-y-2'>
+                <div class='flex flex-col justify-center'>
+                  <div class='display-2 bg-gray-900'></div>
+                </div>
+                <div class='flex flex-col justify-center'>
+                  <div class='display-2 bg-gray-900 -scale-x-100'></div>
+                </div>
+              </div>
+              <div class='flex flex-row justify-center -translate-y-[20px]'>
+                <div class='display-4 bg-gray-900'></div>.
+              </div>
+            </div>
+            <div class='digit digit-h-2 flex flex-col justify-around px-5 min-h-full '>
+              <div class='flex flex-row justify-center translate-y-5 '>
+                <div class='display-1 bg-gray-900 '></div>
+              </div>
+              <div class='flex flex-row justify-between translate-y-2 '>
+                <div class='flex flex-col justify-center'>
+                  <div class='display-2 bg-gray-900 '></div>
+                </div>
+                <div class='flex flex-col justify-center'>
+                  <div class='display-2 bg-gray-900 -scale-x-100'></div>
+                </div>
+              </div>
+              <div class='flex flex-col justify-center'>
+                <div class='display-3 bg-gray-900 scale-y-[.7]  '></div>
+              </div> 
+      
+              <div class='flex flex-row justify-between -translate-y-2'>
+                <div class='flex flex-col justify-center'>
+                  <div class='display-2 bg-gray-900'></div>
+                </div>
+                <div class='flex flex-col justify-center'>
+                  <div class='display-2 bg-gray-900 -scale-x-100'></div>
+                </div>
+              </div>
+              <div class='flex flex-row justify-center -translate-y-[20px]'>
+                <div class='display-4 bg-gray-900'></div>.
+              </div>
+            </div>
+            <div class='flex flex-col justify-center gap-10 animate-pulse drop-shadow-[0_0px_7px_rgba(89,161,255,1)] grow'>
+              <div class='w-6 h-6 bg-[#3080FF] rounded-sm'> </div>
+              <div class='w-6 h-6 bg-[#3080FF] rounded-sm'> </div>
+            </div>
+            <div class='digit digit-m-1 flex flex-col justify-around px-5 min-h-full '>
+              <div class='flex flex-row justify-center translate-y-5 '>
+                <div class='display-1 bg-gray-900 '></div>
+              </div>
+              <div class='flex flex-row justify-between translate-y-2 '>
+                <div class='flex flex-col justify-center'>
+                  <div class='display-2 bg-gray-900 '></div>
+                </div>
+                <div class='flex flex-col justify-center'>
+                  <div class='display-2 bg-gray-900 -scale-x-100'></div>
+                </div>
+              </div>
+              <div class='flex flex-col justify-center'>
+                <div class='display-3 bg-gray-900 scale-y-[.7]  '></div>
+              </div>
+      
+              <div class='flex flex-row justify-between -translate-y-2'>
+                <div class='flex flex-col justify-center'>
+                  <div class='display-2 bg-gray-900'></div>
+                </div>
+                <div class='flex flex-col justify-center'>
+                  <div class='display-2 bg-gray-900 -scale-x-100'></div>
+                </div>
+              </div>
+              <div class='flex flex-row justify-center -translate-y-[20px]'>
+                <div class='display-4 bg-gray-900'></div>.
+              </div>
+            </div>
+            <div class='digit digit-m-2 flex flex-col justify-around px-5 min-h-full '>
+              <div class='flex flex-row justify-center translate-y-5 '>
+                <div class='display-1 bg-gray-900 '></div>
+              </div>
+              <div class='flex flex-row justify-between translate-y-2 '>
+                <div class='flex flex-col justify-center'>
+                  <div class='display-2 bg-gray-900 '></div>
+                </div>
+                <div class='flex flex-col justify-center'>
+                  <div class='display-2 bg-gray-900 -scale-x-100'></div>
+                </div>
+              </div>
+              <div class='flex flex-col justify-center'>
+                <div class='display-3 bg-gray-900 scale-y-[.7]  '></div>
+              </div>
+      
+              <div class='flex flex-row justify-between -translate-y-2'>
+                <div class='flex flex-col justify-center'>
+                  <div class='display-2 bg-gray-900'></div>
+                </div>
+                <div class='flex flex-col justify-center'>
+                  <div class='display-2 bg-gray-900 -scale-x-100'></div>
+                </div>
+              </div>
+              <div class='flex flex-row justify-center -translate-y-[20px]'>
+                <div class='display-4 bg-gray-900'></div>.
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+      
+      <style>
+        .display-1,
+        .display-2,
+        .display-3,
+        .display-4 {
+          transition: all 100ms linear;
+        }
+      
+        .display-1 {
+          clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 25% 100%);
+          height: 20px;
+          width: 120px;
+        }
+      
+        .display-2 {
+          clip-path: polygon(0% 0%, 100% 15%, 100% 85%, 15% 100%);
+          height: 100px;
+          width: 20px;
+        }
+      
+        .display-3 {
+          clip-path: polygon(18% 0%, 85% 0%, 95% 50%, 82% 100%, 20% 100%, 7% 50%);
+          height: 30px;
+          width: 120px;
+        }
+      
+        .display-4 {
+          clip-path: polygon(30% 0%, 75% 0%, 95% 100%, 5% 100%);
+          height: 20px;
+          width: 120px;
+        }
+      </style>
+      
+      <script>
+        const classes = {
+              outerGlow:"drop-shadow-[0_0px_4px_rgba(48,128,255,1)]",
+              on:"bg-[#3080FF]",
+              off:"bg-gray-900/50"
+          }
+      
+          const orderTable = {
+              "0":[0,1,2,4,5,6],
+              "1":[2,5],
+              "2":[0,2,3,4,6],
+              "3":[0,2,3,5,6],
+              "4":[1,2,3,5],
+              "5":[0,1,3,5,6],
+              "6":[0,1,3,4,5,6],
+              "7":[0,2,5],
+              "8":[0,1,2,3,4,5,6],
+              "9":[0,1,2,3,5,6]
+          }
+      
+          const h1Cells = getCells(document.querySelector('.digit-h-1'));
+          const h2Cells = getCells(document.querySelector('.digit-h-2'));
+          const m1Cells = getCells(document.querySelector('.digit-m-1'));
+          const m2Cells = getCells(document.querySelector('.digit-m-2'));
+          
+      
+      
+          function getCells(parent){
+              let cells = [
+                  parent.children[0],
+                  parent.children[1].children[0],
+                  parent.children[1].children[1],
+                  parent.children[2],
+                  parent.children[3].children[0],
+                  parent.children[3].children[1],
+                  parent.children[4]
+              ];
+              return cells; 
+          }
+      
+      
+          function setHours(number){
+              const digits = to2Digits(number);
+              setDigit(h1Cells,digits[0]);
+              setDigit(h2Cells,digits[1]);
+          }
+      
+          function setMinutes(number){
+              const digits = to2Digits(number);
+              setDigit(m1Cells,digits[0]);
+              setDigit(m2Cells,digits[1]);
+          }
+      
+          function to2Digits(number){
+              let h = number.toString();
+              if(h.length===1){
+                  h = "0"+h;
+              }
+              return h;
+          }
+      
+          function setDigit(cells,number){
+              const order = orderTable[number];
+              for(let i =0;i<cells.length;i++){
+            turnCell(cells[i],order.includes(i));
+              }
+          }
+      
+          function turnCell(cell,on){
+              if(on){
+                  cell.children[0].classList.remove(classes.off);
+                  cell.children[0].classList.add(classes.on);
+                  cell.classList.add(classes.outerGlow);
+              }else{
+                  cell.children[0].classList.remove(classes.on);
+                  cell.children[0].classList.add(classes.off);
+                  cell.classList.remove(classes.outerGlow);
+              }
+          }
+      
+        let prev = {
+          h:null,
+          m:null
+        }
+          setInterval(function(){
+              const date = new Date();
+          if(prev.h !== date.getHours()){
+            prev.h = date.getHours();
+            setHours(date.getHours());
+          }
+          if(prev.m !== date.getMinutes()){
+            prev.m = date.getMinutes();
+            setMinutes(date.getMinutes());
+          }
+          },300)
+      </script></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <div data-tf-popover="B9mOgUOl" data-tf-custom-icon="https://static.cracked.io/uploads/avatars/avatar_1613119.gif?dateline=1663506791" data-tf-button-color="#F0E5C1" data-tf-button-text="Launch me" data-tf-iframe-props="title=Product Review Form Template (copy)" data-tf-medium="snippet" style="all:unset;"></div><script src="//embed.typeform.com/next/embed.js"></script>
+  </body>
+</html>
