@@ -7,7 +7,7 @@ import SingleQuiz from './SinlgeQuiz/SingleQuiz';
 
 const notifySuccess = () => toast.success("Congratulation! You have completed the quiz correctly",{
         position: "top-center",
-        autoClose: 5000,
+        autoClose: 15000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -17,7 +17,7 @@ const notifySuccess = () => toast.success("Congratulation! You have completed th
         });
 const notifyFailure = (id) => toast.warning(`Sorry! You have completed the quiz but not correctly. try again!!  Wrong: ${id}`,{
         position: "top-center",
-        autoClose: 5000,
+        autoClose: 15000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -48,6 +48,8 @@ const TopicQuiz = () => {
         clickNum++;
         if (clickNum === quizData.total && correctAns === quizData.total) {
             notifySuccess();
+            //go to the next topic
+            
         }
         else if (clickNum === quizData.total && correctAns !== quizData.total) {
             notifyFailure(quizData.total-correctAns);
