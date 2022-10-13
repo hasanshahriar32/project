@@ -14,11 +14,11 @@ const Header = () => {
       <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
         
         <li tabindex="0">
-        <NavLink className='justify-between' to='/topics'>
+        
           Topics
             
             <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/></svg>
-          </NavLink>
+          
           <ul className="bg-base-200">
           <li><NavLink to='/topics/1'>React</NavLink></li>
           <li><NavLink to='/topics/2'>Javascript</NavLink></li>
@@ -34,7 +34,7 @@ const Header = () => {
 
 
 
-    <a href='https://paradox-bd.com' target='_blank' className="btn btn-ghost normal-case text-xl">Paradox Learning</a>
+    <NavLink to='/topics' className="btn btn-ghost normal-case text-xl">Paradox Learning</NavLink>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal p-0">
