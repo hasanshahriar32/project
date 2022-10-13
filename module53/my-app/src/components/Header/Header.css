@@ -9,11 +9,24 @@
 }
 
 .header a{
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
     text-decoration: none;
     font-size: 17px;
     margin-left: 36px;
 }
-.header a:hover{
+.header a:active{
     color: orange;
+    transform: scale(.8);
+    transition: 0.3s; 
+    /* border: 1px solid orange; */
+    /* border-radius: 5px; */
+    /* padding: 5px; */
+
+
+}
+.active{
+    color: orange;
+}
+.passive{
+    color: rgb(238, 237, 234);
 }
