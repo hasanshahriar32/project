@@ -1,6 +1,31 @@
 import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 import { Link, useLoaderData } from 'react-router-dom';
 import SingleQuiz from './SinlgeQuiz/SingleQuiz';
+
+const notifySuccess = () => toast.success("Congratulation! You have completed the quiz correctly",{
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
+const notifyFailure = (id) => toast.warning(`Sorry! You have completed the quiz but not correctly. try again!!  Wrong: ${id}`,{
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
+
 
 const TopicQuiz = () => {
     const quizData = useLoaderData().data;
@@ -17,6 +42,21 @@ const TopicQuiz = () => {
         // console.log(correcrAns);
 
     }
+    //if all answers are correct then show the result as alert
+    let clickNum = 0;
+    const clickSum = () => {
+        clickNum++;
+        if (clickNum === quizData.total && correctAns === quizData.total) {
+            notifySuccess();
+        }
+        else if (clickNum === quizData.total && correctAns !== quizData.total) {
+            notifyFailure(quizData.total-correctAns);
+        }
+
+
+    }
+    
+
     return (
         <div>
             <img className='w-36 m-5' src={quizData.logo} alt="" />
@@ -25,9 +65,10 @@ const TopicQuiz = () => {
             <h3><span className='text-success' id='correctShow'>Correct: {correctAns}</span> <span className='text-error' id='leftShow'>Left: {quizData.total - correctAns}</span></h3>
             <div className='flex justify-center flex-col items-center'>
             {
-                quizData.questions.map(question => <SingleQuiz correctCount={correctCount} question={question} key={question.id}></SingleQuiz>)
+                quizData.questions.map(question => <SingleQuiz correctCount={correctCount} clickSum={clickSum} question={question} key={question.id}></SingleQuiz>)
             }
             </div>
+            <ToastContainer />
             <div className="btn-group grid grid-cols-2">
             {
                 (quizData.id==1)?

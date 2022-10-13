@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const SingleQuiz = (props) => {
     const [seeAnswer, setSeeAnswer] = React.useState(false);
     const question = props.question;
+    const clickNum = props.clickSum;
     const correctCount = props.correctCount;
     const notify1 = () => toast.success("woop woop! you got it right", {
         position: "top-right",
@@ -17,9 +18,9 @@ const SingleQuiz = (props) => {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "colored",
+        // theme: "colored",
         });
-    const notify2 = () => toast.error("uh oh! try again", {
+    const notify2 = () => toast.error("uh oh! wrong. Try next one", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -27,7 +28,17 @@ const SingleQuiz = (props) => {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "colored",
+        // theme: "colored",
+        });
+    const notify3 = () => toast.warning("oops! you already unrevealed the answer. It won't be counted as correct answer.", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        // theme: "colored",
         });
         const seeAns = (props) => toast.info(`Hint: ${props}`)
     useEffect (()=>{
@@ -49,24 +60,39 @@ const SingleQuiz = (props) => {
     //   //show correct answer
     //   document.getElementById(question.id).querySelector(`[data-id='${question.correct_answer}']`).classList.add('correct');
     //   //show toast
-      console.log('uh oh! try again');
+    //   console.log('uh oh! try again');
+      document.getElementById(question.id).querySelectorAll('.checkbox').forEach(btn => btn.disabled = true);
+
       notify2();
 
     };
     const correct = (id) => {
         // document.getElementById(question.id).classList.add('bg-green-300');
-        console.log('woop woop! you got it right');
+        // console.log('woop woop! you got it right');
+        // if any wrong answer is not selected
+        if (question.correctAnswer === id && !seeAnswer) {
+            document.getElementById(question.id).querySelectorAll('.checkbox').forEach(btn => btn.disabled = true);
+        
         notify1();
         correctCount(1);
+        }
+        else {notify3();
+            document.getElementById(question.id).querySelectorAll('.checkbox').forEach(btn => btn.disabled = true);
+        }
     };
 
     // console.log(question);
     const correctAnswer = question.correctAnswer;
    
+    let clickSum = 0;
     const optionClick = question.option;
     const handleClick = (optionClick)=>{
         console.log('clicked', optionClick);
         (optionClick==question.correctAnswer)?correct(optionClick):wrong(optionClick);
+        clickSum++;
+        clickNum(clickSum);
+        // console.log(clickSum);
+    
     }
     return (
         <div id={question.id}  className='bg-base-200 hover:bg-base-300 m-3 w-[80%]  py-5 border-primary border-double-line'>
