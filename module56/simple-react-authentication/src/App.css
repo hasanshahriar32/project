@@ -14,8 +14,24 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* position: fixed; */
+  
+  background-color: #07192F;
+  min-height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.appBack {
+  /* position: absolute; */
+  /* z-index: 1; */
+  /* position: absolute; */
+  background-color: #07192F;
   min-height: 100vh;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;

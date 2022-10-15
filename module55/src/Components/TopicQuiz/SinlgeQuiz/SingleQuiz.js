@@ -20,7 +20,7 @@ const SingleQuiz = (props) => {
         progress: undefined,
         // theme: "colored",
         });
-    const notify2 = () => toast.error("uh oh! wrong. Try next one", {
+    const notify2 = () => toast.error(`uh oh! wrong. Try next one. Correct Answer: ${question.correctAnswer}`, {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -29,6 +29,7 @@ const SingleQuiz = (props) => {
         draggable: true,
         progress: undefined,
         // theme: "colored",
+        
         });
     const notify3 = () => toast.warning("oops! you already unrevealed the answer. It won't be counted as correct answer.", {
         position: "top-right",
@@ -40,7 +41,7 @@ const SingleQuiz = (props) => {
         progress: undefined,
         // theme: "colored",
         });
-        const seeAns = (props) => toast.info(`Hint: ${props}`)
+        const seeAns = (props) => toast.info(`ANS: ${props}`)
     useEffect (()=>{
         if(seeAnswer){
             // document.getElementById('ansId').innerText = question.correctAnswer;
@@ -53,7 +54,7 @@ const SingleQuiz = (props) => {
     ,[seeAnswer])
 
 
-    const wrong = (id) => {
+    const wrong = (correctAnswerString) => {
     //   document.getElementById(question.id).classList.add('wrong');
     //   //disable all buttons
     //   document.getElementById(question.id).querySelectorAll('checkbox').forEach(btn => btn.disabled = true);
@@ -61,10 +62,12 @@ const SingleQuiz = (props) => {
     //   document.getElementById(question.id).querySelector(`[data-id='${question.correct_answer}']`).classList.add('correct');
     //   //show toast
     //   console.log('uh oh! try again');
-      document.getElementById(question.id).querySelectorAll('.checkbox').forEach(btn => btn.disabled = true);
-
-      notify2();
-
+    document.getElementById(question.id).querySelectorAll('.checkbox').forEach(btn => btn.disabled = true );
+    //color the clicked option red
+    // document.getElementById(question.id).querySelectorAll('.checkbox').forEach(btn => btn.classList.add('bg-danger text-white btn-danger border-danger'));
+    //show toast
+      notify2(correctAnswerString);
+    //   const seeAns = (props) => toast.info(`ANS: ${props}`)
     };
     const correct = (id) => {
         // document.getElementById(question.id).classList.add('bg-green-300');
@@ -100,7 +103,7 @@ const SingleQuiz = (props) => {
             {/* show toast outside the div at the top of the page */}
             <ToastContainer />
             
-            <div className='text-lg text-accent-focus'>{question.question} <button onClick={()=>setSeeAnswer(!seeAnswer)} className='text-info'>ANS ➡️</button></div>
+            <div className='text-lg '><div dangerouslySetInnerHTML={{__html: `${question.question}`}} className=''></div> <button onClick={()=>setSeeAnswer(!seeAnswer)} className='text-info'>ANS ➡️</button></div>
             <p id='ansId'></p>
             <div className='grid grid-col-1  md:grid-cols-2 justify-evenly'>
             {
