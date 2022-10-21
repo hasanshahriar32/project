@@ -32,7 +32,7 @@ const UserPassLogin = () => {
         }
         sendPasswordResetEmail(auth,userMail )
         .then(result=>{
-            // console.log(result);
+            console.log(result);
             notify(userMail);
         })
         .catch(error=>{

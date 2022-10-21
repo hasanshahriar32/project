@@ -1,12 +1,106 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../Contexts/UserContext';
 
 
 
 const Login = () => {
+  const [error, setError] = useState('');
+  const [userMail, setUserMail] = useState('');
+  const {signin} = useContext(AuthContext);
+  const {signInWithPopup:googleSignIn} = useContext(AuthContext);
+  const {twitterSignIn} = useContext(AuthContext);
+  const {githubSignIn} = useContext(AuthContext);
+  const {loggedUser} = useContext(AuthContext);
+  const {resetPass} = useContext(AuthContext);
+  const navigate = useNavigate();
+  const userActive=loggedUser?.uid;
     const handleSubmit = (e) =>{
         e.preventDefault();
         const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        signin(email,password)
+        .then(result=>{
+          const user = result.user;
+          console.log(user);
+          form.reset();
+          setError('user logged in successfully');
+          //redirect to home
+          window.location.pathname='/home';
+        }
+        )
+        .catch(error=>{
+          console.log(error);
+          setError(error.message);
+        })
+        
     }
+    const handleGooglesignin = () =>{
+      googleSignIn()
+      .then(result=>{
+        const user = result.user;
+        console.log(user);
+        setError('user logged in successfully');
+        //redirect to home
+        navigate('/home');
+      })
+      .catch(error=>{
+        console.log(error);
+        setError(error.message);
+      })
+    }
+    const handletwittersignin = () =>{
+      twitterSignIn()
+      .then(result=>{
+        const user = result.user;
+        console.log(user);
+        setError('user logged in successfully');
+        //redirect to home
+        window.location.pathname='/home';
+      })
+      .catch(error=>{
+        console.log(error);
+        setError(error.message);
+      })
+    }
+    const handlegithubsignin = () =>{
+      githubSignIn()
+      .then(result=>{
+        const user = result.user;
+        console.log(user);
+        setError('user logged in successfully');
+        //redirect to home
+        window.location.pathname='/home';
+      })
+      .catch(error=>{
+        console.log(error);
+        setError(error.message);
+      })
+    }
+    const resetPassMail = (e) =>{
+      const email = e.target.value;
+      // console.log(email);
+      setUserMail(email);
+    }
+    const handleResetPass = (e) =>{
+      e.preventDefault();
+      resetPass(userMail)
+      .then(result=>{
+        // const user = result.user;
+        // console.log(user);
+        // form.reset();
+        setError('check your email');
+        //redirect to home
+        // window.location.pathname='/home';
+      })
+      .catch(error=>{
+        console.log(error);
+        setError(error.message);
+      })
+    }
+
+
     return (
         <div  >
             <div className="hero min-h-screen ">
@@ -21,21 +115,37 @@ const Login = () => {
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="email" placeholder="email" autoFocus name='email' autocomplete="on" className="input input-bordered" required />
+          <input type="email" onBlur={resetPassMail} placeholder="email" autoFocus name='email' autoComplete="on" className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" placeholder="password" name='password' autocomplete="on" className="input input-bordered" required
+          <input type="password" placeholder="password" name='password' autoComplete="on" className="input input-bordered" required
            />
-          <label className="label">
-            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-          </label>
+          
         </div>
+        
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          {
+            userActive? <button disabled className="btn btn-primary">Logged In!!</button>:<>
+            <button className="btn btn-primary">Login</button>
+            <label className="label">
+           <button onClick={handleResetPass}> <a href="#"  className="label-text-alt link link-hover">Forgot password?</a></button>
+          </label>
+            <br />
+            <small className='text-sm text-gray-400'>or, login with</small>
+            <div className="btn-group btn-group-vertical w-100 flex justify-center lg:btn-group-horizontal">
+              <button className="btn " onClick={handleGooglesignin}>Google</button>
+              <button className="btn" onClick={handletwittersignin}>Twitter</button>
+              <button className="btn" onClick={handlegithubsignin}>GitHub</button>
+            </div>
+            </>
+          }
+          
         </div>
+        
+        <small className='text-sm'>{error}</small>
       </form>
     </div>
   </div>
