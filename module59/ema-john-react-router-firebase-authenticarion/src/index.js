@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import UserContext from './components/Context/UserContext';
+import Vanta from './Vanta';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <UserContext>
-    <App />
+    <Vanta>
+      
+      </Vanta>
     </UserContext>
   </React.StrictMode>
 );
