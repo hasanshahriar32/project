@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "firebase": "^9.12.1",
+    "prop-types": "^15.8.1",
+    "react-lottie": "^1.2.3",
     "vanta": "^0.5.24"
   }
 }
