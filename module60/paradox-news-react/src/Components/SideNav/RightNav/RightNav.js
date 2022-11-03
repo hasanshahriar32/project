@@ -23,7 +23,6 @@ const RightNav = () => {
         // Signed in
         const user = userCredential.user;
         // console.log(user);
-        // ...
       })
 
       .catch((error) => {
@@ -86,7 +85,7 @@ const RightNav = () => {
         </ListGroup.Item>
       </ListGroup>
       <Link to="/latest">
-        <IndividualIntervalsExample></IndividualIntervalsExample>
+        {/* <IndividualIntervalsExample></IndividualIntervalsExample> */}
       </Link>
 
       <div>
