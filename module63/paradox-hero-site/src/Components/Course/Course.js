@@ -13,6 +13,11 @@ const Course = () => {
       <div className="flex justify-center items-center">
         <img className="h-[60px]  " src={data.icon} alt="" />
         <h1 className="text-center text-4xl m-2">{data.name}</h1>
+        {/* <Link className="" to={`/printCourse/${data.id}`}>
+          <button id="printPreview" className="btn">
+            Print preview{" "}
+          </button>
+        </Link> */}
       </div>
       <p className="text-center m-5">{data.details}</p>
       <div className="flex justify-center">

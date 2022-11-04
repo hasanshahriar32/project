@@ -11,6 +11,8 @@ import Course from "../Course/Course";
 import RequireAuth from "../Authentication/RequireAuth/RequireAuth";
 import Checkout from "../Checkout/Checkout";
 import About from "../About/About";
+import CoursePrint from "../Course/CoursePrint";
+import ErrorPage from "../ErrorPage/ErrorPage.js";
 
 const Routes = () => {
   const router = createBrowserRouter([
@@ -79,8 +81,28 @@ const Routes = () => {
               `https://paradox-hero-paradox-bd.vercel.app/courses/${params.id}`
             ),
         },
+        {
+          path: "/printCourse/:id",
+          element: (
+            <RequireAuth>
+              <CoursePrint />
+            </RequireAuth>
+          ),
+          loader: ({ params }) =>
+            fetch(
+              `https://paradox-hero-paradox-bd.vercel.app/courses/${params.id}`
+            ),
+        },
+        {
+          path: "/*",
+          element: <ErrorPage />,
+        },
       ],
       loader: () => fetch("https://paradox-hero-paradox-bd.vercel.app/courses"),
+    },
+    {
+      path: "*",
+      element: <Home />,
     },
   ]);
   return (

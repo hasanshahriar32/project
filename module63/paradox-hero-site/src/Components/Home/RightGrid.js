@@ -13,7 +13,7 @@ const RightGrid = ({ course }) => {
           <small>Duration: {course.duration}</small>
           <small>Price: {course.price}</small>
           <div className="card-actions justify-end">
-            <Link to={`/course/${course.id}`}>
+            <Link to={`/printCourse/${course.id}`}>
               <button className="btn btn-primary"> Learn now!</button>
             </Link>
           </div>

@@ -60,7 +60,7 @@ const Header = () => {
                 <ul className="p-2 bg-base-200">
                   {courses.map((course) => (
                     <li key={course.id}>
-                      <NavLink to={`/course/${course.id}`}>
+                      <NavLink to={`/printCourse/${course.id}`}>
                         {course.name}
                       </NavLink>
                     </li>
@@ -100,7 +100,9 @@ const Header = () => {
               <ul className="p-2 bg-base-200 z-20">
                 {courses.map((course) => (
                   <li key={course.id}>
-                    <NavLink to={`/course/${course.id}`}>{course.name}</NavLink>
+                    <NavLink to={`/printCourse/${course.id}`}>
+                      {course.name}
+                    </NavLink>
                   </li>
                 ))}
               </ul>

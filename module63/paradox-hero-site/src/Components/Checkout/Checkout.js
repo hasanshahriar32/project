@@ -2,7 +2,6 @@ import userEvent from "@testing-library/user-event";
 import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Context/UserContext";
-import CoursePrint from "../Course/CoursePrint";
 
 const Checkout = () => {
   const { user } = useContext(AuthContext);
@@ -25,8 +24,31 @@ const Checkout = () => {
             you a confirmation email shortly. Thank you for your purchase!{" "}
             <span className="text-success">{user.displayName}</span>
           </p>
-          <button className="btn btn-warning m-5">Download Receipt </button>
-          <CoursePrint></CoursePrint>
+          <p className="m-3">checkout id: {data.id}</p>
+          {/* The button to open modal */}
+          <label htmlFor="my-modal-6" className="btn btn-success">
+            Get Receipt
+          </label>
+
+          {/* Put this part before </body> tag */}
+          <input type="checkbox" id="my-modal-6" className="modal-toggle" />
+          <div className="modal modal-bottom sm:modal-middle">
+            <div className="modal-box">
+              <h3 className="font-bold text-lg">
+                Congratulations {user.displayName}!
+              </h3>
+              <p className="py-4">
+                An email with the receipt has been sent to your email address!
+                If you have any further query, please don't forget to reply to
+                that mail.
+              </p>
+              <div className="modal-action">
+                <label htmlFor="my-modal-6" className="btn">
+                  Yay!
+                </label>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

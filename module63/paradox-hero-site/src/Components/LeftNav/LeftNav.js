@@ -11,7 +11,7 @@ const LeftNav = ({ course }) => {
       <td className="">
         <input type="checkbox" className=" checkbox" />
       </td>
-      <Link to={`/course/${course.id}`}>
+      <Link to={`/printCourse/${course.id}`}>
         <th>
           <div className="flex items-center space-x-3">
             <div className="avatar">

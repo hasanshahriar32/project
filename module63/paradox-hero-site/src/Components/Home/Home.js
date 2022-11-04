@@ -64,7 +64,7 @@ const Home = () => {
               <div className=" w-60 carousel carousel-vertical rounded-box">
                 {data.map((course) => (
                   <div className="carousel-item ">
-                    <Link to={`/course/${course.id}`}>
+                    <Link to={`/printCourse/${course.id}`}>
                       <img src={course.img} />
                     </Link>
                   </div>
