@@ -1,0 +1,47 @@
+.nav-horizontal{width:100%;z-index:1000;position:relative;font-size:2.5rem}
+.nav-horizontal .nav-affixer{z-index:1001;width:100%;overflow:hidden}
+.nav-horizontal .nav-affixer.affix{position:fixed;top:0}
+.nav-horizontal .wrap-1{overflow:auto;background:#fff;border-bottom:1px solid #dedede}
+.nav-horizontal.has-paddles{display:block;clear:both;margin-right:5.5rem;margin-left:5.5rem;position:relative}
+.nav-horizontal.swipable .overflower .overflower-inner{left:0}
+.nav-horizontal.swipable .overflower .overflow-indicators{display:block}
+.nav-horizontal .overflower .overflower-inner{position:relative}
+.nav-horizontal .overflower .overflower-inner .overflower-item{display:table-cell}
+.nav-horizontal .overflower .overflower-inner .overflower-item:hover a{outline:0}
+.nav-horizontal .overflower .overflow-paddles .overflow-paddle-left,.nav-horizontal .overflower .overflow-paddles .overflow-paddle-right{position:absolute;height:4.8rem;width:4.8rem;font-size:3.6rem;line-height:4.8rem;overflow:hidden;top:50%;margin-top:-2.4rem;text-align:center}
+.nav-horizontal .overflower .overflow-paddles .overflow-paddle-left span,.nav-horizontal .overflower .overflow-paddles .overflow-paddle-right span{margin-top:-0.1rem}
+.nav-horizontal .overflower .overflow-paddles .overflow-paddle-left{left:-5.5rem}
+.nav-horizontal .overflower .overflow-paddles .overflow-paddle-right{right:-5.5rem}
+.nav-horizontal .overflower .overflow-indicators{display:none;position:absolute;bottom:0;left:0;right:0}
+.nav-horizontal .overflower .overflow-indicators .overflow-indicators-wrap{float:right;position:relative;left:-50%}
+.nav-horizontal .overflower .overflow-indicators .overflow-indicators-wrap .overflow-indicators-list{position:relative;left:50%;list-style:none;margin:0;padding:0}
+.nav-horizontal .overflower .overflow-indicators .overflow-indicators-wrap .overflow-indicators-list li{list-style:none;float:left;padding:5px}
+.nav-horizontal .overflower .overflow-indicators .overflow-indicators-wrap .overflow-indicators-list li a{border:1px solid #1a1f71;display:block;height:8px;width:8px}
+.nav-horizontal .overflower .overflow-indicators .overflow-indicators-wrap .overflow-indicators-list li.active a{background-color:#1a1f71}
+.nav-horizontal .wrap-2{float:right;position:relative;left:-50%;text-align:left}
+.nav-horizontal .wrap-2 ul{position:relative;left:50%;display:block;list-style:none;padding:0;margin:0}
+.nav-horizontal .wrap-2 ul li{padding-bottom:.3rem}
+.nav-horizontal .wrap-2 ul li.selected,.nav-horizontal .wrap-2 ul li.active,.nav-horizontal .wrap-2 ul li:hover{background:#fa9b00;background:-webkit-gradient(linear,left bottom,right top,color-stop(0,#fa9b00),color-stop(100%,#f4ca12));background:-webkit-linear-gradient(45deg,#fa9b00 0,#f4ca12 100%);background:linear-gradient(45deg,#fa9b00 0,#f4ca12 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFA9B00',endColorstr='#FFF4CA12',GradientType=1)}
+.nav-horizontal .wrap-2 ul li a{display:block;background:#fff;padding:1rem 0;white-space:nowrap;text-align:center}
+.nav-horizontal .wrap-2 ul li a span{padding:0 3rem;display:block;border-right:1px solid #dedede}
+.nav-horizontal .wrap-2 ul li a span.nav-label{font-size:1.7rem}
+.nav-horizontal .wrap-2 ul li a span.nav-sublabel{font-size:1.4rem;color:#5c5c5c}
+.nav-horizontal .wrap-2 ul li a span.nav-sublabel:after{content:".";visibility:hidden}
+.nav-horizontal .wrap-2 ul li a:hover{text-decoration:none}
+.nav-horizontal .wrap-2 ul li.first a span{border-left:1px solid #dedede}
+.nav-horizontal.nav-anchor{font-size:1.8rem;font-weight:400}
+.nav-horizontal.nav-anchor .wrap-2 ul li a{padding:2rem 0 1.7rem}
+.nav-horizontal.nav-ribbon .nav-ribbon-nav{position:relative;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);position:absolute;opacity:0;-webkit-transition:visibility .5s linear;transition:visibility .5s linear;-webkit-transition:opacity .5s linear;transition:opacity .5s linear;left:-99999px}
+.nav-horizontal.nav-ribbon .nav-ribbon-nav.nav-ribbon-nav-active{opacity:1}
+.nav-horizontal.nav-ribbon .nav-ribbon-nav.nav-ribbon-nav-left,.nav-horizontal.nav-ribbon .nav-ribbon-nav.nav-ribbon-nav-right{z-index:1}
+.nav-horizontal.nav-ribbon .nav-ribbon-nav.nav-ribbon-nav-active.nav-ribbon-nav-left{left:10px}
+.nav-horizontal.nav-ribbon .nav-ribbon-nav.nav-ribbon-nav-active.nav-ribbon-nav-right{right:10px;left:auto}
+.nav-horizontal.nav-ribbon .nav-ribbon-nav button{background:#031d40;display:block;font-size:15px;height:20px;padding:0;width:20px;text-align:center}
+.nav-horizontal.nav-ribbon .nav-ribbon-nav button.nav-ribbon-prev{border-bottom:1px solid #fff;border-radius:4px 4px 0 0}
+.nav-horizontal.nav-ribbon .nav-ribbon-nav button.nav-ribbon-next{border-radius:0 0 4px 4px}
+.nav-horizontal.nav-ribbon .nav-ribbon-nav button span{padding:0;color:#fff}
+.nav-horizontal.nav-ribbon .wrap-2 ul li.selected a,.nav-horizontal.nav-audience .wrap-2 ul li.selected a{pointer-events:none;cursor:default}
+@media(max-width:767px){.finder-card-header .nav-anchor-target{margin-top:0}
+}
+.nav-horizontal.swipable .overflower{left:0;width:100%;overflow:hidden;display:-webkit-flex;-webkit-box-pack:center;-webkit-box-align:center}
+.nav-horizontal.swipable .overflower .overflower-inner{left:0}
