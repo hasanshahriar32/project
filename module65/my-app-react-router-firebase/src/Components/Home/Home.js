@@ -6,10 +6,17 @@ const Home = () => {
   const [users, setUsers] = useState({});
   const handleSubmit = (e) => {
     e.preventDefault();
-    const form = e.target;
-    const name = form.name.value;
-    const email = form.email.value;
-    const phone = form.phone.value;
+    // const form = e.target;
+    console.log(users);
+  };
+
+  const handleEventBlur = (e) => {
+    const value = e.target.value;
+    const field = e.target.name;
+    const newUsers = { ...users };
+    newUsers[field] = value;
+    setUsers(newUsers);
+    console.log(value, field);
   };
 
   return (
@@ -18,11 +25,26 @@ const Home = () => {
 
       <h2>Please add a new user</h2>
       <form onSubmit={handleSubmit} action="">
-        <input type="text" name="name" placeholder="Name" />
+        <input
+          type="text"
+          onBlur={handleEventBlur}
+          name="name"
+          placeholder="Name"
+        />
         <br />
-        <input type="email" name="email" placeholder="Email" />
+        <input
+          type="email"
+          name="email"
+          onBlur={handleEventBlur}
+          placeholder="Email"
+        />
         <br />
-        <input type="text" name="phone" placeholder="Phone" />
+        <input
+          type="text"
+          name="phone"
+          onBlur={handleEventBlur}
+          placeholder="Phone"
+        />
         <br />
         <input type="submit" value="Submit" />
       </form>
