@@ -4,8 +4,8 @@ The repository contains codes chronologically according to main course.
 You are welcome to visit the index site of the repository: https://hasanshahriar32.github.io/project
 
 The repository contains:
-	-Front-end codes: HTML5, CSS3, BOOTSTRAP5, TAILWIND, JS, ES6 etc.
-	-Back-end codes.  
+	-Front-end codes: HTML5, CSS3, BOOTSTRAP5, TAILWIND, TAILWIND Libraries, JS, ES6, React etc.
+	-Back-end codes: Express JS (Node Js), Firebase, Mongo dB etc.  
 
 
 Main course site: https://web.programming-hero.com
