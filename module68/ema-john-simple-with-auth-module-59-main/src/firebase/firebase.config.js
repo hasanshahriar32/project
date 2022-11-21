@@ -12,11 +12,11 @@ const firebaseConfig = {
   projectId: "simple-firebase-auth-32",
   storageBucket: "simple-firebase-auth-32.appspot.com",
   messagingSenderId: "967398305494",
-  appId: "1:967398305494:web:96f3a67cf5e85bd2456377",
-  measurementId: "G-0V8Z0XREQF",
+  appId: "1:967398305494:web:071303b13f421509456377",
+  measurementId: "G-EPNCSBD64C",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
+const analytics = getAnalytics(app);
 export default app;

@@ -1,0 +1,44 @@
+[debug] [2022-11-21T06:09:16.026Z] ----------------------------------------------------------------------
+[debug] [2022-11-21T06:09:16.028Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\mrhas\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-11-21T06:09:16.029Z] CLI Version:   11.16.0
+[debug] [2022-11-21T06:09:16.029Z] Platform:      win32
+[debug] [2022-11-21T06:09:16.029Z] Node Version:  v16.15.1
+[debug] [2022-11-21T06:09:16.030Z] Time:          Mon Nov 21 2022 12:09:16 GMT+0600 (East Kazakhstan Time)
+[debug] [2022-11-21T06:09:16.031Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-21T06:09:16.111Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-21T06:09:16.111Z] > authorizing via signed-in user (mr.hasan3032@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\mrhas\Desktop\project\module68\ema-john-simple-with-auth-module-59-main
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-11-21T06:09:31.030Z] Using project from CLI flag: simple-firebase-auth-32
+[debug] [2022-11-21T06:09:31.033Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/simple-firebase-auth-32 [none]
+[debug] [2022-11-21T06:09:33.771Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/simple-firebase-auth-32 200
+[debug] [2022-11-21T06:09:33.771Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/simple-firebase-auth-32 {"projectId":"simple-firebase-auth-32","projectNumber":"967398305494","displayName":"Paradox BD","name":"projects/simple-firebase-auth-32","resources":{"hostingSite":"simple-firebase-auth-32"},"state":"ACTIVE","etag":"1_46ba200e-43bd-4768-99a0-727d80c25ebe"}
+[info] i  Using project simple-firebase-auth-32 (Paradox BD) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
