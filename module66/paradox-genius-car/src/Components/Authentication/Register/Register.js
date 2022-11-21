@@ -80,7 +80,7 @@ const Register = () => {
       >
         <RegisterLottie></RegisterLottie>
       </div>
-      <div className="shadow-lg flex gap-2  justify-center items-center flex-col border-dotted bg-cyan-100 w-80 m-5 p-5 rounded">
+      <div className="shadow-lg flex gap-2  justify-center items-center flex-col border-dotted bg-cyan-100 dark:bg-cyan-300 w-80 m-5 p-5 rounded">
         <h1 className="text-center text-3xl m-3 mb-6">Register!</h1>
         <form
           onSubmit={handleSignUp}
@@ -88,7 +88,11 @@ const Register = () => {
         >
           <div>
             <div className="mb-2 ">
-              <Label htmlFor="name" value="Your Name" />
+              <Label
+                htmlFor="name"
+                className="dark:text-black"
+                value="Your Name"
+              />
             </div>
             <input
               id=""
@@ -100,7 +104,11 @@ const Register = () => {
           </div>
           <div>
             <div className="mb-2 ">
-              <Label htmlFor="image" value="Your Image Link" />
+              <Label
+                htmlFor="image"
+                className="dark:text-black"
+                value="Your Image Link"
+              />
             </div>
             <input
               id="image"
@@ -112,7 +120,11 @@ const Register = () => {
           </div>
           <div>
             <div className="mb-2 ">
-              <Label htmlFor="email2" value="Your email" />
+              <Label
+                htmlFor="email2"
+                className="dark:text-black"
+                value="Your email"
+              />
             </div>
             <input
               id="email2"
@@ -125,7 +137,11 @@ const Register = () => {
           </div>
           <div>
             <div className="mb-2 block">
-              <Label htmlFor="password2" value="Your password" />
+              <Label
+                htmlFor="password2"
+                className="dark:text-black"
+                value="Your password"
+              />
             </div>
             <input
               id="password2"
@@ -138,7 +154,11 @@ const Register = () => {
           </div>
           <div>
             <div className="mb-2 block">
-              <Label htmlFor="repeat-password" value="Repeat password" />
+              <Label
+                htmlFor="repeat-password"
+                className="dark:text-black"
+                value="Repeat password"
+              />
             </div>
             <input
               id="repeat-password"
@@ -152,7 +172,7 @@ const Register = () => {
           <div className="flex items-center gap-2">
             <Checkbox id="agree" onClick={agreeHandle} />
             <Label htmlFor="agree">
-              I agree with the{" "}
+              <span className="dark:text-black">I agree with the </span>
               <Link
                 to="/terms"
                 className="text-blue-600 hover:underline dark:text-blue-500"

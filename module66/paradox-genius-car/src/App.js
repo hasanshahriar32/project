@@ -4,21 +4,21 @@ import Routes from "./Components/Routes/Routes";
 
 function App() {
   return (
-    <div className="dark:bg-gray-700">
-      <Flowbite
-        theme={{
-          theme: {
-            alert: {
-              color: {
-                primary: "bg-primary",
-              },
+    <Flowbite
+      theme={{
+        theme: {
+          alert: {
+            color: {
+              primary: "bg-primary",
             },
           },
-        }}
-      >
+        },
+      }}
+    >
+      <div className="dark:bg-gray-800">
         <Routes></Routes>
-      </Flowbite>
-    </div>
+      </div>
+    </Flowbite>
   );
 }
 

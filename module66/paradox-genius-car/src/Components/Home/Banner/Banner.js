@@ -7,25 +7,29 @@ import "./Banner.css";
 import BannerData from "./BannerData";
 const Banner = () => {
   return (
-    <div>
-      <div className="h-60 md:h-80 m-8 lg:m-20 lg:h-[600px]">
+    <div className="hidden sm:block">
+      <div className="h-60 sm:h-[300px] md:h-[480px] m-8 lg:m-20 lg:h-[600px]">
         <Carousel>
           <div className="flex h-full items-center justify-center  dark:text-white">
             <div className="carousel-image">
-              <img className="rounded-sm" src={img1} alt="" />
+              <img
+                className=" min-h-[600px] rounded-sm  w-auto"
+                src={img1}
+                alt=""
+              />
             </div>
 
             <BannerData></BannerData>
           </div>
           <div className="flex h-full items-center justify-center  dark:text-white">
             <div className="carousel-image">
-              <img className=" rounded-sm" src={img2} alt="" />
+              <img className=" min-h-[600px]  rounded-sm" src={img2} alt="" />
             </div>
             <BannerData></BannerData>
           </div>
           <div className="flex h-full items-center justify-center  dark:text-white">
             <div className="carousel-image">
-              <img className="rounded-sm" src={img3} alt="" />
+              <img className=" min-h-[600px]  rounded-sm" src={img3} alt="" />
             </div>
             <BannerData></BannerData>
           </div>

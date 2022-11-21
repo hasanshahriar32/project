@@ -10,6 +10,10 @@ import { Link } from "react-router-dom";
 import { Button } from "react-neon-ui";
 import { useContext } from "react";
 import { AuthContext } from "../../Authentication/Context/UserContext";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -24,8 +28,12 @@ const Header = () => {
   };
   // console.log(user);
   return (
-    <div>
-      <Navbar className="bg-slate-100 App" fluid={true} rounded={true}>
+    <div className="dark:bg-gray-900" data-aos="fade-down">
+      <Navbar
+        className="bg-slate-200 dark:bg-gray-900 App"
+        fluid={true}
+        rounded={true}
+      >
         <Navbar.Brand>
           <img
             href="https://paradox-bd.com/"
@@ -33,8 +41,11 @@ const Header = () => {
             className="mr-3 h-6 sm:h-9"
             alt="Flowbite Logo"
           />
-          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+          <span className="self-center hidden sm:flex whitespace-nowrap text-xl font-semibold dark:text-white">
             PARADOX SERVICES
+          </span>
+          <span className="self-center  sm:hidden flex whitespace-nowrap text-xl  dark:text-white">
+            SERVICES
           </span>
           <Flowbite className="">
             <DarkThemeToggle />
@@ -62,8 +73,8 @@ const Header = () => {
                   </span>
                 </Dropdown.Header>
                 <Link to="/profile">Dashboard</Link>
-                <Link>Settings</Link>
-                <Link>Earnings</Link>
+                <Link to="/settings">Settings</Link>
+                <Link to={`/orders/${user.uid}`}>My Orders</Link>
                 <Dropdown.Divider />
                 <Link>
                   <button onClick={handleLogout}>Sign out</button>
@@ -80,15 +91,31 @@ const Header = () => {
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
-          <Link to="/home" active={true}>
+          <Link
+            className="hover:text-orange-600 dark:text-white"
+            to="/home"
+            active={true}
+          >
             Home
           </Link>
-          <Link to="/navbars">About</Link>
-          <Link to="/navbars">Services</Link>
-          <Link to="/navbars">Pricing</Link>
-          <Link to="/navbars">Contact</Link>
+          <Link className="hover:text-orange-600 dark:text-white" to="/about">
+            About
+          </Link>
+          <Link
+            className="hover:text-orange-600 dark:text-white"
+            to="/services"
+          >
+            Services
+          </Link>
+          <Link className="hover:text-orange-600 dark:text-white" to="/pricing">
+            Pricing
+          </Link>
+          <Link className="hover:text-orange-600 dark:text-white" to="/contact">
+            Contact
+          </Link>
         </Navbar.Collapse>
       </Navbar>
+      <hr className="dark:bg-gray-900" />
     </div>
   );
 };

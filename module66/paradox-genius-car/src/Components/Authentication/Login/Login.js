@@ -83,7 +83,7 @@ const Login = () => {
         <LoginLottie></LoginLottie>
       </div>
 
-      <div className="shadow-lg border-dotted bg-cyan-100 w-80 m-5 p-5 rounded ">
+      <div className="shadow-lg border-dotted dark:bg-cyan-300 bg-cyan-100 w-80 m-5 p-5 rounded ">
         <h1 className="text-center text-3xl m-3 mb-6">Login Now!</h1>
         <form
           onSubmit={handleLogin}
@@ -91,9 +91,14 @@ const Login = () => {
         >
           <div>
             <div className="mb-2 block">
-              <Label htmlFor="email1" value="Your email" />
+              <Label
+                htmlFor="email1"
+                className="dark:text-black"
+                value="Your email"
+              />
             </div>
             <input
+              className="dark:text-black"
               id="email1"
               type="email"
               name="email"
@@ -104,9 +109,14 @@ const Login = () => {
           </div>
           <div>
             <div className="mb-2 block">
-              <Label htmlFor="password1" value="Your password" />
+              <Label
+                htmlFor="password1"
+                className="dark:text-black"
+                value="Your password"
+              />
             </div>
             <input
+              className="dark:text-black"
               id="password1"
               type="password"
               name="password"
@@ -116,7 +126,9 @@ const Login = () => {
           </div>
           <div className="flex items-center gap-2">
             <Checkbox id="remember" />
-            <Label htmlFor="remember">Remember me</Label>
+            <Label className="dark:text-black" htmlFor="remember">
+              Remember me
+            </Label>
           </div>
           <Button type="submit">Login</Button>
 
