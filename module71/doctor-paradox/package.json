@@ -6,7 +6,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "daisyui": "^2.38.1",
+    "daisyui": "^2.42.0",
     "date-fns": "^2.29.3",
     "firebase": "^9.12.1",
     "flowbite": "^1.5.3",

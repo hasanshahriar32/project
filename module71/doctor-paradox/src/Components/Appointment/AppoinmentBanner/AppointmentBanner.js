@@ -12,7 +12,7 @@ const AppointmentBanner = ({ selected, setSelected }) => {
         <div className="hero bg-gradient-to-l min-h-screen  from-base-content bg-base-200">
           <div className="hero-content justify-evenly items-center w-full gap-6 flex-col lg:flex-row-reverse">
             <img
-              src="https://placeimg.com/260/400/arch"
+              src="https://placeimg.com/260/400/tech"
               className="max-w-sm rounded-lg shadow-2xl"
             />
             <div>
