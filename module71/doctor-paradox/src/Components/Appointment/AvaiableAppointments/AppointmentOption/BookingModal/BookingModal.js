@@ -1,4 +1,6 @@
 import React, { useContext } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import UserContext, {
   AuthContext,
 } from "../../../../../Authentication/Context/UserContext";
@@ -6,7 +8,7 @@ import UserContext, {
 const BookingModal = ({ treatment, date, setTreatment }) => {
   //   console.log(date);
 
-  const { name, schedule } = treatment;
+  let { name, schedule } = treatment;
   const { user } = useContext(AuthContext);
 
   const handleSubmit = (e) => {
@@ -14,11 +16,30 @@ const BookingModal = ({ treatment, date, setTreatment }) => {
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData);
     console.log(data);
-    //close modals
-    treatment.schedule = "none";
+
+    fetch("http://localhost:5000/bookings", {
+      method: "POST",
+      headers: {
+        "content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        //close modals
+        schedule = "none";
+        alert("Appointment booked successfully");
+        setTreatment({ name, schedule });
+      })
+      .catch((err) => {
+        console.log(err);
+        alert(err);
+      });
   };
   return (
     <>
+      <ToastContainer />
       <input type="checkbox" id="booking-modal" className="modal-toggle" />
       <div className="modal">
         <div className="modal-box relative">

@@ -4,16 +4,30 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import AppointmentOption from "./AppointmentOption/AppointmentOption";
 import BookingModal from "./AppointmentOption/BookingModal/BookingModal";
+import { useQuery } from "@tanstack/react-query";
 
 const AvailableAppointments = ({ selected, setSelected }) => {
-  const [appointmentOptions, setAppointmentOptions] = useState([]);
+  // const [appointmentOptions, setAppointmentOptions] = useState([]);
   const [treatment, setTreatment] = useState({});
   // console.log(treatment);
-  useEffect(() => {
-    fetch("appointmentOption.json")
-      .then((res) => res.json())
-      .then((data) => setAppointmentOptions(data));
+
+  const { data: appointmentOptions = [] } = useQuery({
+    queryKey: ["appointments"],
+    queryFn: async () => {
+      const res = await fetch("http://localhost:5000/appointments");
+      const data = await res.json();
+      return data;
+    },
+    // queryFn: () =>
+    //   fetch("http://localhost:5000/appointments").then((res) => res.json()),
   });
+
+  // useEffect(() => {
+  //   // fetch("http://localhost:5000/appointments")
+  //   fetch("appointmentOption.json")
+  //     .then((res) => res.json())
+  //     .then((data) => setAppointmentOptions(data));
+  // },[]);
   // console.log(selected);
   return (
     <div className="App">
@@ -28,7 +42,7 @@ const AvailableAppointments = ({ selected, setSelected }) => {
             ></AppointmentOption>
           ))}
         </div>
-        {treatment.schedule != "none" && (
+        {treatment.schedule !== "none" && (
           <BookingModal
             date={selected}
             setTreatment={setTreatment}
